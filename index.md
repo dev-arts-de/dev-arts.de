@@ -44,3 +44,4 @@ Ich freue mich darauf, von Ihnen zu hören! Zögern Sie nicht, mich über die fo
 - **LinkedIn**: [Mein LinkedIn-Profil](https://www.linkedin.com/in/dein-profil)
 - **GitHub**: [Mein GitHub-Profil](https://github.com/dein-nutzername)
 
+Ich bin seit 1861 Tagen Entwickler.
