@@ -1,1 +1,8 @@
 INFO:root:Upload erfolgreich: index.html
+INFO:root:Upload erfolgreich: index.html
+2024-10-07 00:03:10,877 - INFO - Berechnete Tage seit dem Startdatum: 1862
+2024-10-07 00:03:10,878 - INFO - Die index.md wurde aktualisiert.
+2024-10-07 00:03:12,671 - INFO - Änderungen wurden in Git gepusht.
+2024-10-07 00:04:44,349 - INFO - Vitepress Build abgeschlossen.
+2024-10-07 00:04:44,506 - INFO - FTP-Anmeldung erfolgreich.
+2024-10-07 00:04:44,633 - INFO - Upload erfolgreich: index.html

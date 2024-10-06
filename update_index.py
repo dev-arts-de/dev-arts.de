@@ -1,24 +1,20 @@
 import os
 import datetime
 import subprocess
-from ftplib import FTP, error_perm
 import logging
+
+# Fehlerprotokollierung einrichten
+logging.basicConfig(filename='index_update.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Konfiguration
 start_date = datetime.date(2019, 9, 2)  # Startdatum
 md_file_path = 'index.md'  # Annahme: index.md befindet sich im Hauptverzeichnis des Projekts
-html_file_path = '.vitepress/dist/index.html'  # Pfad zur generierten index.html
-ftp_ip = '213.130.145.40'
-ftp_username = 'u687124589.dev-arts.de'
-ftp_password = os.environ.get('FTP_PASSWORD')  # Holen des Passworts aus der Umgebungsvariable
-ftp_upload_path = 'index.html'  # Zielort auf dem FTP-Server
-
-# Fehlerprotokollierung einrichten
-logging.basicConfig(filename='ftp_upload.log', level=logging.DEBUG)
+ftp_upload_script = 'ftp_upload.py'  # Skript für den FTP-Upload
 
 # Berechnung der Anzahl der Tage seit dem Startdatum
 today = datetime.date.today()
 days_since_start = (today - start_date).days
+logging.info(f'Berechnete Tage seit dem Startdatum: {days_since_start}')
 
 # Update der index.md
 with open(md_file_path, 'r+') as file:
@@ -35,28 +31,17 @@ with open(md_file_path, 'r+') as file:
     file.writelines(content)
     file.truncate()
 
+logging.info('Die index.md wurde aktualisiert.')
+
 # Git commit und push
-subprocess.run(['git', 'add', md_file_path])
+subprocess.run(['git', 'add', '.'])
 subprocess.run(['git', 'commit', '-m', 'feat: updated days'])
 subprocess.run(['git', 'push'])
+logging.info('Änderungen wurden in Git gepusht.')
 
 # Vitepress Build
 subprocess.run(['vitepress', 'build', 'dev-arts'])
+logging.info('Vitepress Build abgeschlossen.')
 
-# FTP Upload
-try:
-    ftp = FTP(ftp_ip)
-    ftp.login(ftp_username, ftp_password)
-
-    # Hochladen der index.html
-    with open(html_file_path, 'rb') as file:
-        ftp.storbinary(f'STOR {ftp_upload_path}', file)
-    
-    logging.info('Upload erfolgreich: %s', ftp_upload_path)
-
-except error_perm as e:
-    logging.error('FTP-Berechtigungsfehler: %s', e)
-except Exception as e:
-    logging.error('Fehler beim Hochladen der Datei: %s', e)
-finally:
-    ftp.quit()
+# FTP Upload durch das separate Skript aufrufen
+subprocess.run(['python3', ftp_upload_script])
