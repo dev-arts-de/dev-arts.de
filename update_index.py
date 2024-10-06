@@ -9,7 +9,6 @@ logging.basicConfig(filename='index_update.log', level=logging.DEBUG, format='%(
 # Konfiguration
 start_date = datetime.date(2019, 9, 2)  # Startdatum
 md_file_path = 'index.md'  # Annahme: index.md befindet sich im Hauptverzeichnis des Projekts
-ftp_upload_script = 'ftp_upload.py'  # Skript für den FTP-Upload
 
 # Berechnung der Anzahl der Tage seit dem Startdatum
 today = datetime.date.today()
@@ -43,5 +42,3 @@ logging.info('Änderungen wurden in Git gepusht.')
 subprocess.run(['vitepress', 'build', 'dev-arts'])
 logging.info('Vitepress Build abgeschlossen.')
 
-# FTP Upload durch das separate Skript aufrufen
-subprocess.run(['python3', ftp_upload_script])
