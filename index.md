@@ -22,7 +22,7 @@ features:
 # <br>
 # Über mich
 ## Wer bin ich?
-Ich bin ein leidenschaftlicher Full-Stack Software Entwickler mit über **1861 Tagen** Erfahrung in der Entwicklung von modernen Webanwendungen sowie Backendlösungen. Ich liebe es, kreative Lösungen für komplexe Probleme zu finden und dabei die Benutzererfahrung zu verbessern.
+Ich bin ein leidenschaftlicher Full-Stack Software Entwickler mit über **1862 Tagen** Erfahrung in der Entwicklung von modernen Webanwendungen sowie Backendlösungen. Ich liebe es, kreative Lösungen für komplexe Probleme zu finden und dabei die Benutzererfahrung zu verbessern.
 
 Derzeit arbeite ich im Baustoff-Sektor und sorge dafür, dass tausende Händler und Gesellschafter zuverlässig und sicher ihre Rechnungen erfassen können. Mit modernen Tools wie Vaadin schaffe ich damit eine Verbindung zweier Welten.
 
