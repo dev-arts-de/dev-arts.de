@@ -1,7 +1,8 @@
 import os
 import datetime
 import subprocess
-from ftplib import FTP
+from ftplib import FTP, error_perm
+import logging
 
 # Konfiguration
 start_date = datetime.date(2019, 9, 2)  # Startdatum
@@ -11,6 +12,9 @@ ftp_ip = '213.130.145.40'
 ftp_username = 'u687124589.dev-arts.de'
 ftp_password = 'Gogglepause812421!'  # Setze hier dein FTP-Passwort ein
 ftp_upload_path = 'index.html'  # Zielort auf dem FTP-Server
+
+# Fehlerprotokollierung einrichten
+logging.basicConfig(filename='ftp_upload.log', level=logging.DEBUG)
 
 # Berechnung der Anzahl der Tage seit dem Startdatum
 today = datetime.date.today()
@@ -40,11 +44,19 @@ subprocess.run(['git', 'push'])
 subprocess.run(['vitepress', 'build', 'dev-arts'])
 
 # FTP Upload
-ftp = FTP(ftp_ip)
-ftp.login(ftp_username, ftp_password)
+try:
+    ftp = FTP(ftp_ip)
+    ftp.login(ftp_username, ftp_password)
 
-# Hochladen der index.html
-with open(html_file_path, 'rb') as file:
-    ftp.storbinary(f'STOR {ftp_upload_path}', file)
+    # Hochladen der index.html
+    with open(html_file_path, 'rb') as file:
+        ftp.storbinary(f'STOR {ftp_upload_path}', file)
+    
+    logging.info('Upload erfolgreich: %s', ftp_upload_path)
 
-ftp.quit()
+except error_perm as e:
+    logging.error('FTP-Berechtigungsfehler: %s', e)
+except Exception as e:
+    logging.error('Fehler beim Hochladen der Datei: %s', e)
+finally:
+    ftp.quit()
