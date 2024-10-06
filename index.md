@@ -1,4 +1,4 @@
----
+Anzahl der Tage: 34
 layout: home
 
 hero:
