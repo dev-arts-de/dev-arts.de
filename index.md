@@ -23,7 +23,7 @@ features:
 # <br>
 # Über mich
 ## Wer bin ich?
-Ich bin ein leidenschaftlicher Full-Stack Software Entwickler mit über 5 Jahren Erfahrung in der Entwicklung von modernen Webanwendungen sowie Backendlösungen. Ich liebe es, kreative Lösungen für komplexe Probleme zu finden und dabei die Benutzererfahrung zu verbessern.
+Ich bin ein leidenschaftlicher Full-Stack Software Entwickler mit über **1861 Tagen** Erfahrung in der Entwicklung von modernen Webanwendungen sowie Backendlösungen. Ich liebe es, kreative Lösungen für komplexe Probleme zu finden und dabei die Benutzererfahrung zu verbessern.
 
 Derzeit arbeite ich im Baustoff-Sektor und sorge dafür, dass tausende Händler und Gesellschafter zuverlässig und sicher ihre Rechnungen erfassen können. Mit modernen Tools wie Vaadin schaffe ich damit eine Verbindung zweier Welten.
 
@@ -43,3 +43,4 @@ Ich freue mich darauf, von Ihnen zu hören! Zögern Sie nicht, mich über die fo
 - **E-Mail**: [Arthur.Schimpf@dev-arts.de](mailto:Arthur.schimpf@gmx.de)
 - **LinkedIn**: [Mein LinkedIn-Profil](https://www.linkedin.com/in/dein-profil)
 - **GitHub**: [Mein GitHub-Profil](https://github.com/dein-nutzername)
+
