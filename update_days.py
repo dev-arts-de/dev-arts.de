@@ -10,7 +10,7 @@ md_file_path = 'index.md'  # Annahme: index.md befindet sich im Hauptverzeichnis
 html_file_path = '.vitepress/dist/index.html'  # Pfad zur generierten index.html
 ftp_ip = '213.130.145.40'
 ftp_username = 'u687124589.dev-arts.de'
-ftp_password = 'Gogglepause812421!'  # Setze hier dein FTP-Passwort ein
+ftp_password = os.environ.get('FTP_PASSWORD')  # Holen des Passworts aus der Umgebungsvariable
 ftp_upload_path = 'index.html'  # Zielort auf dem FTP-Server
 
 # Fehlerprotokollierung einrichten
