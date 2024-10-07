@@ -21,8 +21,8 @@ features:
     link: /#wer-bin-ich
 
   - icon: 🌙
-    title: "Have a vision. Be demanding."
-    details: "– Colin Powell"
+    title: "When you move beyond your fear, you feel free."
+    details: "– Spencer Johnson"
     link: /projects
     
   - icon: 📜
