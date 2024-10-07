@@ -21,8 +21,8 @@ features:
     link: /#wer-bin-ich
 
   - icon: 🌙
-    title: "Der Weg ist das Ziel."
-    details: "– Konfuzius"
+    title: "Guilt is perhaps the most painful companion of death."
+    details: "– Coco Chanel"
     link: /projects
     
   - icon: 📜
