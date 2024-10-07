@@ -21,8 +21,8 @@ features:
     link: /#wer-bin-ich
 
   - icon: 🌙
-    title: "Guilt is perhaps the most painful companion of death."
-    details: "– Coco Chanel"
+    title: "Have a vision. Be demanding."
+    details: "– Colin Powell"
     link: /projects
     
   - icon: 📜
