@@ -119,7 +119,8 @@ onMounted(() => {
 
 Ich bin ein leidenschaftlicher Full-Stack Software Entwickler mit über **<span style="color: var(
 --vp-home-hero-name-color); cursor: pointer;" @click="toggleUnit">{{ displayValue }} {{ currentUnit }}</span>**
-Erfahrung in der Entwicklung von modernen Webanwendungen sowie Backendlösungen.
+Erfahrung in der Entwicklung von modernen Webanwendungen sowie Backendlösungen. Dabei kombiniere ich technisches 
+Know-how mit kreativen Ansätzen, um maßgeschneiderte und effiziente Lösungen zu schaffen.
 <br><br><small>(Klicken Sie auf die Anzahl der Tage, um zwischen den verschiedenen Einheiten zu wechseln)</small>
 
 Aktuell arbeite ich im Baustoff-Sektor, wo ich maßgeblich dazu beitrage, dass tausende Händler und 
@@ -127,7 +128,7 @@ Gesellschafter ihre Geschäftsprozesse sicher und zuverlässig abwickeln können
 wie Vaadin schaffe ich Schnittstellen, die Backend- und Frontend-Systeme nahtlos miteinander verbinden und so 
 das Beste aus beiden Welten zusammenführen.
 
-**Backend-Expertise:**  
+## **Backend-Expertise:**  
 Meine Stärke liegt in der Entwicklung skalierbarer, robuster Backend-Lösungen. Ich erstelle APIs 
 und Datenbankarchitekturen, die sowohl leistungsfähig als auch sicher sind. Datensicherheit hat für 
 mich oberste Priorität, weshalb ich stets bewährte Sicherheitspraktiken implementiere – von der Authentifizierung 
@@ -136,7 +137,7 @@ nicht nur stabil laufen, sondern auch potenzielle Bedrohungen minimiert und die 
 wird.
 
 
-**Clean Code und Best Practices:**  
+## **Clean Code und Best Practices:**  
 Für mich ist Clean Code nicht nur ein Ansatz, sondern eine Verpflichtung. Ich folge strikt den Prinzipien der modernen 
 Softwareentwicklung und halte mich an Best Practices wie Conventional Commits, um eine klare und nachvollziehbare 
 Code-Historie sicherzustellen. Zudem setze ich das Vier-Augen-Prinzip bei Merge Requests um, sodass jeder Code vor 
@@ -144,13 +145,13 @@ der Integration in das Hauptprojekt überprüft wird. Diese Arbeitsweise förder
 und der kontinuierlichen Verbesserung.
 
 
-**Neugierde und Weiterentwicklung**
+## **Neugierde und Weiterentwicklung**
 Ich bin ständig auf der Suche nach neuen Herausforderungen und Technologien, die mich weiterbringen. 
 Durch die Arbeit an kommerziellen Projekten erweitere ich kontinuierlich meinen Horizont und bleibe auf
 dem neuesten Stand der Technik. Diese Erfahrungen helfen mir, innovative Lösungen zu entwickeln, die nicht nur
 den Anforderungen meiner Kunden gerecht werden, sondern diese oft übertreffen.
 
-**Agiles Arbeiten & Extreme Programming**
+## **Agiles Arbeiten & Extreme Programming**
 
 In meiner täglichen Arbeit setze ich konsequent auf agile Methoden, insbesondere Scrum und Extreme Programming (XP). 
 Dabei schätze ich die Flexibilität und den klaren Fokus auf schnelle Iterationen sowie kontinuierliches Kundenfeedback. 
@@ -159,17 +160,16 @@ auch den Wissensaustausch innerhalb des Teams zu fördern. Durch regelmäßige C
 Test-driven Development (TDD) stelle ich sicher, dass neue Features nicht nur effizient, sondern auch sauber 
 und wartbar entwickelt werden.
 
-**Mein Technologie-Stack**
+## **Mein Technologie-Stack**
 
 Ich arbeite täglich mit einem modernen Full-Stack-Technologie-Stack, der sowohl Frontend- als auch 
 Backend-Technologien umfasst:
-
-	•	Frontend: Vue.js (mein Favorit), Svelte, React, TypeScript, HTML5, CSS3, SCSS
-	•	Backend: Java, Spring Boot, Vaadin, Node.js
-	•	Datenbanken: MySQL, PostgreSQL, MongoDB
-	•	Tools & CI/CD: Docker, Jenkins, Git, GitLab CI, Azure DevOps
-	•	Cloud & Infrastruktur: Microsoft Azure, AWS, Linux-Server-Administration
-	•	Zusätzlich: Test-driven Development (TDD), Clean Code, RESTful APIs, GraphQL
+- Frontend: Vue.js (mein Favorit), Svelte, React, TypeScript, HTML5, CSS3, SCSS
+- kend: Java, Spring Boot, Vaadin, Node.js
+- enbanken: MySQL, PostgreSQL, MongoDB
+- Tools & CI/CD: Docker, Jenkins, Git, GitLab CI, Azure DevOps
+- Cloud & Infrastruktur: Microsoft Azure, AWS, Linux-Server-Administration
+- Zusätzlich: Test-driven Development (TDD), Clean Code, RESTful APIs, GraphQL
 
 Durch diesen breitgefächerten Stack bin ich in der Lage, Projekte flexibel und effektiv umzusetzen – 
 von der Datenbankarchitektur bis hin zu modernen Frontend-Interfaces.

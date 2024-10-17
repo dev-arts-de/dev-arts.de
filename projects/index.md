@@ -6,12 +6,6 @@ hero:
   tagline: Hier finden Sie eine Liste an Projekten, an denen ich in meiner Freizeit tüfftle.
 
 features:
-  - icon: 
-        src: /images/projects/shopitech.png
-    title: "Shopitech"
-    details: "Web-Dienstleister für kleine bis mittelständische Unternehmen"
-    link: https://www.shopitech.de
-
   - icon:
       src: /images/projects/comeparty.png
     title: "Come-Party-With.me"
