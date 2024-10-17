@@ -122,27 +122,57 @@ Ich bin ein leidenschaftlicher Full-Stack Software Entwickler mit über **<span 
 Erfahrung in der Entwicklung von modernen Webanwendungen sowie Backendlösungen.
 <br><br><small>(Klicken Sie auf die Anzahl der Tage, um zwischen den verschiedenen Einheiten zu wechseln)</small>
 
-Derzeit arbeite ich im Baustoff-Sektor und sorge dafür, dass tausende Händler und Gesellschafter zuverlässig und sicher
-ihre Rechnungen erfassen können. Mit modernen Tools wie Vaadin schaffe ich damit eine Verbindung zweier Welten.
+Aktuell arbeite ich im Baustoff-Sektor, wo ich maßgeblich dazu beitrage, dass tausende Händler und 
+Gesellschafter ihre Geschäftsprozesse sicher und zuverlässig abwickeln können. Mit modernen Technologien 
+wie Vaadin schaffe ich Schnittstellen, die Backend- und Frontend-Systeme nahtlos miteinander verbinden und so 
+das Beste aus beiden Welten zusammenführen.
 
 **Backend-Expertise:**  
-Ich bringe umfangreiche Erfahrung im Backend-Development mit, einschließlich der Entwicklung von robusten, skalierbaren
-APIs und Datenbankarchitekturen. Ich lege großen Wert auf die Sicherheit meiner Anwendungen und setze bewährte
-Sicherheitspraktiken um, um potenzielle Bedrohungen zu minimieren und die Datenintegrität zu gewährleisten. Die
-Implementierung von Authentifizierungs- und Autorisierungsmechanismen sowie die Verschlüsselung sensibler Daten sind für
-mich selbstverständlich.
+Meine Stärke liegt in der Entwicklung skalierbarer, robuster Backend-Lösungen. Ich erstelle APIs 
+und Datenbankarchitekturen, die sowohl leistungsfähig als auch sicher sind. Datensicherheit hat für 
+mich oberste Priorität, weshalb ich stets bewährte Sicherheitspraktiken implementiere – von der Authentifizierung 
+und Autorisierung bis hin zur Verschlüsselung sensibler Daten. Durch meine Erfahrung sorge ich dafür, dass Anwendungen 
+nicht nur stabil laufen, sondern auch potenzielle Bedrohungen minimiert und die Integrität der Daten gewährleistet 
+wird.
+
 
 **Clean Code und Best Practices:**  
-Clean Code ist für mich nicht nur ein Prinzip, sondern eine Lebensweise. Ich halte mich strikt an die Prinzipien der
-Softwareentwicklung und folge den Richtlinien der Conventional Commits, um eine klare Historie meiner Änderungen zu
-gewährleisten. Zudem arbeite ich nach dem 4-Augen-Prinzip bei Merge Requests, um sicherzustellen, dass jeder Code von
-einem Kollegen überprüft wird, bevor er in das Hauptprojekt integriert wird. So schaffe ich eine Kultur des
-Qualitätsbewusstseins und der kontinuierlichen Verbesserung in meinen Projekten.
+Für mich ist Clean Code nicht nur ein Ansatz, sondern eine Verpflichtung. Ich folge strikt den Prinzipien der modernen 
+Softwareentwicklung und halte mich an Best Practices wie Conventional Commits, um eine klare und nachvollziehbare 
+Code-Historie sicherzustellen. Zudem setze ich das Vier-Augen-Prinzip bei Merge Requests um, sodass jeder Code vor 
+der Integration in das Hauptprojekt überprüft wird. Diese Arbeitsweise fördert eine Kultur des Qualitätsbewusstseins 
+und der kontinuierlichen Verbesserung.
 
-Zusätzlich probiere ich mich in mehreren kommerziellen Projekten, um meine Fähigkeiten weiter zu entwickeln und neue
-Technologien zu erforschen. Diese Erfahrungen erweitern meinen Horizont und helfen mir, innovative Lösungen zu
-entwickeln, die den Bedürfnissen meiner Kunden gerecht werden.
 
+**Neugierde und Weiterentwicklung**
+Ich bin ständig auf der Suche nach neuen Herausforderungen und Technologien, die mich weiterbringen. 
+Durch die Arbeit an kommerziellen Projekten erweitere ich kontinuierlich meinen Horizont und bleibe auf
+dem neuesten Stand der Technik. Diese Erfahrungen helfen mir, innovative Lösungen zu entwickeln, die nicht nur
+den Anforderungen meiner Kunden gerecht werden, sondern diese oft übertreffen.
+
+**Agiles Arbeiten & Extreme Programming**
+
+In meiner täglichen Arbeit setze ich konsequent auf agile Methoden, insbesondere Scrum und Extreme Programming (XP). 
+Dabei schätze ich die Flexibilität und den klaren Fokus auf schnelle Iterationen sowie kontinuierliches Kundenfeedback. 
+Besonders Pair Programming ist für mich ein unverzichtbares Werkzeug, um sowohl die Qualität des Codes zu erhöhen als 
+auch den Wissensaustausch innerhalb des Teams zu fördern. Durch regelmäßige Code Reviews und 
+Test-driven Development (TDD) stelle ich sicher, dass neue Features nicht nur effizient, sondern auch sauber 
+und wartbar entwickelt werden.
+
+**Mein Technologie-Stack**
+
+Ich arbeite täglich mit einem modernen Full-Stack-Technologie-Stack, der sowohl Frontend- als auch 
+Backend-Technologien umfasst:
+
+	•	Frontend: Vue.js (mein Favorit), Svelte, React, TypeScript, HTML5, CSS3, SCSS
+	•	Backend: Java, Spring Boot, Vaadin, Node.js
+	•	Datenbanken: MySQL, PostgreSQL, MongoDB
+	•	Tools & CI/CD: Docker, Jenkins, Git, GitLab CI, Azure DevOps
+	•	Cloud & Infrastruktur: Microsoft Azure, AWS, Linux-Server-Administration
+	•	Zusätzlich: Test-driven Development (TDD), Clean Code, RESTful APIs, GraphQL
+
+Durch diesen breitgefächerten Stack bin ich in der Lage, Projekte flexibel und effektiv umzusetzen – 
+von der Datenbankarchitektur bis hin zu modernen Frontend-Interfaces.
 ### Mein Internationales Profil:
 
 <VPTeamMembers size="small" :members="members" />
