@@ -2,7 +2,7 @@
 layout: home
 
 hero:
-  name: "Arthur Schimpf 🤞🏻"
+  name: "Arthur Schimpf ✌🏻"
   text: "Softwareentwickler"
   tagline: "Karlsruhe, Deutschland"
   image: "/images/avatar.jpeg"
