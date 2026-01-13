@@ -28,9 +28,9 @@ features:
     link: https://www.tinybill.de
 
   - icon: 🚛
-    title: "Hellmann Mitarbeiter"
-    details: "Ich arbeite bei der Firma Hellmann als Backend Entwickler"
-    link: https://www.hellmann.com
+    title: "Offen für Arbeit"
+    details: "Hart aber Ehrlich: Mein aktueller Arbeitgeber baut Stellen ab"
+    link: /#wer-bin-ich
 ---
 
 <script setup>
@@ -316,38 +316,12 @@ Es verbindet für mich praktischen Nutzen mit der Möglichkeit, neue Ideen in Ru
 
 👉 [Tinybill.de](https://tinybill.de)
 
-### Tinybill Changelog (Auszug)
-
-- `v0.1.0` – Erste Rechnung erfolgreich erstellt
-- `v0.1.1` – Texte aufgeräumt, aber garantiert noch nicht alle Tippfehler gefunden
-- `v0.1.3` – Kleine UX-Verbesserungen und weitere Spielereien im Hintergrund
-
----
-
-## Developer Logs (Konami-Mode)
-
-<div v-if="developerModeEnabled" style="border-radius: 0.75rem; border: 1px solid var(--vp-c-divider); padding: 1rem; margin-top: 1rem; background: rgba(0,0,0,0.3); font-family: monospace; font-size: 0.85rem;">
-  <strong>Developer Mode aktiviert 🎮</strong>
-  <br /><br />
-  <div v-for="(log, index) in devLogs" :key="index">
-    {{ log }}
-  </div>
-  <br />
-  <div style="font-size: 0.8rem; opacity: 0.9;">
-    Tipp: Geheimtür testen? → <a href="/hidden">/hidden</a>
-  </div>
-</div>
-
-<div v-else style="font-size: 0.8rem; opacity: 0.8; margin-top: 0.5rem;">
-  <em>(Es gibt hier einen versteckten Developer Mode. Klassische Tastatur-Kombinationen könnten helfen.)</em>
-</div>
-
 ---
 
 # Kontakt
 
 Ich freue mich darauf, von Ihnen zu hören! Zögern Sie nicht, mich über die folgenden Kanäle zu kontaktieren:
 
-- **E-Mail**: [Arthur.Schimpf@dev-arts.de](mailto:Arthur.Schimpf@dev-arts.de)
+- **E-Mail**: [Arthur.Schimpf@gmx.de](mailto:Arthur.Schimpf@gmx.de)
 - **LinkedIn**: [Mein LinkedIn-Profil](https://www.linkedin.com/in/dein-profil)
 - **GitHub**: [Mein GitHub-Profil](https://github.com/dein-nutzername)
