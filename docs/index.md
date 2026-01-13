@@ -196,8 +196,7 @@ Ich bin ein leidenschaftlicher Full-Stack Software Entwickler mit über **<span 
 --vp-home-hero-name-color); cursor: pointer;" @click="toggleUnit">{{ displayValue }} {{ currentUnit }}</span>**
 Erfahrung in der Entwicklung von modernen Webanwendungen sowie Backend-Lösungen. Dabei kombiniere ich technisches
 Know-how mit kreativen Ansätzen, um maßgeschneiderte und effiziente Lösungen zu schaffen.
-<br><br><small>(Klicken Sie auf die Anzahl der Tage, um zwischen den verschiedenen Einheiten zu wechseln. Bonus-Einheit inklusive. ☕)</small>
-
+<br>
 Ich bin bei Hellmann im Bereich Quotes/Offertenmanagement tätig, wo ich technisch die Migration eines alten AS400-Systems in eine moderne Infrastruktur vorantreibe.
 Dabei sorge ich dafür, dass komplexe Angebots- und Kalkulationsprozesse zuverlässig in neue, skalierbare Systeme überführt werden.
 
