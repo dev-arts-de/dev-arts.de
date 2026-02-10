@@ -4,7 +4,7 @@ layout: home
 hero:
   name: "Arthur Schimpf"
   text: "Softwareentwickler"
-  tagline: "Karlsruhe, Deutschland"
+  tagline: "Karlsruhe, Deutschland ✌🏻"
   image: "/images/avatar.png"
   actions:
     - theme: brand
