@@ -27,7 +27,7 @@ features:
 
   - icon: 🚛
     title: "Offen für Arbeit"
-    details: "Ehrlich gesagt: Mein aktueller Arbeitgeber baut Stellen ab."
+    details: "Aktuell bin ich auf der Suche nach einer neuen beruflichen Herausforderung."
     link: /#kontakt
 ---
 
@@ -41,6 +41,30 @@ const toggleLang = () => {
   lang.value = lang.value === 'de' ? 'en' : 'de';
 };
 const t = (de, en) => lang.value === 'de' ? de : en;
+
+// ─── Toggle: Kleingewerbe / Side projects in Career path ─────────
+const showSideProjectsInCareer = ref(false);
+const toggleSideProjectsInCareer = () => {
+  showSideProjectsInCareer.value = !showSideProjectsInCareer.value;
+};
+
+const sideProjectsToggleLabel = computed(() => t('Kleingewerbe Shopitech mit Anzeigen', 'Show Shopitech side projects'));
+const sideProjectsToggleState = computed(() => showSideProjectsInCareer.value ? t('AN', 'ON') : t('AUS', 'OFF'));
+
+// ─── Shopitech Projekte (safe, single-line mustache in HTML) ─────
+const shopitechIntro = computed(() =>
+  t(
+    'Shopitech ist mein Kleingewerbe. Dort setze ich ausgewählte Webprojekte um – von Unternehmensseiten bis hin zu Webapps wie TinyBill.',
+    'Shopitech is my small business. I build selected web projects there — from company websites to web apps like TinyBill.'
+  )
+);
+
+const shopitechCard = {
+  cw: computed(() => t('Handwerker-Service in Baden-Baden', 'Craftsman service in Baden-Baden')),
+  mango: computed(() => t('Restaurant-Webseite', 'Restaurant website')),
+  notruf: computed(() => t('Hausnotrufservice (Aufbau)', 'Emergency call service (early stage)')),
+  tinybill: computed(() => t('Webapp zur Rechnungsgenerierung', 'Invoice generation web app')),
+};
 
 // ─── Erfahrungszähler / Experience Counter ───────────────────────
 const startDate = new Date('2019-09-02');
@@ -297,9 +321,45 @@ onBeforeUnmount(() => {
 
 <h2>{{ t('Werdegang', 'Career path') }}</h2>
 
-<p style="line-height: 1.8; margin-bottom: 1.5rem; opacity: 0.85;">
+<p style="line-height: 1.8; margin-bottom: 1rem; opacity: 0.85;">
   {{ t('Drei Stationen, jede mit einer eigenen Lektion.', 'Three stations, each with its own lesson.') }}
 </p>
+
+<!-- Toggle Button (inside Career path section) -->
+<div style="display: flex; align-items: center; gap: 0.75rem; margin: 0 0 1.5rem 0; flex-wrap: wrap;">
+  <button
+    @click="toggleSideProjectsInCareer"
+    :aria-pressed="showSideProjectsInCareer"
+    style="
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.55rem 0.9rem;
+      border-radius: 0.65rem;
+      border: 1px solid var(--vp-c-divider);
+      background: var(--vp-c-bg-soft);
+      color: var(--vp-c-text-1);
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.18s ease;
+    "
+  >
+    <span style="opacity: 0.9;">{{ sideProjectsToggleLabel }}</span>
+    <span
+      style="
+        padding: 0.15rem 0.5rem;
+        border-radius: 999px;
+        border: 1px solid var(--vp-c-divider);
+        background: var(--vp-c-bg);
+        font-size: 0.8rem;
+        opacity: 0.9;
+      "
+    >
+      {{ sideProjectsToggleState }}
+    </span>
+  </button>
+</div>
 
 <!-- Hellmann -->
 <div style="position: relative; padding: 1.5rem 1.5rem 1.5rem 2.25rem; border-left: 3px solid var(--vp-c-brand); margin-bottom: 2rem;">
@@ -314,8 +374,53 @@ onBeforeUnmount(() => {
     ) }}
   </p>
   <p style="line-height: 1.8; margin: 0; font-size: 0.9rem; opacity: 0.8;">
-    {{ t('Neues für mich: Erstkontakt mit Angular im Frontend. Nach Jahren mit Vue eine interessante Umstellung.', 'New for me: first hands-on experience with Angular on the frontend. After years of Vue, an interesting shift.') }}
+    {{ t('Neues für mich: Erstkontakt mit Angular im Frontend. Nach Jahren mit Vue eine interessante Umstellung.', 'New for me: first hands-on experience with Angular on the frontend. After years with Vue, an interesting shift.') }}
   </p>
+</div>
+
+<!-- Side projects inside Career path (toggle controlled) -->
+<div v-if="showSideProjectsInCareer">
+  <!-- Dein-Notruf -->
+  <div style="position: relative; padding: 1.5rem 1.5rem 1.5rem 2.25rem; border-left: 3px solid var(--vp-c-text-3); margin-bottom: 2rem;">
+    <div style="position: absolute; left: -0.55rem; top: 1.5rem; width: 0.85rem; height: 0.85rem; background: var(--vp-c-text-3); border-radius: 50%;"></div>
+    <p style="font-size: 0.8rem; opacity: 0.5; margin: 0;">2026 – {{ t('aktuell', 'present') }}</p>
+    <h3 style="margin: 0.25rem 0 0.25rem 0;">Dein-Notruf</h3>
+    <p style="font-weight: 600; opacity: 0.7; margin: 0 0 0.75rem 0;">{{ t('Hausnotruf-Service (Aufbauphase)', 'Personal emergency call service (early stage)') }}</p>
+    <p style="line-height: 1.8; margin: 0; font-size: 0.95rem; opacity: 0.9;">
+      {{ t(
+        'Ein Service, den ich zusammen mit einer sehr engen Freundin aufbauen möchte. Aktuell sind wir in der Aufbauphase – ich informiere mich, plane Prozesse und kläre die Grundlagen.',
+        'A service I want to build with a very close friend. We are currently in the setup phase — researching, planning processes, and establishing the fundamentals.'
+      ) }}
+    </p>
+  </div>
+
+  <!-- Tinybill -->
+  <div style="position: relative; padding: 1.5rem 1.5rem 1.5rem 2.25rem; border-left: 3px solid var(--vp-c-text-3); margin-bottom: 2rem;">
+    <div style="position: absolute; left: -0.55rem; top: 1.5rem; width: 0.85rem; height: 0.85rem; background: var(--vp-c-text-3); border-radius: 50%;"></div>
+    <p style="font-size: 0.8rem; opacity: 0.5; margin: 0;">2025 – {{ t('aktuell', 'present') }}</p>
+    <h3 style="margin: 0.25rem 0 0.25rem 0;">TinyBill</h3>
+    <p style="font-weight: 600; opacity: 0.7; margin: 0 0 0.75rem 0;">{{ t('Rechnungsgenerator Software', 'Invoice generator software') }}</p>
+    <p style="line-height: 1.8; margin: 0; font-size: 0.95rem; opacity: 0.9;">
+      {{ t(
+        'TinyBill ist eine Rechnungsgenerator-Software. Aktuell arbeite ich an einer API-first, headless Version 2 – mit dem Ziel, das Backend sauber als API bereitzustellen und Frontends flexibel anzubinden.',
+        'TinyBill is an invoice generator. I am currently building an API-first, headless version 2 to provide a clean backend API and connect flexible frontends.'
+      ) }}
+    </p>
+  </div>
+
+  <!-- Shopitech -->
+  <div style="position: relative; padding: 1.5rem 1.5rem 1.5rem 2.25rem; border-left: 3px solid var(--vp-c-text-3); margin-bottom: 2rem;">
+    <div style="position: absolute; left: -0.55rem; top: 1.5rem; width: 0.85rem; height: 0.85rem; background: var(--vp-c-text-3); border-radius: 50%;"></div>
+    <p style="font-size: 0.8rem; opacity: 0.5; margin: 0;">2023 – {{ t('aktuell', 'present') }}</p>
+    <h3 style="margin: 0.25rem 0 0.25rem 0;">Shopitech</h3>
+    <p style="font-weight: 600; opacity: 0.7; margin: 0 0 0.75rem 0;">{{ t('Kleingewerbe (Weblösungen)', 'Small business (web solutions)') }}</p>
+    <p style="line-height: 1.8; margin: 0; font-size: 0.95rem; opacity: 0.9;">
+      {{ t(
+        'Mein Kleingewerbe, mit dem ich individuelle Weblösungen für eine handvoll Kunden umsetze – u.a. für meine Schwiegereltern und zuletzt eine Restaurant-Webseite: www.mango-thai.de.',
+        'My small business where I build custom web solutions for a handful of clients — including my in-laws and recently a restaurant website: www.mango-thai.de.'
+      ) }}
+    </p>
+  </div>
 </div>
 
 <!-- Infokom -->
@@ -569,6 +674,43 @@ onBeforeUnmount(() => {
   </div>
 </div>
 
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- SHOPITECH PROJEKTE                                             -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+
+<h2 id="shopitech-projekte">{{ t('Shopitech Projekte', 'Shopitech projects') }}</h2>
+
+<p style="line-height: 1.8; margin-bottom: 1.25rem; opacity: 0.85;">
+  {{ shopitechIntro }}
+</p>
+
+<div class="shopitech-grid">
+
+  <div class="shopitech-card">
+    <a class="shopitech-link" href="https://cw-baden.de" target="_blank" rel="noopener"></a>
+    <h3 style="margin: 0 0 0.25rem 0;">cw-baden.de</h3>
+    <p style="margin: 0; opacity: 0.75; line-height: 1.7;">{{ shopitechCard.cw }}</p>
+  </div>
+
+  <div class="shopitech-card">
+    <a class="shopitech-link" href="https://www.mango-thai.de" target="_blank" rel="noopener"></a>
+    <h3 style="margin: 0 0 0.25rem 0;">mango-thai.de</h3>
+    <p style="margin: 0; opacity: 0.75; line-height: 1.7;">{{ shopitechCard.mango }}</p>
+  </div>
+
+  <div class="shopitech-card">
+    <a class="shopitech-link" href="https://www.dein-notruf.de" target="_blank" rel="noopener"></a>
+    <h3 style="margin: 0 0 0.25rem 0;">dein-notruf.de</h3>
+    <p style="margin: 0; opacity: 0.75; line-height: 1.7;">{{ shopitechCard.notruf }}</p>
+  </div>
+
+  <div class="shopitech-card">
+    <a class="shopitech-link" href="https://tinybill.de" target="_blank" rel="noopener"></a>
+    <h3 style="margin: 0 0 0.25rem 0;">tinybill.de</h3>
+    <p style="margin: 0; opacity: 0.75; line-height: 1.7;">{{ shopitechCard.tinybill }}</p>
+  </div>
+
+</div>
 
 <!-- ═══════════════════════════════════════════════════════════════ -->
 <!-- PERSÖNLICHES                                                   -->
@@ -597,7 +739,6 @@ onBeforeUnmount(() => {
   </div>
 </div>
 
-
 <!-- ═══════════════════════════════════════════════════════════════ -->
 <!-- WORKSPACE                                                      -->
 <!-- ═══════════════════════════════════════════════════════════════ -->
@@ -610,7 +751,6 @@ onBeforeUnmount(() => {
   {{ t('Hier entstehen Tinybill, Shopitech-Projekte und manchmal auch ein nächtlicher Refactor, der niemandem etwas bringt, aber sich gut anfühlt.', 'This is where Tinybill, Shopitech projects, and the occasional midnight refactor that helps nobody but feels satisfying are born.') }}
 </p>
 
-
 <!-- ═══════════════════════════════════════════════════════════════ -->
 <!-- GITHUB                                                         -->
 <!-- ═══════════════════════════════════════════════════════════════ -->
@@ -618,7 +758,6 @@ onBeforeUnmount(() => {
 <h3>{{ t('Meine GitHub Profile', 'My GitHub profiles') }}</h3>
 
 <VPTeamMembers size="small" :members="members" />
-
 
 <!-- ═══════════════════════════════════════════════════════════════ -->
 <!-- KONTAKT                                                        -->
@@ -642,3 +781,37 @@ onBeforeUnmount(() => {
   <p v-for="(log, i) in devLogs[lang]" :key="i" style="margin: 0.15rem 0; opacity: 0.85;">{{ log }}</p>
   <p style="margin-top: 0.75rem; opacity: 0.5;">{{ t('↑↑↓↓←→←→BA – Du kennst dich aus. Respekt.', '↑↑↓↓←→←→BA – You know your stuff. Respect.') }}</p>
 </div>
+
+
+<style>
+.shopitech-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:1rem;
+  margin-bottom:2rem;
+}
+
+.shopitech-card{
+  position:relative;
+  padding:1.25rem;
+  border-radius:0.75rem;
+  border:1px solid var(--vp-c-divider);
+  background:var(--vp-c-bg-soft);
+  transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease;
+}
+
+.shopitech-card:hover{
+  cursor:pointer;
+  transform:translateY(-3px);
+  border-color:color-mix(in srgb, var(--vp-c-brand) 40%, var(--vp-c-divider));
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+  background:color-mix(in srgb, var(--vp-c-bg-soft) 85%, var(--vp-c-brand-soft));
+}
+
+.shopitech-link{
+  position:absolute;
+  inset:0;
+  border-radius:0.75rem;
+  text-decoration:none;
+}
+</style>
