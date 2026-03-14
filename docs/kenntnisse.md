@@ -81,3 +81,13 @@ IntelliJ IDEA ist meine primäre Entwicklungsumgebung – seit Beginn meiner Kar
 Für API-Design und Dokumentation setze ich OpenAPI ein. Schnittstellen beschreiben, bevor man sie implementiert, hat einen klaren Vorteil: man durchdenkt den Vertrag explizit und nicht erst wenn der Code schon steht. Das habe ich bei Hellmann für die neuen Services praktiziert.
 
 Git-Plattformen: GitLab war mein hauptsächliches Werkzeug im beruflichen Kontext. GitHub nutze ich für eigene Projekte intensiv. Bitbucket kenne ich ebenfalls aus der Praxis. Für Projektorganisation habe ich mit Jira und Miro gearbeitet – Jira für Ticket-Verwaltung und Sprint-Planung, Miro für Architekturdiagramme und technische Workshops.
+
+---
+
+## Betriebssystem
+
+macOS ist mein Betriebssystem – und das seit dem ersten Tag, an dem ich mir selbst etwas leisten konnte. Mit meinem ersten eigenen Geld habe ich mir einen iMac gekauft. Seitdem habe ich nichts anderes mehr benutzt.
+
+Das ist keine ideologische Entscheidung. Es ist eine praktische. macOS und Unix-basierte Systeme sind für Softwareentwicklung gebaut – die Terminal-Umgebung, die Paketverwaltung, das Verhalten des Dateisystems entsprechen dem was auf Servern läuft. Der Übergang zwischen lokalem Rechner und Linux-Server ist fließend, nicht ein ständiges Übersetzen von Systemkonzepten.
+
+Gleichzeitig habe ich Linux nicht nur als entfernte Serverumgebung kennengelernt. Der Raspberry Pi im Heimnetzwerk auf dem DailyDev und daily-pi-poetry laufen, ist ein vollwertiger Linux-Rechner den ich administriere: Prozesse, Cron-Jobs, Logs, Netzwerkkonfiguration. Das ist kein Spielzeug-Setup sondern eine laufende Produktivumgebung unter der Schreibtischplatte.

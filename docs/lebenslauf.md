@@ -3,35 +3,6 @@ sidebar: false
 aside: false
 ---
 
-<script setup>
-import { ref, onMounted } from 'vue';
-
-const email = ref('');
-const hasAccess = ref(false);
-const error = ref('');
-
-const isValidEmail = (e) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e);
-
-const requestAccess = () => {
-  error.value = '';
-  if (!email.value.trim()) {
-    error.value = 'Bitte eine E-Mail-Adresse eingeben.';
-    return;
-  }
-  if (!isValidEmail(email.value.trim())) {
-    error.value = 'Bitte eine gültige E-Mail-Adresse eingeben.';
-    return;
-  }
-  localStorage.setItem('cv_access_email', email.value.trim());
-  hasAccess.value = true;
-};
-
-onMounted(() => {
-  if (localStorage.getItem('cv_access_email')) {
-    hasAccess.value = true;
-  }
-});
-</script>
 
 # Lebenslauf
 
@@ -149,28 +120,7 @@ Eigene Softwareprojekte (TinyBill, Bewerber-Schmiede, DailyDev) unter [dev-arts.
 
 ## Lebenslauf als PDF
 
-<div v-if="!hasAccess" class="cv-gate">
-  <p style="margin: 0 0 1.25rem 0; font-size: 0.95rem; line-height: 1.7; color: var(--vp-c-text-2);">
-    Bitte hinterlassen Sie Ihre E-Mail-Adresse, um den Lebenslauf als PDF herunterzuladen.
-    Ich melde mich bei Interesse gerne zurück.
-  </p>
-  <label for="cv-email">E-Mail-Adresse</label>
-  <input
-    id="cv-email"
-    v-model="email"
-    type="email"
-    placeholder="vorname.nachname@unternehmen.de"
-    @keyup.enter="requestAccess"
-  />
-  <div v-if="error" class="error-msg">{{ error }}</div>
-  <button @click="requestAccess">Lebenslauf herunterladen</button>
-</div>
-
-<div v-else class="cv-download-area">
-  <p style="margin: 0 0 0.75rem 0; font-size: 0.95rem; color: var(--vp-c-text-2);">
-    Danke. Der Lebenslauf steht zum Download bereit.
-  </p>
-  <!-- TODO: /downloads/cv-arthur-schimpf.pdf durch echte Datei ersetzen -->
+<div class="cv-download-area">
   <a href="/downloads/cv-arthur-schimpf.pdf" download class="cv-download-link">
     Lebenslauf herunterladen (PDF)
   </a>

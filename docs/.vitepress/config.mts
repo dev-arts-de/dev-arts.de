@@ -6,10 +6,19 @@ export default defineConfig({
   description: 'Softwareentwickler aus Karlsruhe – Java, Spring Boot, Kotlin.',
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
-    ['meta', { name: 'theme-color', content: '#1a3a5c' }],
+    ['meta', { name: 'theme-color', content: '#1e4168' }],
     ['meta', { name: 'author', content: 'Arthur Schimpf' }],
+    // Open Graph
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:url', content: 'https://dev-arts.de' }],
     ['meta', { property: 'og:title', content: 'Arthur Schimpf – Softwareentwickler' }],
-    ['meta', { property: 'og:description', content: 'Softwareentwickler aus Karlsruhe. Java, Spring Boot, Kotlin.' }],
+    ['meta', { property: 'og:description', content: 'Softwareentwickler aus Karlsruhe. Java, Spring Boot, Kotlin. Seit 2019.' }],
+    ['meta', { property: 'og:image', content: 'https://dev-arts.de/images/me-portfolio.jpeg' }],
+    // Twitter Card
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+    ['meta', { name: 'twitter:title', content: 'Arthur Schimpf – Softwareentwickler' }],
+    ['meta', { name: 'twitter:description', content: 'Softwareentwickler aus Karlsruhe. Java, Spring Boot, Kotlin.' }],
+    ['meta', { name: 'twitter:image', content: 'https://dev-arts.de/images/me-portfolio.jpeg' }],
     ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0' }],
   ],
   themeConfig: {
@@ -20,6 +29,10 @@ export default defineConfig({
       { text: 'Kenntnisse', link: '/kenntnisse' },
       { text: 'Projekte', link: '/projekte/' },
       { text: 'Lebenslauf', link: '/lebenslauf' },
+    ],
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/dev-arts-de' },
+      { icon: 'linkedin', link: 'https://www.linkedin.com/in/arthur-schimpf-832b64240/' },
     ],
     sidebar: {
       '/projekte/': [
@@ -42,6 +55,7 @@ export default defineConfig({
           text: 'Experimente',
           items: [
             { text: 'Shopitech', link: '/projekte/shopitech' },
+            { text: 'dein-notruf.de', link: '/projekte/dein-notruf' },
             { text: 'daily-pi-poetry', link: '/projekte/daily-pi-poetry' },
             { text: 'Merkelfy', link: '/projekte/merkelfy' },
             { text: 'will-you-be-my-valentine', link: '/projekte/will-you-be-my-valentine' },
@@ -65,6 +79,7 @@ export default defineConfig({
       provider: 'local',
     },
     footer: {
+      message: '<a href="https://github.com/iqwrwq" target="_blank">github/iqwrwq</a> · <a href="https://github.com/dev-arts-de" target="_blank">github/dev-arts-de</a> · <a href="/impressum">Impressum</a>',
       copyright: 'Arthur Schimpf · Karlsruhe'
     },
     editLink: undefined,
