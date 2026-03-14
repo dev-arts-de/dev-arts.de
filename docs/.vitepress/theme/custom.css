@@ -110,8 +110,10 @@ body {
 /* ─── Navigation ─────────────────────────────────────────────────── */
 .VPNav {
   border-bottom: 1px solid var(--vp-c-divider) !important;
+}
+
+.VPNavBar {
   background: var(--vp-c-bg) !important;
-  backdrop-filter: blur(16px);
 }
 
 .VPNavBar {
