@@ -1,0 +1,34 @@
+diese projekte müssen noch eingearbeitet werden
+
+java-developedia eine wissenssammlung die auf aweseme-java basiert. Hier habe ich alle themen rund um java als programmiersprache in einer dokumentatiuonartigen web geschichte abgebildet. Ist mittlerweile nichtmehr online.
+war zur ausbildung und hat spaß gemacht. denke so 2020
+
+php-developer-roadmap das selbe denke so 2020
+
+meme_react_mememory ein react memory mit memes aus der arbeit bei abas denek so 2019
+
+foxfolio. ein automatisierter portolio generator wie der der hier grade gesehen wird. man gibt quasi seine daten ein und das tool generiert und hostet automatisiert ein portfolio
+entweder über eine .foxfolio domain oder eine custom domain. die app war eine vaadin anwendung und eigentlich in 2 teile mit spriong java backend und vaadin als fe gedacht.
+Entwicklungen stehen jetzt wieder weil andere sachen wichtiger sind, aber die idee und die domain sind mir sicher.
+Es war gedacht anstelle eines step stones oder linked in mit irgendwelchen doofen blocktexten in cvs und anschreiben verpackt sich direkt mit einer webseite zu bewerben und recruitern einen besseren blick zu geben.
+start war so ca mit shopitech zusammen 2023-24
+
+will-you-be-my-valentine-selina.de Eine Webseite mit der ich selina gefragt habe ob sie das diesjäh rige 2026 valentinstag date sein möcthe
+war 2026
+
+palmtr.ee eine seite die gedacht war als linktr.ee ersatz. Aktuell nichtmehr in entwicklung, war auch mehr architektur als programmierung.
+war ca. 2024 aber nur architektur und design
+
+dein-notruf.de eine idee für später oder nie. Zusammen mit einer Freundin wollten wir einen Notrufdienstleister ins leben rufen. Die Seite steht schon
+www.Dein-Notruf.de weil ich gerne immer schnell bin und direkt alles implementiere. Das Konzept steht auch schon aber Produkte und
+Kunden sind noch keine da. Aktuell steht das Projekt und ist nur noch eine Idee und Webseite. Aber wir haben kontakte zu einem großen mobilen Pflegedienstleister in Karlsruhe
+und für spätere Zeitpunkte würde ich das gerne wieder halbzeitlich auf mich nehmen. Interessant hier war es wie einfach es war social Media aufzubauen
+die Alters und gesundheitspflege ist so supportive das habe ich selten in einer domäne gesehen.
+ca ende 2025.
+
+awave eine in der ausbildung gestartettes tool, für Dateiverwaltung. Quasi konnte man dateien finden vberwalten erstellen gruppieren usw. Das besondere:
+das war mit PHP gelöst und hatte eine weboberfläche und hatte ein eigenes DI design. War viel rumgespiele und nie wirklich funktionell
+aber es hat mich tiefer in die Architektur gebracht von anwendungen und extrem spaß gemacht. war so 2020 oder 21
+
+beercraftshop ein php projekt in meiner ausbildung und für die schule. War ein Biershop mit mehreren seiten. war so 2020
+

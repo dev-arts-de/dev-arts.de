@@ -1,0 +1,830 @@
+/* ===================================================================
+   CUSTOM THEME – Arthur Schimpf Portfolio
+   Palette: Warm Off-White / Deep Navy / Charcoal
+   =================================================================== */
+
+/* ─── Google Font: Inter ─────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;450;500;600;700&display=swap');
+
+/* ─── CSS Custom Properties (Light) ─────────────────────────────── */
+:root {
+  /* Brand */
+  --vp-c-brand-1: #1a3a5c;
+  --vp-c-brand-2: #1f4872;
+  --vp-c-brand-3: #245888;
+  --vp-c-brand-soft: #e8f0f8;
+
+  /* Backgrounds */
+  --vp-c-bg:      #f8f7f4;
+  --vp-c-bg-soft: #f1f0ec;
+  --vp-c-bg-mute: #e9e7e2;
+  --vp-c-bg-elv:  #fdfcf9;
+  --vp-c-bg-alt:  #f1f0ec;
+
+  /* Borders & Dividers */
+  --vp-c-divider: rgba(26, 26, 28, 0.09);
+  --vp-c-gutter:  #e9e7e2;
+
+  /* Text */
+  --vp-c-text-1: #1a1a1c;
+  --vp-c-text-2: #3c3c3f;
+  --vp-c-text-3: #8c8c90;
+
+  /* Hero Name Color */
+  --vp-home-hero-name-color: #1a3a5c;
+  --vp-home-hero-name-background: none;
+
+  /* Neutral */
+  --vp-c-neutral:         #1a3a5c;
+  --vp-c-neutral-inverse: #f8f7f4;
+
+  /* Button */
+  --vp-button-brand-border:  transparent;
+  --vp-button-brand-text:    #fdfcf9;
+  --vp-button-brand-bg:      var(--vp-c-brand-1);
+  --vp-button-brand-hover-border: transparent;
+  --vp-button-brand-hover-text:   #fdfcf9;
+  --vp-button-brand-hover-bg:     var(--vp-c-brand-2);
+  --vp-button-brand-active-border: transparent;
+  --vp-button-brand-active-text:   #fdfcf9;
+  --vp-button-brand-active-bg:     var(--vp-c-brand-3);
+
+  --vp-button-alt-border:  var(--vp-c-divider);
+  --vp-button-alt-text:    var(--vp-c-text-1);
+  --vp-button-alt-bg:      var(--vp-c-bg-soft);
+  --vp-button-alt-hover-border: var(--vp-c-brand-1);
+  --vp-button-alt-hover-text:   var(--vp-c-brand-1);
+  --vp-button-alt-hover-bg:     var(--vp-c-bg-soft);
+
+  /* Layout */
+  --vp-layout-max-width: 1200px;
+
+  /* Nav */
+  --vp-nav-height: 60px;
+
+  /* Code */
+  --vp-code-font-size: 0.875em;
+  --vp-code-color: #1a3a5c;
+  --vp-code-bg: #edf2f8;
+  --vp-code-block-bg: #f0eeea;
+}
+
+/* ─── Dark Mode ──────────────────────────────────────────────────── */
+.dark {
+  --vp-c-brand-1: #5b9bd5;
+  --vp-c-brand-2: #4d8ec7;
+  --vp-c-brand-3: #6aaade;
+  --vp-c-brand-soft: #1b2f44;
+
+  --vp-c-bg:      #111317;
+  --vp-c-bg-soft: #181c22;
+  --vp-c-bg-mute: #1e2229;
+  --vp-c-bg-elv:  #1a1e25;
+  --vp-c-bg-alt:  #181c22;
+
+  --vp-c-divider: rgba(255, 255, 255, 0.07);
+  --vp-c-gutter:  #1e2229;
+
+  --vp-c-text-1: #e2e8f0;
+  --vp-c-text-2: #94a3b8;
+  --vp-c-text-3: #64748b;
+
+  --vp-home-hero-name-color: #5b9bd5;
+
+  --vp-code-color: #7fb8e8;
+  --vp-code-bg: #1e2f3f;
+  --vp-code-block-bg: #181c22;
+}
+
+/* ─── Base Typography ────────────────────────────────────────────── */
+* {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* ─── Navigation ─────────────────────────────────────────────────── */
+.VPNav {
+  border-bottom: 1px solid var(--vp-c-divider) !important;
+  background: var(--vp-c-bg) !important;
+  backdrop-filter: blur(16px);
+}
+
+.VPNavBar {
+  border-bottom: none !important;
+}
+
+.VPNavBarTitle .title {
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: -0.01em;
+  color: var(--vp-c-text-1);
+}
+
+.VPNavBarMenuLink,
+.VPNavBarMenuLink.active {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--vp-c-text-2);
+  transition: color 0.2s ease;
+}
+
+.VPNavBarMenuLink:hover {
+  color: var(--vp-c-brand-1);
+}
+
+.VPNavBarMenuLink.active {
+  color: var(--vp-c-brand-1);
+}
+
+/* ─── Hero Section ───────────────────────────────────────────────── */
+.VPHero .name {
+  font-size: clamp(2.2rem, 5vw, 3.2rem) !important;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.VPHero .text {
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem) !important;
+  font-weight: 400;
+  color: var(--vp-c-text-2) !important;
+  letter-spacing: -0.01em;
+}
+
+.VPHero .tagline {
+  font-size: clamp(0.95rem, 1.8vw, 1.05rem) !important;
+  color: var(--vp-c-text-3) !important;
+  line-height: 1.7;
+  max-width: 440px;
+}
+
+.VPHero {
+  padding: 120px 24px 72px !important;
+}
+
+.VPHero .image-container {
+  width: 240px !important;
+  height: 240px !important;
+  max-width: 240px !important;
+  max-height: 240px !important;
+  border-radius: 50% !important;
+  overflow: hidden !important;
+  border: 3px solid var(--vp-c-divider);
+  transition: border-color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.VPHero .image-container:hover {
+  border-color: var(--vp-c-brand-1);
+}
+
+.VPHero .image-bg {
+  display: none !important;
+}
+
+.VPHero img.VPImage {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: 50% 15% !important;
+  border-radius: 0 !important;
+  border: none !important;
+}
+
+/* Constrain hero width to feel proportional to content */
+.VPHero .container {
+  max-width: 880px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Hero actions */
+.VPHero .actions {
+  margin-top: 2rem !important;
+}
+
+.VPHero .action .VPButton {
+  border-radius: 6px !important;
+  font-size: 0.9rem !important;
+  font-weight: 500 !important;
+  padding: 0 20px !important;
+  height: 40px !important;
+  transition: all 0.2s ease;
+}
+
+.VPHero .action .VPButton.medium {
+  font-size: 0.9rem !important;
+}
+
+.VPHero .action .VPButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(26, 58, 92, 0.18);
+}
+
+.dark .VPHero .action .VPButton:hover {
+  box-shadow: 0 4px 14px rgba(91, 155, 213, 0.2);
+}
+
+/* ─── Home Feature Cards ─────────────────────────────────────────── */
+.VPFeature {
+  border: 1px solid var(--vp-c-divider) !important;
+  background: var(--vp-c-bg-soft) !important;
+  border-radius: 8px !important;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.VPFeature:hover {
+  border-color: rgba(26, 58, 92, 0.2) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06) !important;
+}
+
+.dark .VPFeature:hover {
+  border-color: rgba(91, 155, 213, 0.2) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2) !important;
+}
+
+.VPFeature .title {
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.015em !important;
+  color: var(--vp-c-text-1) !important;
+}
+
+.VPFeature .details {
+  font-size: 0.875rem !important;
+  line-height: 1.65 !important;
+  color: var(--vp-c-text-2) !important;
+}
+
+/* ─── Doc Layout ─────────────────────────────────────────────────── */
+.vp-doc {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  letter-spacing: -0.005em;
+}
+
+.vp-doc p {
+  margin-bottom: 1.5em;
+  color: var(--vp-c-text-1);
+}
+
+.vp-doc h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.vp-doc h2 {
+  font-size: 1.4rem;
+  font-weight: 650;
+  letter-spacing: -0.025em;
+  border-top: none !important;
+  border-bottom: none !important;
+  padding-top: 0 !important;
+  margin-top: 3rem;
+  margin-bottom: 0.75rem;
+}
+
+.vp-doc h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.vp-doc hr {
+  border: none;
+  border-top: 1px solid var(--vp-c-divider);
+  margin: 2.5rem 0;
+}
+
+.vp-doc a {
+  color: var(--vp-c-brand-1);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.15s ease;
+}
+
+.vp-doc a:hover {
+  color: var(--vp-c-brand-2);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ─── Inline Code ────────────────────────────────────────────────── */
+.vp-doc :not(pre) > code {
+  background: var(--vp-code-bg) !important;
+  color: var(--vp-code-color) !important;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 4px;
+  padding: 0.15em 0.4em;
+  font-size: 0.875em;
+}
+
+/* ─── Code Blocks ────────────────────────────────────────────────── */
+.vp-doc div[class*='language-'] {
+  border-radius: 8px !important;
+  border: 1px solid var(--vp-c-divider);
+}
+
+/* ─── Blockquote ─────────────────────────────────────────────────── */
+.vp-doc blockquote {
+  border-left: 3px solid var(--vp-c-brand-1);
+  background: var(--vp-c-bg-soft);
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  border-radius: 0 6px 6px 0;
+  color: var(--vp-c-text-2);
+  font-style: normal;
+}
+
+.vp-doc blockquote p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* ─── Sidebar ────────────────────────────────────────────────────── */
+.VPSidebar {
+  border-right: 1px solid var(--vp-c-divider) !important;
+  background: var(--vp-c-bg) !important;
+  padding-top: 24px !important;
+}
+
+.VPSidebarItem .text {
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
+  color: var(--vp-c-text-2) !important;
+  transition: color 0.15s ease;
+}
+
+.VPSidebarItem.is-active > .item .text {
+  color: var(--vp-c-brand-1) !important;
+  font-weight: 600 !important;
+}
+
+.VPSidebarItem .VPLink:hover .text {
+  color: var(--vp-c-brand-1) !important;
+}
+
+.VPSidebarItem.level-0 > .item .text {
+  font-size: 0.8rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--vp-c-text-3) !important;
+}
+
+/* ─── Scroll Reveal ──────────────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── Home Page Custom Content ───────────────────────────────────── */
+.home-section {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.home-section p {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--vp-c-text-1);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.005em;
+}
+
+.home-section h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--vp-c-text-3);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  margin: 3rem 0 0.75rem 0;
+}
+
+.home-divider {
+  border: none;
+  border-top: 1px solid var(--vp-c-divider);
+  margin: 2.5rem 0;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ─── Pull Quotes ────────────────────────────────────────────────── */
+.c-pullquote {
+  font-size: 1.2rem !important;
+  line-height: 1.65 !important;
+  font-weight: 500;
+  color: var(--vp-c-brand-1) !important;
+  letter-spacing: -0.02em;
+  border-left: 2px solid var(--vp-c-brand-1);
+  padding: 0.1rem 0 0.1rem 1.25rem !important;
+  margin: 1.75rem 0 !important;
+}
+
+.dark .c-pullquote {
+  color: var(--vp-c-brand-1) !important;
+  border-left-color: var(--vp-c-brand-1);
+}
+
+/* ─── Section Label (small eyebrow above h2) ─────────────────────── */
+.home-section h2 {
+  position: relative;
+}
+
+.home-section h2::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--vp-c-brand-1);
+  margin-bottom: 0.6rem;
+  opacity: 0.5;
+}
+
+/* ─── Inline Images ─────────────────────────────────────────────── */
+.c-img {
+  width: 70%;
+  border-radius: 8px;
+  border: 1px solid var(--vp-c-divider);
+  margin: 1.75rem auto;
+  display: block;
+  object-fit: cover;
+}
+
+.c-img-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin: 1.75rem 0;
+}
+
+.c-img-grid img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 8px;
+  border: 1px solid var(--vp-c-divider);
+  display: block;
+}
+
+@media (max-width: 480px) {
+  .c-img-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ─── Project Screenshot ─────────────────────────────────────────── */
+.c-screenshot {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--vp-c-divider);
+  margin: 1.75rem 0;
+  display: block;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.dark .c-screenshot {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ─── Project Cards ──────────────────────────────────────────────── */
+.project-card {
+  display: block;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--vp-c-divider);
+  background: var(--vp-c-bg-soft);
+  text-decoration: none !important;
+  color: var(--vp-c-text-1) !important;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  margin-bottom: 1rem;
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(26, 58, 92, 0.25);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  text-decoration: none !important;
+}
+
+.dark .project-card:hover {
+  border-color: rgba(91, 155, 213, 0.25);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-card .card-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--vp-c-text-1);
+  margin-bottom: 0.35rem;
+}
+
+.project-card .card-meta {
+  font-size: 0.8rem;
+  color: var(--vp-c-text-3);
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+}
+
+.project-card .card-desc {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--vp-c-text-2);
+}
+
+/* ─── CV Station Header with Logo ───────────────────────────────── */
+.cv-station-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin: 2.5rem 0 0.5rem 0;
+}
+
+.cv-station-info h3 {
+  margin: 0 0 0.2rem 0 !important;
+  padding: 0 !important;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.cv-station-meta {
+  font-size: 0.875rem;
+  color: var(--vp-c-text-3);
+  margin: 0 !important;
+}
+
+.cv-logo {
+  height: 30px;
+  width: auto;
+  max-width: 120px;
+  object-fit: contain;
+  flex-shrink: 0;
+  opacity: 0.9;
+}
+
+.dark .cv-logo {
+  background: #fff;
+  border-radius: 5px;
+  padding: 4px 10px;
+  height: 38px;
+}
+
+/* ─── CV Header with Portrait ───────────────────────────────────── */
+.cv-header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.cv-portrait {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 2px solid var(--vp-c-divider);
+  flex-shrink: 0;
+}
+
+.cv-header-text {
+  flex: 1;
+}
+
+.cv-header-text h2 {
+  margin-top: 0 !important;
+}
+
+@media (max-width: 480px) {
+  .cv-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+/* ─── CV Email Gate ──────────────────────────────────────────────── */
+.cv-gate {
+  max-width: 480px;
+  margin: 2rem 0;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid var(--vp-c-divider);
+  background: var(--vp-c-bg-soft);
+}
+
+.cv-gate label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--vp-c-text-2);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+.cv-gate input {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 6px;
+  background: var(--vp-c-bg);
+  color: var(--vp-c-text-1);
+  font-size: 0.95rem;
+  font-family: inherit;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+  outline: none;
+  margin-bottom: 0.85rem;
+}
+
+.cv-gate input:focus {
+  border-color: var(--vp-c-brand-1);
+}
+
+.cv-gate button {
+  padding: 0.6rem 1.25rem;
+  border-radius: 6px;
+  border: none;
+  background: var(--vp-c-brand-1);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.cv-gate button:hover {
+  background: var(--vp-c-brand-2);
+  transform: translateY(-1px);
+}
+
+.cv-gate .error-msg {
+  font-size: 0.85rem;
+  color: #c0392b;
+  margin-top: 0.5rem;
+}
+
+.dark .cv-gate .error-msg {
+  color: #e74c3c;
+}
+
+.cv-download-area {
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--vp-c-divider);
+  background: var(--vp-c-bg-soft);
+  max-width: 480px;
+}
+
+.cv-download-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.25rem;
+  border-radius: 6px;
+  background: var(--vp-c-brand-1);
+  color: #fff !important;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none !important;
+  transition: background 0.2s ease, transform 0.15s ease;
+  margin-top: 0.75rem;
+}
+
+.cv-download-link:hover {
+  background: var(--vp-c-brand-2);
+  transform: translateY(-1px);
+}
+
+/* ─── PDF Viewer ─────────────────────────────────────────────────── */
+.pdf-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.5rem 0 1rem 0;
+}
+
+.pdf-viewer {
+  width: 100%;
+  height: 85vh;
+  min-height: 600px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--vp-c-divider);
+  background: var(--vp-c-bg-soft);
+}
+
+.pdf-viewer iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .pdf-viewer {
+    height: 75vh;
+    min-height: 400px;
+  }
+}
+
+/* ─── Footer ─────────────────────────────────────────────────────── */
+.VPFooter {
+  border-top: 1px solid var(--vp-c-divider) !important;
+  background: var(--vp-c-bg) !important;
+  padding: 1.5rem 0 !important;
+}
+
+.VPFooter .message,
+.VPFooter .copyright {
+  font-size: 0.85rem !important;
+  color: var(--vp-c-text-3) !important;
+}
+
+/* ─── Last Updated ───────────────────────────────────────────────── */
+.VPDocFooter {
+  border-top: 1px solid var(--vp-c-divider);
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+}
+
+/* ─── Table of Contents ──────────────────────────────────────────── */
+.VPDocAside .VPDocAsideOutline {
+  border-left: 1px solid var(--vp-c-divider);
+}
+
+/* ─── Outline Links ──────────────────────────────────────────────── */
+.VPDocOutlineItem a {
+  font-size: 0.82rem !important;
+  color: var(--vp-c-text-3) !important;
+  transition: color 0.15s ease;
+}
+
+.VPDocOutlineItem a:hover,
+.VPDocOutlineItem.active a {
+  color: var(--vp-c-brand-1) !important;
+}
+
+/* ─── Local Search ───────────────────────────────────────────────── */
+.VPLocalSearchBox {
+  font-family: inherit;
+}
+
+/* ─── Responsive ─────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .VPHero {
+    padding: 160px 24px 48px !important;
+    text-align: center;
+  }
+
+  .VPHero .image-container {
+    margin: 0 auto 1.5rem !important;
+    width: 180px !important;
+    height: 180px !important;
+    max-width: 180px !important;
+    max-height: 180px !important;
+  }
+
+  .VPHero img.VPImage {
+    object-position: 50% 5% !important;
+  }
+
+  .home-section {
+    padding: 0 20px;
+  }
+
+  .home-section p {
+    font-size: 1rem;
+  }
+}
