@@ -21,9 +21,9 @@ Softwareentwickler · Karlsruhe · [Arthur.Schimpf@gmx.de](mailto:Arthur.Schimpf
 
 ## Kurzprofil
 
-Softwareentwickler mit sechs Jahren Berufserfahrung, davon vier Jahre in der dualen Ausbildung und zwei Jahre in Festanstellung. Schwerpunkt auf Backend-Entwicklung mit Java und Spring Boot, ergänzt durch solide Frontend-Kenntnisse in Vue.js, Angular und React. Erfahrung in der Architektur und Umsetzung von Systemen von Grund auf – sowohl als alleiniger Entwickler als auch in kleinen Teams.
+Softwareentwickler mit sechs Jahren Berufserfahrung, davon vier Jahre in der dualen Ausbildung und zwei Jahre in Festanstellung. Schwerpunkt auf Backend-Entwicklung mit Java und Spring Boot, ergänzt durch solide Frontend-Kenntnisse in Vue.js, Angular und React. Erfahrung in der Architektur und Umsetzung von Systemen von Grund auf, sowohl als alleiniger Entwickler als auch in kleinen Teams.
 
-Ich arbeite strukturiert, kommuniziere direkt und schreibe Code, der in einem Jahr noch verständlich ist. Wirtschaftlicher Hintergrund durch kaufmännisches Abitur hilft mir, technische Entscheidungen im fachlichen Kontext zu verankern. Aktuell offen für eine neue Festanstellung in einem Team, das handwerklich sauber arbeitet.
+Ich arbeite strukturiert, kommuniziere direkt und schreibe Code, der in einem Jahr noch verständlich ist. Der wirtschaftliche Hintergrund durch das kaufmännische Abitur hilft mir, technische Entscheidungen im fachlichen Kontext zu sehen. Ab Mai 2026 bei init SE in Karlsruhe als Software Engineer.
 
 ---
 
@@ -31,61 +31,67 @@ Ich arbeite strukturiert, kommuniziere direkt und schreibe Code, der in einem Ja
 
 <div class="cv-station-header">
   <div class="cv-station-info">
+    <h3>Software Engineer</h3>
+    <p class="cv-station-meta">init SE · Karlsruhe · ab Mai 2026</p>
+  </div>
+</div>
+
+---
+
+<div class="cv-station-header">
+  <div class="cv-station-info">
     <h3>Digital Transformation Projects Programmer</h3>
-    <p class="cv-station-meta">Hellmann Worldwide Logistics SE · Osnabrück (remote) · 2025 – heute</p>
+    <p class="cv-station-meta">Hellmann Worldwide Logistics SE · Osnabrück (remote) · 2025 bis 2026</p>
   </div>
   <img src="/images/hellmann-logo.png" class="cv-logo" alt="Hellmann" />
 </div>
 
-Arbeit in einem kleinen, spezialisierten Team an der Migration eines AS400-Systems in eine moderne Microservice-Architektur. Der technische Kern war die Entwicklung einer vollständigen ETL-Pipeline: Extraktion der Daten aus dem Altsystem, Transformation und Validierung über einen eigenen Service, Einspeisung in das neue Domänenmodell und Persistierung in einer relationalen Datenbank. Darüber hinaus wurde ein Angular-Frontend für die operativen Nutzer entwickelt, das die Bedienung der neuen Systeme ablöst.
+Ich habe in einem kleinen, spezialisierten Team an der Migration eines AS400-Systems in eine moderne Microservice-Architektur gearbeitet. Der technische Kern war eine vollständige ETL-Pipeline: Daten aus dem Altsystem extrahiert, über einen eigenen Service transformiert und validiert, ins neue Domänenmodell überführt. Ein Angular-Frontend für die operativen Nutzer kam dazu.
 
-Die Zusammenarbeit erfolgte eng mit Fachbereichs-Experten, die die fachlichen Anforderungen an das Offerten- und Kalkulationssystem eingebracht haben. Technisch: Java, Spring Boot, REST, Angular, PostgreSQL. Das Team bestand aus einem Senior-Entwickler, einem Product Owner und zwei Fachlichen.
+Die Anforderungen kamen direkt aus den Fachbereichen. Offerten, Angebote, Nebenkostenberechnungen, also die Kernprozesse, mit denen Hellmann seine Logistikleistungen bepreist. Team: ein Senior-Entwickler, ein Product Owner, zwei Fachliche. Technisch: Java, Spring Boot, REST, Angular, PostgreSQL.
 
-Die Stelle entfiel im Rahmen einer unternehmensweiten Restrukturierung – Hellmann hat konzernweit einen erheblichen Teil der Belegschaft abgebaut. Der Abgang war wirtschaftlich bedingt, nicht leistungsbedingt.
+Die Stelle entfiel durch eine konzernweite Restrukturierung. Wirtschaftlich bedingt, nicht leistungsbedingt.
 
 ---
 
 <div class="cv-station-header">
   <div class="cv-station-info">
     <h3>Softwareentwickler</h3>
-    <p class="cv-station-meta">Infokom GmbH (Tochtergesellschaft der EurobaustoffHandels-AG) · Karlsruhe · 2023 – 2025</p>
+    <p class="cv-station-meta">Infokom GmbH (Tochtergesellschaft der EurobaustoffHandels-AG) · Karlsruhe · 2023 bis 2025</p>
   </div>
   <img src="/images/infokom-logo.png" class="cv-logo" alt="Infokom" />
 </div>
 
-Die Infokom verantwortet die IT-Entwicklung innerhalb der Eurobaustoff-Gruppe. Ich war Teil eines kleinen Entwicklungsteams, das an drei wesentlichen Projekten gearbeitet hat:
+Die Infokom verantwortet die IT-Entwicklung der Eurobaustoff-Gruppe. Ich war Teil eines kleinen Entwicklungsteams und habe an drei Projekten gearbeitet.
 
-**ZFWEB – ZentralFaktur Web.**
-Eine vollständige Web-Anwendung zur Verwaltung und Verarbeitung von Rechnungsdaten. Ich habe dieses Projekt von Beginn an verantwortet: Konzeption der Architektur, Aufbau der ersten Versionen, Implementierung der zentralen Funktionen, Einrichtung der CI/CD-Pipeline und Etablierung eines Scrum-Prozesses inklusive Board und Sprint-Struktur. In den ersten eineinhalb Jahren war ich der primäre Entwickler dieser Anwendung, bevor weitere Kollegen eingestiegen sind. Thematisch: Rechnungserfassung, Versand von E-Rechnungen nach den aktuellen Standards (ZUGFeRD, XRechnung), Archivierung. Technisch: Vaadin, Spring Boot, PostgreSQL, Hibernate, GitLab CI.
+ZFWEB ist eine Web-Anwendung zur Verwaltung und Verarbeitung von Rechnungsdaten, die ich von Anfang an verantwortet habe: Architektur, erste Versionen, zentrale Funktionen, CI/CD-Pipeline, Scrum-Prozess mit Board und Sprint-Struktur. In den ersten anderthalb Jahren war ich der primäre Entwickler, bevor weitere Kollegen einstiegen. Thematisch: Rechnungserfassung, E-Rechnungen nach ZUGFeRD und XRechnung, Archivierung. Technisch: Vaadin, Spring Boot, PostgreSQL, Hibernate, GitLab CI.
 
-**AS400-Migration.**
-Parallele Mitarbeit an der Konzeption und Vorbereitung einer langfristigen Systemablösung. Ziel war die Migration von Millionen von Datensätzen aus einem AS400-System in eine moderne Umgebung auf Basis von CockroachDB. Das Projekt war auf mehrere Jahre angelegt und erforderte enge Abstimmung mit Fachbereichen sowie Zusammenarbeit mit einem externen Datenbankspezialisten-Team von CockroachDB selbst. Diese Erfahrung – Analyse eines komplexen Altsystems, Anforderungserhebung mit Fachabteilungen, Datenbankdesign für Migrationsprojekte – hat sich direkt in meiner Arbeit bei Hellmann als wertvoll erwiesen.
+Daneben war ich an der Konzeption einer AS400-Migration beteiligt: Millionen von Datensätzen sollten in eine moderne Umgebung auf Basis von CockroachDB überführt werden. Das Projekt war auf mehrere Jahre angelegt und erforderte enge Abstimmung mit Fachbereichen sowie die Zusammenarbeit mit einem Spezialistenteam von CockroachDB selbst. Was ich dort an Altsystemanalyse, Anforderungserhebung und Datenbankdesign gelernt habe, kam bei Hellmann direkt wieder zum Einsatz.
 
-**InfoGPT.**
-Eine interne Chat-Anwendung, vergleichbar mit ChatGPT, für den Einsatz innerhalb der Unternehmensgruppe. Ich war als zweiter Entwickler an diesem Projekt beteiligt, gemeinsam mit einem englischsprachigen Kollegen. Technisch ebenfalls auf Vaadin-Basis.
+Das dritte Projekt war InfoGPT, eine interne Chat-Anwendung für die Unternehmensgruppe. Ich war als zweiter Entwickler beteiligt, gemeinsam mit einem englischsprachigen Kollegen. Technisch ebenfalls auf Vaadin-Basis.
 
-Gegen Ende der Tätigkeit übernahm ich zusätzlich die Begleitung von Auszubildenden und dualen Studenten in technischen Themen. Ich entschied mich zum Wechsel, weil ich meinen Fokus konsequent auf Backend-Entwicklung und Architektur legen wollte.
+Gegen Ende der Tätigkeit begleitete ich Auszubildende und duale Studenten in technischen Themen. Ich entschied mich zum Wechsel, weil ich meinen Fokus konsequent auf Backend-Entwicklung und Architektur legen wollte.
 
 ---
 
 <div class="cv-station-header">
   <div class="cv-station-info">
     <h3>Webentwickler</h3>
-    <p class="cv-station-meta">abas Software GmbH (heute: Forterro) · Karlsruhe · 2022 – 2023</p>
+    <p class="cv-station-meta">abas Software GmbH (heute: Forterro) · Karlsruhe · 2022 bis 2023</p>
   </div>
   <img src="/images/abas-logo.png" class="cv-logo" alt="abas" />
 </div>
 
-Nach Abschluss der Ausbildung war ich ein halbes Jahr als Webentwickler im Professional Services tätig. Das Kernprodukt der Abteilung: Shop-Plugins, die das hausinterne abas ERP-System mit externen E-Commerce-Shops verbinden. Aufgabe war die technische Integration dieser Systeme sowie die Implementierung kundenspezifischer Themes und Funktionserweiterungen nach Kundenvorgaben.
+Nach der Ausbildung war ich ein halbes Jahr als Webentwickler im Professional Services tätig. Das Kernprodukt: Shop-Plugins, die das abas ERP-System mit externen E-Commerce-Shops verbinden. Aufgabe war die technische Integration sowie die Implementierung kundenspezifischer Themes und Funktionserweiterungen.
 
-Dabei arbeitete ich mit einem hausinternen Framework auf Basis von Spring Boot im Backend und Vue.js im Frontend – dem gleichen Stack, der mich auch in späteren Stationen begleitet hat. Die Arbeit war kundenprojektgetrieben mit klaren Zeit- und Kostenrahmen, was frühzeitig ein Verständnis für kommerzielle Softwarelieferung und das Arbeiten unter definierten Budgets vermittelt hat.
+Ich arbeitete mit einem hausinternen Framework auf Basis von Spring Boot im Backend und Vue.js im Frontend, dem gleichen Stack, der mich in späteren Stationen weiterhin begleitet hat. Kundenprojekte mit klaren Zeit- und Budgetvorgaben: Das prägt früh, was Softwarelieferung in der Praxis bedeutet.
 
 ---
 
 <div class="cv-station-header">
   <div class="cv-station-info">
     <h3>Auszubildender Fachinformatiker Anwendungsentwicklung</h3>
-    <p class="cv-station-meta">abas Software GmbH · Karlsruhe · 2019 – 2022</p>
+    <p class="cv-station-meta">abas Software GmbH · Karlsruhe · 2019 bis 2022</p>
   </div>
   <img src="/images/abas-logo.png" class="cv-logo" alt="abas" />
 </div>
@@ -106,7 +112,7 @@ Ludwig-Erhard Gymnasium Karlsruhe · 2019
 
 ## Technische Kenntnisse
 
-Java (LTS bis 21), Spring Boot 3, Spring MVC / Data JPA / Security / AI, PostgreSQL, MySQL, Flyway, Hibernate/JPA, Kafka, Vue.js 3, React / Next.js, Angular, Vaadin (21–25), TypeScript, Docker, GitLab CI, Kubernetes, Testcontainers, JUnit 4/5, OpenAPI.
+Java (LTS bis 21), Spring Boot 3, Spring MVC / Data JPA / Security / AI, PostgreSQL, MySQL, Flyway, Hibernate/JPA, Kafka, Vue.js 3, React / Next.js, Angular, Vaadin (21 bis 25), TypeScript, Docker, GitLab CI, Kubernetes, Testcontainers, JUnit 4/5, OpenAPI.
 
 Eine ausführliche Beschreibung mit konkreten Projektreferenzen und ehrlicher Einschätzung des jeweiligen Kenntnisstands findet sich unter [Technische Kenntnisse](/kenntnisse).
 
@@ -114,7 +120,7 @@ Eine ausführliche Beschreibung mit konkreten Projektreferenzen und ehrlicher Ei
 
 ## Weitere Informationen
 
-Eigene Softwareprojekte (TinyBill, Bewerber-Schmiede, DailyDev) unter [dev-arts.de/projekte](/projekte/).
+Eigene Softwareprojekte (TinyBill, DailyDev und weitere) unter [dev-arts.de/projekte](/projekte/).
 
 ---
 

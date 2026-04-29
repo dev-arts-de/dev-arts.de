@@ -24,7 +24,7 @@ Die Generierungslogik sollte aus strukturierten Nutzer-Daten statische Seiten er
 
 ## Aktueller Stand
 
-Die Entwicklung ist pausiert. Andere Projekte – TinyBill v2, Bewerber-Schmiede, die eigene Jobsuche – haben Priorität. Das bedeutet nicht, dass die Idee tot ist. Der Markt für Bewerbungstools ist groß, die meisten sind schlecht, und das Problem das Foxfolio lösen würde ist real. Wenn die Zeit es erlaubt, wird das Projekt wieder aufgenommen.
+Die Entwicklung ist pausiert. TinyBill v2 und der Übergang zur neuen Stelle hatten Vorrang. Das bedeutet nicht, dass die Idee tot ist. Der Markt für Bewerbungstools ist groß, die meisten sind schlecht, und das Problem das Foxfolio lösen würde ist real. Wenn die Zeit es erlaubt, wird das Projekt wieder aufgenommen.
 
 ---
 
