@@ -32,11 +32,7 @@ Das Besondere an Bewerber-Schmiede aus technischer Sicht ist nicht die Anwendung
 
 ## Was ich daraus gelernt habe
 
-Zwei Dinge haben mich bei diesem Projekt überrascht.
-
-Das erste: Wie viel Disziplin es braucht, auch bei einem Nebenprojekt ohne externe Deadline konsequent auf Qualität zu bestehen. Es ist verlockend, für ein kleines Nebenprojekt den CI/CD-Aufwand als Überengineering zu betrachten und einfach manuell zu deployen. Ich habe das bewusst nicht getan und bin froh darüber. Die Pipeline hat mir mehrfach Fehler gezeigt, die ich ohne sie in Produktion gepusht hätte.
-
-Das zweite: Die KI-gestützte Entwicklung mit Claude Code ist kein Gimmick. Es ist ein echter Wandel in der Arbeitsweise, vergleichbar damit, wie das Aufkommen guter Linters und Formatter die Codequalität in der Breite verändert hat. Wer lernt wie man mit diesem Werkzeug arbeitet, nicht als Abkürzung, sondern als Gesprächspartner, verändert seine Entwicklungsgeschwindigkeit und seine Codequalität gleichzeitig.
+Wie viel Disziplin es braucht, auch bei einem Nebenprojekt ohne externe Deadline konsequent auf Qualität zu bestehen. Es ist verlockend, für ein kleines Nebenprojekt den CI/CD-Aufwand als Überengineering zu betrachten und einfach manuell zu deployen. Ich habe das bewusst nicht getan und bin froh darüber. Die Pipeline hat mir mehrfach Fehler gezeigt, die ich ohne sie in Produktion gepusht hätte.
 
 ---
 
