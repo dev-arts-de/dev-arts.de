@@ -14,7 +14,7 @@ aside: false
 
 ## Arthur Schimpf
 
-Softwareentwickler · Karlsruhe · [Arthur.Schimpf@gmx.de](mailto:Arthur.Schimpf@gmx.de)
+Softwareentwickler · Karlsruhe · <MailLink />
 
   </div>
 </div>
@@ -132,6 +132,7 @@ Eigene Softwareprojekte (TinyBill, DailyDev und weitere) unter [dev-arts.de/proj
   </a>
   <p style="margin: 0.75rem 0 0 0; font-size: 0.85rem; color: var(--vp-c-text-3);">
     Bei Fragen stehe ich jederzeit per E-Mail zur Verfügung:
-    <a href="mailto:Arthur.Schimpf@gmx.de">Arthur.Schimpf@gmx.de</a>
+    <MailLink />
+
   </p>
 </div>

@@ -170,7 +170,7 @@ Ich bin seit Jahren an Videografie interessiert, konkret Filmen und Schneiden, w
 
 Ich freue mich über Nachrichten: Projektideen, Fragen oder einfach ein Gespräch. Direkt per E-Mail ist am schnellsten.
 
-[Arthur.Schimpf@gmx.de](mailto:Arthur.Schimpf@gmx.de)
+<MailLink />
 
 </div>
 
