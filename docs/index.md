@@ -64,7 +64,7 @@ Dann kam die duale Ausbildung bei abas Software in Karlsruhe: vier Jahre, in den
 </div>
 
 <div class="reveal" data-delay="160">
-<img src="/images/workspace.jpeg" alt="Workspace" class="c-img" />
+<img src="/images/workspace.jpeg" alt="Workspace" class="c-img" width="900" height="1600" loading="lazy" decoding="async" />
 </div>
 
 <hr class="home-divider">
@@ -123,7 +123,7 @@ Für Code Reviews gilt dasselbe Prinzip. Ein Review ist keine Beurteilung des En
 
 ## Was mich gerade beschäftigt
 
-Anfang 2025 habe ich bei Hellmann Worldwide Logistics in einem kleinen, spezialisierten Team gearbeitet. Die Aufgabe war die Migration eines AS400-Systems in eine moderne Microservice-Architektur. Wir haben eine vollständige ETL-Pipeline gebaut, Daten aus dem Altsystem extrahiert, über einen eigenen Service transformiert und validiert, ins neue Domänenmodell eingespielt. Ein Angular-Frontend für die operativen Nutzer kam dazu. Es ging um Offerten, Angebote, Nebenkostenberechnungen, also die Kernprozesse, mit denen Hellmann seine Logistikleistungen bepreist.
+Von Anfang 2025 bis Anfang 2026 habe ich bei Hellmann Worldwide Logistics in einem kleinen, spezialisierten Team gearbeitet. Die Aufgabe war die Migration eines AS400-Systems in eine moderne Microservice-Architektur. Wir haben eine vollständige ETL-Pipeline gebaut, Daten aus dem Altsystem extrahiert, über einen eigenen Service transformiert und validiert, ins neue Domänenmodell eingespielt. Ein Angular-Frontend für die operativen Nutzer kam dazu. Es ging um Offerten, Angebote, Nebenkostenberechnungen, also die Kernprozesse, mit denen Hellmann seine Logistikleistungen bepreist.
 
 </div>
 
@@ -135,7 +135,7 @@ Diese Arbeit klingt technisch trocken. Im Alltag war sie das Gegenteil. Detektiv
 
 <div class="reveal" data-delay="120">
 
-Hellmann hat im Zuge einer konzernweiten Restrukturierung einen erheblichen Teil der Belegschaft abgebaut. Meine Stelle war davon betroffen, wirtschaftlich bedingt und nicht leistungsbedingt. Ich habe die Zeit genutzt, um genau hinzuschauen, was als Nächstes kommt. Ab Mai 2026 fange ich bei init SE in Karlsruhe als Software Engineer an.
+Hellmann hat im Zuge einer konzernweiten Restrukturierung einen erheblichen Teil der Belegschaft abgebaut. Meine Stelle war davon betroffen, wirtschaftlich bedingt und nicht leistungsbedingt. Ich habe die Zeit genutzt, um genau hinzuschauen, was als Nächstes kommt. Seit Mai 2026 arbeite ich bei der init SE in Karlsruhe als Software Engineer. Meine Aufgabe dort ist die Integration einer CI/CD-Pipeline in eine neue Cloud-Infrastruktur. Das bewegt sich genau in dem Bereich, der mich am meisten interessiert: die Verbindung von Anwendungscode mit der Plattform, auf der er später läuft, und die Frage, wie man diesen Übergang verlässlich, nachvollziehbar und wartbar gestaltet.
 
 </div>
 
@@ -157,8 +157,8 @@ Ich bin seit Jahren an Videografie interessiert, konkret Filmen und Schneiden, w
 
 <div class="reveal" data-delay="120">
 <div class="c-img-grid">
-  <img src="/images/me-and-selina.jpeg" alt="Arthur und Selina" />
-  <img src="/images/apartment.jpeg" alt="Die neue Wohnung" />
+  <img src="/images/me-and-selina.jpeg" alt="Arthur und Selina" width="1200" height="1600" loading="lazy" decoding="async" />
+  <img src="/images/apartment.jpeg" alt="Die neue Wohnung" width="1200" height="1600" loading="lazy" decoding="async" />
 </div>
 </div>
 
@@ -170,7 +170,7 @@ Ich bin seit Jahren an Videografie interessiert, konkret Filmen und Schneiden, w
 
 Ich freue mich über Nachrichten: Projektideen, Fragen oder einfach ein Gespräch. Direkt per E-Mail ist am schnellsten.
 
-[Arthur.Schimpf@gmx.de](mailto:Arthur.Schimpf@gmx.de)
+<MailLink />
 
 </div>
 

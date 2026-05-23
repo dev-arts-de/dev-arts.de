@@ -1,0 +1,67 @@
+/* ===================================================================
+   Print styles, primarily tuned for /lebenslauf
+   =================================================================== */
+
+@media print {
+  .VPNav,
+  .VPSidebar,
+  .VPFooter,
+  .VPDocFooter,
+  .VPLocalNav,
+  .cv-download-area {
+    display: none !important;
+  }
+
+  .VPContent {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .VPDoc {
+    padding: 0 !important;
+  }
+
+  .vp-doc {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
+  .cv-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .cv-portrait {
+    width: 80px;
+    height: 80px;
+  }
+
+  .cv-station-header {
+    margin-top: 1.5rem;
+  }
+
+  .cv-logo {
+    height: 22px;
+    opacity: 1;
+    background: none !important;
+    padding: 0 !important;
+  }
+
+  body {
+    font-size: 11pt;
+    color: #000;
+    background: #fff;
+  }
+
+  h1 { font-size: 20pt; }
+  h2 { font-size: 14pt; }
+  h3 { font-size: 12pt; }
+
+  a {
+    color: #000 !important;
+    text-decoration: none !important;
+  }
+
+  hr {
+    border-top: 1px solid #ccc;
+  }
+}

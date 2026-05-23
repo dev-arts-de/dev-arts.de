@@ -8,7 +8,7 @@ aside: true
 
 TinyBill ist ein Dokumentengenerator für Rechnungen, Angebote und allgemeine Geschäftsdokumente. Wer eine Rechnung stellen will (als Freelancer, kleines Unternehmen oder Einzelperson) findet selten ein Tool, das genau das macht was es soll, ohne monatliche Abonnementgebühren und ohne überkomplizierte Oberflächen. TinyBill ist die Antwort auf dieses Problem: kostenlos nutzbar, ohne Account, ohne Abo.
 
-<img src="/images/tinybill-screenshot.png" alt="TinyBill Screenshot" class="c-screenshot" />
+<img src="/images/tinybill-screenshot.png" alt="TinyBill Screenshot" class="c-screenshot" width="1053" height="1200" loading="lazy" decoding="async" />
 
 ## Wie es entstand
 
