@@ -10,5 +10,3 @@ Manche Projekte haben keinen technischen Anspruch. Diese Webseite habe ich gebau
 
 Kein Framework, kein Deployment-Overhead, keine Architektur-Diskussion. Eine Seite, ein Ziel, eine Frage. Sie hat ja gesagt.
 
----
-
