@@ -28,6 +28,24 @@ Einige davon laufen produktiv, andere sind pausiert. Der Anspruch ist derselbe w
   <div class="card-desc">Ein Tool zur Lebenslauf-Analyse, das strukturiertes Feedback zu Vollständigkeit, Formulierungen und häufigen Schwachstellen liefert. Vollständig mit Claude Code als Entwicklungspartner gebaut, mit CI/CD-Pipeline, Unit-Tests und End-to-End-Tests von Anfang an.</div>
 </a>
 
+<a href="/projekte/stoistic-forge" class="project-card">
+  <div class="card-title">Stoistic Forge</div>
+  <div class="card-meta">KI-Blog · Java/Quarkus · Claude · stoistic-forge.de</div>
+  <div class="card-desc">Ein Blog, der täglich automatisch Artikel über stoische Philosophie veröffentlicht. Mehrstufige Pipeline mit Topic-Auswahl, Generierung, Quality-Review, Bildgenerierung und wöchentlichen Verbesserungs-Agenten, die das System selbst optimieren. Läuft seit Monaten ohne manuellen Eingriff.</div>
+</a>
+
+<a href="/projekte/9thbit" class="project-card">
+  <div class="card-title">9thbit</div>
+  <div class="card-meta">KI-Blog für Entwickler · Java/Quarkus · Claude · 9thbit.de</div>
+  <div class="card-desc">Technischer Blog mit täglichen Artikeln zu Java-Grundlagen, OOP, Anti-Patterns und Interview-Themen. Gleiche Pipeline-Architektur wie Stoistic Forge, angepasst für technische Inhalte: kuratierte Themen-Roadmap, schärferer Quality-Review, RSS-Feed statt Push-Benachrichtigung.</div>
+</a>
+
+<a href="/projekte/wunschliste-selina" class="project-card">
+  <div class="card-title">wunschliste-selina.de</div>
+  <div class="card-meta">Wunschliste · Next.js · Prisma · In Betrieb</div>
+  <div class="card-desc">Eine kleine Wunschlisten-Anwendung für meine Freundin. Synchronisiert ihre Amazon-Wunschliste automatisch, erlaubt zusätzliche Wünsche aus beliebigen Shops und ermöglicht anonyme Reservierungen über einen Session-Token. Gebaut mit Next.js 16, Prisma und Vercel Postgres.</div>
+</a>
+
 <a href="/projekte/shopitech" class="project-card">
   <div class="card-title">Shopitech</div>
   <div class="card-meta">Kundenprojekte · Verschiedene Technologien</div>
@@ -61,6 +79,12 @@ Einige davon laufen produktiv, andere sind pausiert. Der Anspruch ist derselbe w
 ---
 
 ## Persönliches
+
+<a href="/projekte/wunschliste-selina" class="project-card">
+  <div class="card-title">wunschliste-selina.de</div>
+  <div class="card-meta">Wunschliste für Selina · Next.js · Prisma · 2026</div>
+  <div class="card-desc">Eine kleine Wunschlisten-Webseite für meine Freundin. Synchronisiert ihre Amazon-Wunschliste automatisch, ergänzt um eigene Wünsche aus beliebigen Shops und mit anonymer Reservierung über einen Session-Token. Weiches, persönliches Design.</div>
+</a>
 
 <a href="/projekte/will-you-be-my-valentine" class="project-card">
   <div class="card-title">will-you-be-my-valentine-selina.de</div>

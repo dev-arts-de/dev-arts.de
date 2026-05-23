@@ -97,6 +97,8 @@ export default defineConfig({
             { text: 'DailyDev', link: '/projekte/dailydev' },
             { text: 'TinyBill', link: '/projekte/tinybill' },
             { text: 'Bewerber-Schmiede', link: '/projekte/bewerber-schmiede' },
+            { text: 'Stoistic Forge', link: '/projekte/stoistic-forge' },
+            { text: '9thbit', link: '/projekte/9thbit' },
             { text: 'Shopitech', link: '/projekte/shopitech' },
             { text: 'dein-notruf.de', link: '/projekte/dein-notruf' },
             { text: 'daily-pi-poetry', link: '/projekte/daily-pi-poetry' },
@@ -107,6 +109,7 @@ export default defineConfig({
         {
           text: 'Persönliches',
           items: [
+            { text: 'wunschliste-selina.de', link: '/projekte/wunschliste-selina' },
             { text: 'will-you-be-my-valentine', link: '/projekte/will-you-be-my-valentine' },
           ]
         },
