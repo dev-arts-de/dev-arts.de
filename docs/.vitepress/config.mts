@@ -41,6 +41,10 @@ export default defineConfig({
   lang: 'de-DE',
   title: 'Arthur Schimpf',
   description: 'Softwareentwickler aus Karlsruhe – Java, Spring Boot, Kotlin.',
+  cleanUrls: true,
+  sitemap: {
+    hostname: 'https://dev-arts.de'
+  },
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     ['meta', { name: 'theme-color', content: '#1e4168' }],
