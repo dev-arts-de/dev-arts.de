@@ -1,5 +1,42 @@
 import { defineConfig } from 'vitepress'
 
+const personJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Arthur Schimpf',
+  jobTitle: 'Softwareentwickler',
+  url: 'https://dev-arts.de',
+  image: 'https://dev-arts.de/images/me-portfolio.jpeg',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Karlsruhe',
+    addressRegion: 'Baden-Württemberg',
+    addressCountry: 'DE'
+  },
+  worksFor: {
+    '@type': 'Organization',
+    name: 'init SE',
+    url: 'https://www.init-se.de'
+  },
+  alumniOf: [
+    { '@type': 'Organization', name: 'Hellmann Worldwide Logistics SE' },
+    { '@type': 'Organization', name: 'Infokom GmbH' },
+    { '@type': 'Organization', name: 'abas Software GmbH' },
+    { '@type': 'EducationalOrganization', name: 'Heinrich-Hertz-Schule Karlsruhe' },
+    { '@type': 'EducationalOrganization', name: 'Ludwig-Erhard Gymnasium Karlsruhe' }
+  ],
+  knowsAbout: [
+    'Java', 'Spring Boot', 'Kotlin', 'PostgreSQL', 'Kafka',
+    'Vue.js', 'Angular', 'Vaadin', 'TypeScript', 'Docker',
+    'Kubernetes', 'GitLab CI', 'Testcontainers', 'OpenAPI'
+  ],
+  sameAs: [
+    'https://github.com/iqwrwq',
+    'https://github.com/dev-arts-de',
+    'https://www.linkedin.com/in/arthur-schimpf-832b64240/'
+  ]
+}
+
 export default defineConfig({
   lang: 'de-DE',
   title: 'Arthur Schimpf',
@@ -8,6 +45,7 @@ export default defineConfig({
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     ['meta', { name: 'theme-color', content: '#1e4168' }],
     ['meta', { name: 'author', content: 'Arthur Schimpf' }],
+    ['script', { type: 'application/ld+json' }, JSON.stringify(personJsonLd)],
     // Open Graph
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:url', content: 'https://dev-arts.de' }],
