@@ -666,74 +666,6 @@ body {
   }
 }
 
-/* ─── CV Email Gate ──────────────────────────────────────────────── */
-.cv-gate {
-  max-width: 480px;
-  margin: 2rem 0;
-  padding: 2rem;
-  border-radius: 8px;
-  border: 1px solid var(--vp-c-divider);
-  background: var(--vp-c-bg-soft);
-}
-
-.cv-gate label {
-  display: block;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--vp-c-text-2);
-  margin-bottom: 0.5rem;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  font-size: 0.75rem;
-}
-
-.cv-gate input {
-  width: 100%;
-  padding: 0.65rem 0.85rem;
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 6px;
-  background: var(--vp-c-bg);
-  color: var(--vp-c-text-1);
-  font-size: 0.95rem;
-  font-family: inherit;
-  box-sizing: border-box;
-  transition: border-color 0.2s ease;
-  outline: none;
-  margin-bottom: 0.85rem;
-}
-
-.cv-gate input:focus {
-  border-color: var(--vp-c-brand-1);
-}
-
-.cv-gate button {
-  padding: 0.6rem 1.25rem;
-  border-radius: 6px;
-  border: none;
-  background: var(--vp-c-brand-1);
-  color: #fff;
-  font-size: 0.9rem;
-  font-weight: 500;
-  font-family: inherit;
-  cursor: pointer;
-  transition: background 0.2s ease, transform 0.15s ease;
-}
-
-.cv-gate button:hover {
-  background: var(--vp-c-brand-2);
-  transform: translateY(-1px);
-}
-
-.cv-gate .error-msg {
-  font-size: 0.85rem;
-  color: #c0392b;
-  margin-top: 0.5rem;
-}
-
-.dark .cv-gate .error-msg {
-  color: #e74c3c;
-}
-
 .cv-download-area {
   padding: 1.5rem;
   border-radius: 8px;
@@ -901,7 +833,6 @@ body {
   .VPFooter,
   .VPDocFooter,
   .VPLocalNav,
-  .cv-gate,
   .cv-download-area {
     display: none !important;
   }
