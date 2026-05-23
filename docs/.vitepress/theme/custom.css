@@ -4,8 +4,12 @@
    Dark:  Blue-Slate / Soft Steel Blue
    =================================================================== */
 
-/* ─── Google Font: Inter ─────────────────────────────────────────── */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;450;500;600;700&display=swap');
+/* ─── Font ───────────────────────────────────────────────────────
+   Inter is shipped self-hosted by VitePress' default theme
+   (woff2 files in dist/assets/inter-*). No external CSS import,
+   no fonts.googleapis.com request. The font-family stack below
+   resolves to those self-hosted faces.
+   ───────────────────────────────────────────────────────────── */
 
 /* ─── CSS Custom Properties (Light) ─────────────────────────────── */
 :root {
