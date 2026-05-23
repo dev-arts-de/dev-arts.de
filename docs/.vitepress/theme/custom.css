@@ -449,14 +449,23 @@ body {
 }
 
 .home-section h2 {
-  font-size: 1.1rem;
+  position: relative;
+  font-size: 0.75rem;
   font-weight: 600;
-  letter-spacing: -0.02em;
   color: var(--vp-c-text-3);
   text-transform: uppercase;
-  font-size: 0.75rem;
   letter-spacing: 0.1em;
   margin: 3rem 0 0.75rem 0;
+}
+
+.home-section h2::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--vp-c-brand-1);
+  margin-bottom: 0.6rem;
+  opacity: 0.5;
 }
 
 .home-divider {
@@ -483,21 +492,6 @@ body {
 .dark .c-pullquote {
   color: var(--vp-c-brand-1) !important;
   border-left-color: var(--vp-c-brand-1);
-}
-
-/* ─── Section Label (small eyebrow above h2) ─────────────────────── */
-.home-section h2 {
-  position: relative;
-}
-
-.home-section h2::before {
-  content: '';
-  display: block;
-  width: 24px;
-  height: 2px;
-  background: var(--vp-c-brand-1);
-  margin-bottom: 0.6rem;
-  opacity: 0.5;
 }
 
 /* ─── Inline Images ─────────────────────────────────────────────── */
