@@ -1,0 +1,60 @@
+/* ===================================================================
+   404 page (theme/NotFound.vue)
+   =================================================================== */
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.not-found-code {
+  font-size: clamp(6rem, 20vw, 12rem);
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  line-height: 1;
+  color: var(--vp-c-bg-mute);
+  margin-bottom: 1.5rem;
+  user-select: none;
+}
+
+.not-found-msg {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--vp-c-text-1);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem !important;
+  min-height: 1.8em;
+}
+
+.not-found-sub {
+  font-size: 0.95rem;
+  color: var(--vp-c-text-3);
+  max-width: 400px;
+  line-height: 1.7;
+  margin-bottom: 2.5rem !important;
+}
+
+.not-found-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.not-found-alt {
+  font-size: 0.9rem;
+  color: var(--vp-c-text-2);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.15s ease;
+}
+
+.not-found-alt:hover {
+  color: var(--vp-c-brand-1);
+}
