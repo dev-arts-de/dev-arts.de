@@ -23,7 +23,7 @@ Softwareentwickler · Karlsruhe · <MailLink />
 
 Softwareentwickler mit sechs Jahren Berufserfahrung, davon vier Jahre in der dualen Ausbildung und zwei Jahre in Festanstellung. Schwerpunkt auf Backend-Entwicklung mit Java und Spring Boot, ergänzt durch solide Frontend-Kenntnisse in Vue.js, Angular und React. Erfahrung in der Architektur und Umsetzung von Systemen von Grund auf, sowohl als alleiniger Entwickler als auch in kleinen Teams.
 
-Ich arbeite strukturiert, kommuniziere direkt und schreibe Code, der in einem Jahr noch verständlich ist. Der wirtschaftliche Hintergrund durch das kaufmännische Abitur hilft mir, technische Entscheidungen im fachlichen Kontext zu sehen. Ab Mai 2026 bei init SE in Karlsruhe als Software Engineer.
+Ich arbeite strukturiert, kommuniziere direkt und schreibe Code, der in einem Jahr noch verständlich ist. Der wirtschaftliche Hintergrund durch das kaufmännische Abitur hilft mir, technische Entscheidungen im fachlichen Kontext zu sehen. Seit Mai 2026 bei der init SE in Karlsruhe als Software Engineer mit Schwerpunkt CI/CD und Cloud-Infrastruktur.
 
 ---
 
@@ -32,9 +32,14 @@ Ich arbeite strukturiert, kommuniziere direkt und schreibe Code, der in einem Ja
 <div class="cv-station-header">
   <div class="cv-station-info">
     <h3>Software Engineer</h3>
-    <p class="cv-station-meta">init SE · Karlsruhe · ab Mai 2026</p>
+    <p class="cv-station-meta">init SE · Karlsruhe · seit Mai 2026</p>
   </div>
+  <img src="/images/init-se-logo.png" class="cv-logo" alt="init SE" />
 </div>
+
+Seit dem 1. Mai 2026 arbeite ich bei der init SE in Karlsruhe als Software Engineer. Mein Aufgabenfeld liegt im Bereich CI/CD und Cloud-Infrastruktur. Ich bin verantwortlich für die Integration einer Continuous-Integration- und Continuous-Deployment-Pipeline in eine neue Cloud-Umgebung, die intern aufgebaut wird. Das umfasst die Wahl und Konfiguration der Pipeline-Werkzeuge, die Anbindung an Container-Registries und Deployment-Targets, die Definition wiederverwendbarer Pipeline-Bausteine für unterschiedliche Anwendungstypen sowie die Begleitung der Entwicklungsteams beim Übergang von der alten in die neue Umgebung.
+
+Die init SE ist seit Jahrzehnten im öffentlichen Personenverkehr aktiv und entwickelt Software für Ticketing, Fahrgastinformation und damit verbundene Prozesse. Was mich an der Stelle gereizt hat, war die Kombination aus konkreter Branchenrelevanz und langfristiger Perspektive. Software für Verkehrsbetriebe muss über viele Jahre stabil laufen, sich an wechselnde Anforderungen anpassen lassen und gleichzeitig in einer modernen Entwicklungsumgebung gepflegt werden können. Genau in dieser Spannung bewegt sich meine aktuelle Arbeit.
 
 ---
 
