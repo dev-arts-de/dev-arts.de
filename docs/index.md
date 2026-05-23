@@ -123,7 +123,7 @@ Für Code Reviews gilt dasselbe Prinzip. Ein Review ist keine Beurteilung des En
 
 ## Was mich gerade beschäftigt
 
-Anfang 2025 habe ich bei Hellmann Worldwide Logistics in einem kleinen, spezialisierten Team gearbeitet. Die Aufgabe war die Migration eines AS400-Systems in eine moderne Microservice-Architektur. Wir haben eine vollständige ETL-Pipeline gebaut, Daten aus dem Altsystem extrahiert, über einen eigenen Service transformiert und validiert, ins neue Domänenmodell eingespielt. Ein Angular-Frontend für die operativen Nutzer kam dazu. Es ging um Offerten, Angebote, Nebenkostenberechnungen, also die Kernprozesse, mit denen Hellmann seine Logistikleistungen bepreist.
+Von Anfang 2025 bis Anfang 2026 habe ich bei Hellmann Worldwide Logistics in einem kleinen, spezialisierten Team gearbeitet. Die Aufgabe war die Migration eines AS400-Systems in eine moderne Microservice-Architektur. Wir haben eine vollständige ETL-Pipeline gebaut, Daten aus dem Altsystem extrahiert, über einen eigenen Service transformiert und validiert, ins neue Domänenmodell eingespielt. Ein Angular-Frontend für die operativen Nutzer kam dazu. Es ging um Offerten, Angebote, Nebenkostenberechnungen, also die Kernprozesse, mit denen Hellmann seine Logistikleistungen bepreist.
 
 </div>
 
