@@ -32,19 +32,22 @@ Das war ein bewusstes Abrücken von dem typografisch strengen, gedeckten Design,
 
 ## Technischer Aufbau
 
-Die Anwendung läuft auf Next.js 16 mit React 19. Tailwind CSS in Version 4 für das Styling. Die Datenhaltung läuft über Vercel Postgres, der Datenbankzugriff über Prisma. Die Wahl fiel auf diesen Stack, weil ich für ein kleines Projekt minimale Reibung wollte. Vercel Postgres ist mit einem Klick bereitgestellt, Prisma generiert den Client und kümmert sich um Migrationen, Next.js bringt App-Router, Server Components und die nötige Infrastruktur für API-Routen mit.
+```
+Frontend        Next.js 16 · React 19 · Tailwind v4
+Datenbank       Vercel Postgres · Prisma 6
+Sync            täglicher Cron auf /api/cron/sync-all
+Admin           /tools/reset · /tools/sync (geschützt)
+```
 
-Das Datenmodell ist einfach. Eine `Wishlist` gehört zu einer Person und einem Anlass. `Items` gehören zu einer Wishlist und haben einen Titel, eine Beschreibung, einen optionalen Preis, ein optionales Bild und eine `canonicalUrl`, die auf das Produkt im jeweiligen Shop verweist. Items haben außerdem eine optionale Kategorie und eine Liste alternativer `Links`, falls dasselbe Produkt bei mehreren Händlern verfügbar ist. Die Reservierung wird über zwei Felder am Item abgebildet: ein Zeitstempel und der erwähnte Session-Token.
+Vercel Postgres ist mit einem Klick bereitgestellt, Prisma generiert den Client und kümmert sich um Migrationen, Next.js bringt App-Router, Server Components und die nötige Infrastruktur für API-Routen mit. Minimale Reibung für ein kleines Projekt.
 
-Es gibt einen täglichen Cron-Job, der unter `/api/cron/sync-all` läuft. Er holt die hinterlegten Amazon-Wunschlisten ab, parst die Produkte heraus und legt sie in der Datenbank ab. Vorhandene Items werden aktualisiert, neue ergänzt, entfernte Items werden als gelöscht markiert. So bleibt die Seite synchron, ohne dass jemand manuell eingreifen muss.
+Das Datenmodell ist überschaubar. Eine `Wishlist` gehört zu einer Person und einem Anlass. `Items` gehören zu einer Wishlist, mit Titel, Beschreibung, optionalem Preis, optionalem Bild und einer `canonicalUrl` auf das Produkt im jeweiligen Shop. Optional eine Kategorie, eine Liste alternativer `Links` für mehrere Händler, und für die Reservierung zwei Felder am Item: ein Zeitstempel und der Session-Token.
 
-Zwei kleine Admin-Werkzeuge gibt es zusätzlich: eine Reset-Seite, mit der ich die Datenbank zurücksetzen kann, und eine Sync-Seite, die einen manuellen Sync-Lauf auslöst. Beide sind nicht öffentlich, sondern nur über einen direkten Link erreichbar und mit einem einfachen Schutz versehen.
+Der Cron-Job holt die hinterlegten Amazon-Wunschlisten täglich ab, parst die Produkte heraus und gleicht sie mit der Datenbank ab. Vorhandene Items werden aktualisiert, neue ergänzt, entfernte als gelöscht markiert.
 
 ## Was das Projekt für mich war
 
-Im Kern war wunschliste-selina.de eine Aufmerksamkeit. Selina hat irgendwann erzählt, dass ihr die Amazon-Wunschliste zu unpersönlich ist, und ich habe das mitgenommen, ohne weiter darüber zu reden. Ein paar Wochenenden später stand die erste Version online und ich habe ihr den Link geschickt. Die Reaktion war so wie erhofft.
-
-Was mich an dem Projekt überrascht hat, war wie viel Spaß die Detailarbeit gemacht hat. Die genaue Wahl der Herzchen-Marker, die Animation beim Reservieren, das Verhalten der Karten beim Hover, das Verhalten der Liste auf einem Smartphone. Diese Kleinigkeiten machen den Unterschied zwischen "funktional" und "schön", und in einem Projekt für eine konkrete Person, die man jeden Tag sieht, lohnt sich dieser Aufwand sofort sichtbar.
+Im Kern war wunschliste-selina.de eine Aufmerksamkeit. Selina hat irgendwann erzählt, dass ihr die Amazon-Wunschliste zu unpersönlich ist, ich habe das mitgenommen ohne weiter darüber zu reden. Ein paar Wochenenden später stand die erste Version online. Was mich beim Bauen überrascht hat, war wie viel Spaß die Detailarbeit gemacht hat: die genaue Wahl der Herzchen-Marker, die Animation beim Reservieren, das Verhalten der Karten beim Hover. Bei einem Projekt für eine konkrete Person lohnt sich dieser Aufwand sofort sichtbar.
 
 ---
 

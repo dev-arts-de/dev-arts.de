@@ -87,9 +87,7 @@ Das führt mich zu kurzen Methoden, zu sprechenden Variablennamen, zu Klassen di
 
 <div class="reveal" data-delay="120">
 
-Gleichzeitig glaube ich nicht an Reinheitsdogmen. Sauberer Code ist kein Selbstzweck. Er ist ein Mittel, um Software langfristig wartbar und erweiterbar zu halten. Wenn der Kontext pragmatische Abstriche erfordert (Zeitdruck, Prototyp, Legacy-Umgebung), dann mache ich die Abstriche bewusst und dokumentiere sie.
-
-<p class="c-pullquote">Der Unterschied zwischen einem schlechten Entwickler und einem pragmatischen liegt darin, dass der pragmatische weiß was er tut und warum.</p>
+Gleichzeitig glaube ich nicht an Reinheitsdogmen. Sauberer Code ist kein Selbstzweck. Er ist ein Mittel, um Software langfristig wartbar und erweiterbar zu halten. Wenn der Kontext pragmatische Abstriche erfordert, etwa unter Zeitdruck, in einem Prototyp oder in einer Legacy-Umgebung, dann mache ich die Abstriche bewusst und dokumentiere sie.
 
 </div>
 
@@ -135,7 +133,7 @@ Diese Arbeit klingt technisch trocken. Im Alltag war sie das Gegenteil. Detektiv
 
 <div class="reveal" data-delay="120">
 
-Hellmann hat im Zuge einer konzernweiten Restrukturierung einen erheblichen Teil der Belegschaft abgebaut. Meine Stelle war davon betroffen, wirtschaftlich bedingt und nicht leistungsbedingt. Ich habe die Zeit genutzt, um genau hinzuschauen, was als Nächstes kommt. Seit Mai 2026 arbeite ich bei der init SE in Karlsruhe als Software Engineer. Meine Aufgabe dort ist die Integration einer CI/CD-Pipeline in eine neue Cloud-Infrastruktur. Das bewegt sich genau in dem Bereich, der mich am meisten interessiert: die Verbindung von Anwendungscode mit der Plattform, auf der er später läuft, und die Frage, wie man diesen Übergang verlässlich, nachvollziehbar und wartbar gestaltet.
+Hellmann hat im Zuge einer konzernweiten Restrukturierung einen erheblichen Teil der Belegschaft abgebaut. Meine Stelle war davon betroffen, wirtschaftlich bedingt und nicht leistungsbedingt. Seit Mai 2026 arbeite ich bei der init SE in Karlsruhe als Software Engineer und verantworte dort die Integration einer CI/CD-Pipeline in eine neue Cloud-Infrastruktur. Das bewegt sich genau in dem Bereich, der mich am meisten interessiert: die Verbindung von Anwendungscode mit der Plattform, auf der er später läuft.
 
 </div>
 
@@ -151,7 +149,7 @@ Meine Freundin und ich haben seit April 2025 eine gemeinsame Wohnung in Karlsruh
 
 <div class="reveal" data-delay="80">
 
-Ich bin seit Jahren an Videografie interessiert, konkret Filmen und Schneiden, weniger als Hobby denn als Gegenpol zum abstrakten Denken im Beruf. Ein Video zu schneiden hat ein konkretes, sichtbares Ergebnis auf das man zeigen kann. Das schätze ich. Außerdem: gute Serien, Story-Games wenn die Zeit es erlaubt. The Last of Us Part II war das einzige Spiel, das mich tagelang beschäftigt hat, nicht wegen der Spielmechanik, sondern wegen der Geschichte. Gute Erzählungen faszinieren mich, egal in welchem Medium.
+Ich bin seit Jahren an Videografie interessiert, konkret Filmen und Schneiden, weniger als Hobby denn als Gegenpol zum abstrakten Denken im Beruf. Ein Video zu schneiden hat ein konkretes, sichtbares Ergebnis auf das man zeigen kann. Außerdem gute Serien und Story-Games wenn die Zeit es erlaubt. The Last of Us Part II war das einzige Spiel, das mich tagelang beschäftigt hat, nicht wegen der Spielmechanik, sondern wegen der Geschichte.
 
 </div>
 

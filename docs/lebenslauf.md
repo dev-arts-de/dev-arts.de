@@ -37,9 +37,7 @@ Ich arbeite strukturiert, kommuniziere direkt und schreibe Code, der in einem Ja
   <img src="/images/init-se-logo.png" class="cv-logo" alt="init SE" />
 </div>
 
-Seit dem 1. Mai 2026 arbeite ich bei der init SE in Karlsruhe als Software Engineer. Mein Aufgabenfeld liegt im Bereich CI/CD und Cloud-Infrastruktur. Ich bin verantwortlich für die Integration einer Continuous-Integration- und Continuous-Deployment-Pipeline in eine neue Cloud-Umgebung, die intern aufgebaut wird. Das umfasst die Wahl und Konfiguration der Pipeline-Werkzeuge, die Anbindung an Container-Registries und Deployment-Targets, die Definition wiederverwendbarer Pipeline-Bausteine für unterschiedliche Anwendungstypen sowie die Begleitung der Entwicklungsteams beim Übergang von der alten in die neue Umgebung.
-
-Die init SE ist seit Jahrzehnten im öffentlichen Personenverkehr aktiv und entwickelt Software für Ticketing, Fahrgastinformation und damit verbundene Prozesse. Was mich an der Stelle gereizt hat, war die Kombination aus konkreter Branchenrelevanz und langfristiger Perspektive. Software für Verkehrsbetriebe muss über viele Jahre stabil laufen, sich an wechselnde Anforderungen anpassen lassen und gleichzeitig in einer modernen Entwicklungsumgebung gepflegt werden können. Genau in dieser Spannung bewegt sich meine aktuelle Arbeit.
+Seit dem 1. Mai 2026 arbeite ich bei der init SE in Karlsruhe als Software Engineer mit Schwerpunkt CI/CD und Cloud-Infrastruktur. Konkret geht es um die Integration einer Continuous-Integration- und Deployment-Pipeline in eine neue Cloud-Umgebung, die intern aufgebaut wird: Wahl und Konfiguration der Pipeline-Werkzeuge, Anbindung an Container-Registries und Deployment-Targets, wiederverwendbare Pipeline-Bausteine für unterschiedliche Anwendungstypen, Begleitung der Entwicklungsteams beim Übergang. Die init SE entwickelt Software für den öffentlichen Personenverkehr, ein Bereich mit langer Lebenszeit und entsprechend hohen Ansprüchen an stabile Liefermechanik.
 
 ---
 

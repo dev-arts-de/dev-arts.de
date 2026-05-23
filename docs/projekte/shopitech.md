@@ -30,9 +30,9 @@ Das klingt wie ein Schritt zurück für jemanden der hauptberuflich Softwareentw
 
 ## Was Kundenprojekte lehren
 
-Wer Software für Kunden baut, die selbst keine Entwickler sind, lernt andere Dinge als wer im Team für interne Systeme entwickelt. Kundenkommunikation ist eine eigene Kompetenz: Anforderungen heraushören, die nicht explizit genannt werden. Erwartungen managen, ohne zu versprechen was nicht machbar ist. Erklären warum etwas so gelöst wird wie es gelöst wird, ohne dabei technisch zu werden.
+Wer Software für Kunden baut, die selbst keine Entwickler sind, lernt andere Dinge als wer im Team für interne Systeme entwickelt. Anforderungen heraushören, die nicht explizit genannt werden. Erwartungen managen, ohne zu versprechen was nicht machbar ist. Erklären warum etwas so gelöst wird wie es gelöst wird, ohne dabei technisch zu werden.
 
-Ich habe durch diese Projekte gelernt, was "fertig" wirklich bedeutet. Im Unternehmenskontext gibt es immer die nächste Iteration, den nächsten Sprint, das nächste Release. Bei einem Kundenprojekt gibt es irgendwann eine Website, die live ist und läuft. Dieses Gefühl (und die Verantwortung die damit verbunden ist) schärft die Perspektive auf das was wirklich wichtig ist.
+Was ich durch diese Projekte gelernt habe, ist was "fertig" wirklich bedeutet. Im Unternehmenskontext gibt es immer die nächste Iteration, den nächsten Sprint. Bei einem Kundenprojekt gibt es irgendwann eine Website, die live ist und läuft. Dieses Gefühl und die Verantwortung die damit verbunden ist schärfen die Perspektive auf das was wirklich wichtig ist.
 
 ---
 
