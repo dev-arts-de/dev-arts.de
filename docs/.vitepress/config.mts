@@ -13,12 +13,15 @@ export default defineConfig({
     ['meta', { property: 'og:url', content: 'https://dev-arts.de' }],
     ['meta', { property: 'og:title', content: 'Arthur Schimpf – Softwareentwickler' }],
     ['meta', { property: 'og:description', content: 'Softwareentwickler aus Karlsruhe. Java, Spring Boot, Kotlin. Seit 2019.' }],
-    ['meta', { property: 'og:image', content: 'https://dev-arts.de/images/me-portfolio.jpeg' }],
+    ['meta', { property: 'og:image', content: 'https://dev-arts.de/og-cover.png' }],
+    ['meta', { property: 'og:image:width', content: '1200' }],
+    ['meta', { property: 'og:image:height', content: '630' }],
+    ['meta', { property: 'og:locale', content: 'de_DE' }],
     // Twitter Card
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:title', content: 'Arthur Schimpf – Softwareentwickler' }],
     ['meta', { name: 'twitter:description', content: 'Softwareentwickler aus Karlsruhe. Java, Spring Boot, Kotlin.' }],
-    ['meta', { name: 'twitter:image', content: 'https://dev-arts.de/images/me-portfolio.jpeg' }],
+    ['meta', { name: 'twitter:image', content: 'https://dev-arts.de/og-cover.png' }],
     ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0' }],
   ],
   themeConfig: {
