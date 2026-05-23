@@ -433,6 +433,23 @@ body {
   transform: translateY(0);
 }
 
+/* If the user prefers reduced motion, skip the reveal animation
+   entirely and show the content immediately. Same fallback if
+   JavaScript is disabled (handled via .no-js below). */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+.no-js .reveal {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
 /* ─── Home Page Custom Content ───────────────────────────────────── */
 .home-section {
   max-width: 720px;

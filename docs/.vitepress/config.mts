@@ -61,6 +61,10 @@ export default defineConfig({
     ['meta', { name: 'twitter:description', content: 'Softwareentwickler aus Karlsruhe. Java, Spring Boot, Kotlin.' }],
     ['meta', { name: 'twitter:image', content: 'https://dev-arts.de/og-cover.png' }],
     ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0' }],
+    // Mark <html> as 'no-js' before paint. The class is removed once
+    // Vue mounts in enhanceApp() so CSS can fall back to showing the
+    // reveal content when JavaScript is unavailable.
+    ['script', {}, "document.documentElement.classList.add('no-js');"],
   ],
   themeConfig: {
     siteTitle: 'Arthur Schimpf',

@@ -14,5 +14,8 @@ export default {
   },
   enhanceApp({ app }: EnhanceAppContext) {
     app.component('MailLink', MailLink)
+    if (typeof document !== 'undefined') {
+      document.documentElement.classList.remove('no-js')
+    }
   },
 }
