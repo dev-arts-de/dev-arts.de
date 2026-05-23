@@ -34,6 +34,12 @@ Einige davon laufen produktiv, andere sind pausiert. Der Anspruch ist derselbe w
   <div class="card-desc">Einige ausgewählte Web-Projekte, die ich für Kunden gebaut habe: ein Handwerker-Service, eine Restaurant-Website, ein Hausnotruf-Dienst und weitere. Jedes Projekt hat eigene technische Anforderungen mitgebracht. Zuletzt habe ich die eigene Unternehmensseite von Next.js auf Framer migriert.</div>
 </a>
 
+<a href="/projekte/dein-notruf" class="project-card">
+  <div class="card-title">dein-notruf.de</div>
+  <div class="card-meta">Hausnotruf-Dienst · Idee &amp; Webseite · Ende 2025</div>
+  <div class="card-desc">Konzept und Webseite für einen Hausnotruf-Dienst. Entstanden gemeinsam mit einer Freundin, mit Kontakten in die Pflegebranche in Karlsruhe. Die Seite läuft, das Geschäftsmodell wird noch ausgearbeitet. Aktuell pausiert.</div>
+</a>
+
 <a href="/projekte/daily-pi-poetry" class="project-card">
   <div class="card-title">daily-pi-poetry</div>
   <div class="card-meta">Raspberry Pi · Lokales Sprachmodell · Open Source</div>
@@ -102,4 +108,10 @@ Projekte aus der Ausbildungszeit und den ersten Jahren, teilweise nicht mehr onl
   <div class="card-title">beercraftshop</div>
   <div class="card-meta">Schulprojekt · PHP · ~2020</div>
   <div class="card-desc">Ein mehrseitiger Online-Biershop in PHP, entstanden als Schulprojekt. Der erste vollständige Kreislauf: serverseitiges Rendering, Formulare, Datenbankanbindung.</div>
+</a>
+
+<a href="/projekte/abschlussarbeit" class="project-card">
+  <div class="card-title">Abschlussarbeit Ausbildung 2022</div>
+  <div class="card-meta">Fachinformatiker · abas Software · 2022</div>
+  <div class="card-desc">Abschlussprojekt der dualen Ausbildung zum Fachinformatiker Anwendungsentwicklung an der Heinrich-Hertz-Schule Karlsruhe. Projektdokumentation als PDF eingebettet.</div>
 </a>
