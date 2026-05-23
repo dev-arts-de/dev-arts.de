@@ -79,7 +79,7 @@ export default defineConfig({
       provider: 'local',
     },
     footer: {
-      message: '<a href="https://github.com/iqwrwq" target="_blank">github/iqwrwq</a> · <a href="https://github.com/dev-arts-de" target="_blank">github/dev-arts-de</a> · <a href="/impressum">Impressum</a>',
+      message: '<a href="https://github.com/iqwrwq" target="_blank">github/iqwrwq</a> · <a href="https://github.com/dev-arts-de" target="_blank">github/dev-arts-de</a> · <a href="/impressum">Impressum</a> · <a href="/datenschutz">Datenschutz</a>',
       copyright: 'Arthur Schimpf · Karlsruhe'
     },
     editLink: undefined,
