@@ -9,7 +9,7 @@ aside: false
 ---
 
 <div class="cv-header">
-  <img src="/images/me-portfolio.jpeg" alt="Arthur Schimpf" class="cv-portrait" />
+  <img src="/images/me-portfolio.jpeg" alt="Arthur Schimpf" class="cv-portrait" width="1066" height="1600" decoding="async" />
   <div class="cv-header-text">
 
 ## Arthur Schimpf

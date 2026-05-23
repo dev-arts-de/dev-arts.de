@@ -64,7 +64,7 @@ Dann kam die duale Ausbildung bei abas Software in Karlsruhe: vier Jahre, in den
 </div>
 
 <div class="reveal" data-delay="160">
-<img src="/images/workspace.jpeg" alt="Workspace" class="c-img" />
+<img src="/images/workspace.jpeg" alt="Workspace" class="c-img" width="900" height="1600" loading="lazy" decoding="async" />
 </div>
 
 <hr class="home-divider">
@@ -157,8 +157,8 @@ Ich bin seit Jahren an Videografie interessiert, konkret Filmen und Schneiden, w
 
 <div class="reveal" data-delay="120">
 <div class="c-img-grid">
-  <img src="/images/me-and-selina.jpeg" alt="Arthur und Selina" />
-  <img src="/images/apartment.jpeg" alt="Die neue Wohnung" />
+  <img src="/images/me-and-selina.jpeg" alt="Arthur und Selina" width="1200" height="1600" loading="lazy" decoding="async" />
+  <img src="/images/apartment.jpeg" alt="Die neue Wohnung" width="1200" height="1600" loading="lazy" decoding="async" />
 </div>
 </div>
 
