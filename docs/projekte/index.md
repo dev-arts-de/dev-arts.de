@@ -22,6 +22,12 @@ Einige davon laufen produktiv, andere sind pausiert. Der Anspruch ist derselbe w
   <div class="card-desc">Ein kostenloser Dokumentengenerator für Rechnungen, Angebote und Geschäftsdokumente. Entstanden aus zwei Jahren intensiver Arbeit mit E-Rechnungen bei der Infokom GmbH. Version 1 läuft produktiv, Version 2 wird in Kotlin mit API-first Ansatz neu aufgebaut.</div>
 </a>
 
+<a href="/projekte/bewerber-schmiede" class="project-card">
+  <div class="card-title">Bewerber-Schmiede</div>
+  <div class="card-meta">Web-Anwendung · In Betrieb · bewerber-schmiede.de</div>
+  <div class="card-desc">Ein Tool zur Lebenslauf-Analyse, das strukturiertes Feedback zu Vollständigkeit, Formulierungen und häufigen Schwachstellen liefert. Vollständig mit Claude Code als Entwicklungspartner gebaut, mit CI/CD-Pipeline, Unit-Tests und End-to-End-Tests von Anfang an.</div>
+</a>
+
 <a href="/projekte/shopitech" class="project-card">
   <div class="card-title">Shopitech</div>
   <div class="card-meta">Kundenprojekte · Verschiedene Technologien</div>
