@@ -1,0 +1,101 @@
+/* ===================================================================
+   Design tokens
+   Fog grey and slate ink, one tram-green accent.
+   Fonts are bundled via @fontsource (self-hosted, no external request).
+   =================================================================== */
+
+:root {
+  /* Palette */
+  --c-fog: #eceef0;
+  --c-fog-raised: #f6f7f8;
+  --c-fog-sunk: #e1e5e8;
+  --c-ink: #16202a;
+  --c-ink-soft: #3b4652;
+  --c-muted: #5b6672;
+  --c-green: #1f6f5c;
+  --c-green-strong: #175646;
+  --c-line: rgba(22, 32, 42, 0.12);
+  --c-line-soft: rgba(22, 32, 42, 0.07);
+  --c-fan: rgba(31, 111, 92, 0.42);
+
+  /* Type */
+  --f-display: 'Bricolage Grotesque Variable', 'Avenir Next Condensed', 'Helvetica Neue', Arial, sans-serif;
+  --f-text: 'Source Serif 4 Variable', 'Iowan Old Style', Georgia, serif;
+  --f-code: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+
+  /* Scale (modular, ratio ~1.25) */
+  --t-small: 0.875rem;
+  --t-body: 1.125rem;
+  --t-lead: 1.375rem;
+  --t-h3: 1.375rem;
+  --t-h2: clamp(1.75rem, 1.4rem + 1.2vw, 2.375rem);
+  --t-h1: clamp(2.5rem, 1.8rem + 3vw, 4.25rem);
+  --t-name: clamp(4.25rem, 2rem + 11vw, 11rem);
+
+  /* Layout */
+  --w-page: 1180px;
+  --w-text: 40rem;
+  --gutter: clamp(1.25rem, 0.8rem + 2vw, 2.5rem);
+  --radius: 6px;
+
+  /* VitePress mapping */
+  --vp-font-family-base: var(--f-display);
+  --vp-font-family-mono: var(--f-code);
+
+  --vp-c-brand-1: var(--c-green);
+  --vp-c-brand-2: var(--c-green-strong);
+  --vp-c-brand-3: var(--c-green-strong);
+  --vp-c-brand-soft: rgba(31, 111, 92, 0.1);
+
+  --vp-c-bg: var(--c-fog);
+  --vp-c-bg-alt: var(--c-fog);
+  --vp-c-bg-soft: var(--c-fog-sunk);
+  --vp-c-bg-elv: var(--c-fog-raised);
+  --vp-c-bg-mute: var(--c-fog-sunk);
+
+  --vp-c-divider: var(--c-line);
+  --vp-c-gutter: var(--c-line-soft);
+  --vp-c-border: var(--c-line);
+
+  --vp-c-text-1: var(--c-ink);
+  --vp-c-text-2: var(--c-ink-soft);
+  --vp-c-text-3: var(--c-muted);
+
+  --vp-nav-height: 68px;
+  --vp-layout-max-width: var(--w-page);
+
+  --vp-code-font-size: 0.86em;
+  --vp-code-color: var(--c-green-strong);
+  --vp-code-bg: rgba(31, 111, 92, 0.08);
+  --vp-code-block-bg: var(--c-fog-raised);
+
+  --vp-button-brand-border: transparent;
+  --vp-button-brand-text: var(--c-fog-raised);
+  --vp-button-brand-bg: var(--c-ink);
+  --vp-button-brand-hover-border: transparent;
+  --vp-button-brand-hover-text: var(--c-fog-raised);
+  --vp-button-brand-hover-bg: var(--c-green-strong);
+  --vp-button-brand-active-bg: var(--c-green-strong);
+
+  --vp-home-hero-name-color: var(--c-ink);
+  --vp-home-hero-name-background: none;
+}
+
+.dark {
+  --c-fog: #121a21;
+  --c-fog-raised: #18222b;
+  --c-fog-sunk: #0e151b;
+  --c-ink: #e3e8ec;
+  --c-ink-soft: #bcc6ce;
+  --c-muted: #8e9ba7;
+  --c-green: #6fc7ae;
+  --c-green-strong: #8fd8c2;
+  --c-line: rgba(227, 232, 236, 0.13);
+  --c-line-soft: rgba(227, 232, 236, 0.07);
+  --c-fan: rgba(111, 199, 174, 0.38);
+
+  --vp-c-brand-soft: rgba(111, 199, 174, 0.12);
+  --vp-code-bg: rgba(111, 199, 174, 0.1);
+  --vp-button-brand-text: var(--c-fog);
+  --vp-button-brand-hover-text: var(--c-fog);
+}

@@ -1,81 +1,51 @@
 # dev-arts.de
 
-Persönliche VitePress-Website mit Dokumentation (Lebenslauf, Kenntnisse, Projektseiten, Impressum, Datenschutz), betrieben von Arthur.
+Persönliches Portfolio von Arthur Schimpf, gebaut mit VitePress.
 
-## Worum es geht
+## Inhalt
 
-Die Seiten liegen als Markdown unter `docs/` und werden mit VitePress zu einer statischen Website gebaut. Die Inhalte deuten auf eine persönliche Präsentation hin. Der Zweck ist nicht ausdrücklich dokumentiert.
+- `docs/index.md`: Startseite mit Hero (`HomeHero.vue`) und Textabschnitten
+- `docs/lebenslauf.md`: Stationen als Zeitleiste (`<CvStation>`)
+- `docs/kenntnisse.md`: Technische Kenntnisse
+- `docs/projekte/*.md`: eine Seite pro Projekt, Übersicht unter `docs/projekte/index.md`
+- `docs/impressum.md`, `docs/datenschutz.md`: Pflichtseiten
 
-- **Stand:** Letzte Änderungen vom 2026-05-24. Der Branch `main` enthält 64 Commits.
-- **Status:** ruhend
+## Projektseiten
 
-## Funktionen
+Die Metadaten eines Projekts stehen im Frontmatter der jeweiligen Seite. `docs/projekte/projects.data.ts` sammelt sie beim Build ein; daraus entstehen die Übersicht, der Kopf jeder Projektseite und die Navigation zum vorherigen und nächsten Projekt.
 
-- Startseite, Lebenslauf und Kenntnisse
-- Projektübersicht mit einzelnen Projektseiten unter `docs/projekte/`
-- Impressum und Datenschutzerklärung
-- Automatisch erzeugte `robots.txt` und `sitemap.xml`
-- Lazy Loading und feste Bildmaße für Inhaltsbilder
+```yaml
+---
+title: Fundus
+description: Ein Satz, der in der Übersicht und als Lead erscheint.
+gruppe: aktuell        # aktuell | shopitech | persoenlich | frueher
+order: 1               # Reihenfolge innerhalb der Gruppe
+zeitraum: seit November 2026
+status: In Betrieb
+technik: [Python, SQLite]
+link: { href: 'https://example.org', text: 'example.org' }   # optional
+aside: false
+---
+```
 
-## Technik
+Gruppen und ihre Texte stehen in `docs/.vitepress/theme/data/projects.ts`. Eine neue Projektseite braucht keine weitere Registrierung.
 
-- Node.js (Version ist nicht im Projekt festgelegt)
-- VitePress `^1.6.4`
-- Vue `^3.5.24`
-- npm mit `package-lock.json`
+## Gestaltung
 
-## Projektstruktur
+- Tokens in `docs/.vitepress/theme/styles/tokens.css`: Nebelgrau, Schieferblau, ein Grünton als Akzent, eigener Dark Mode
+- Schriften: Bricolage Grotesque (Überschriften, Navigation) und Source Serif 4 (Fließtext), selbst gehostet über `@fontsource`
+- Das Linienmotiv im Hero (`FanLines.vue`) ist der Stadtgrundriss von Karlsruhe: 32 Straßen, die vom Schlossturm ausgehen
+- Keine Bilder in den Inhalten; das Social-Vorschaubild ist `docs/public/og-cover.svg`, gerendert nach `og-cover.png`
 
-- `docs/`: Quelltexte der Seiten als Markdown
-- `docs/.vitepress/`: VitePress-Konfiguration
-- `docs/projekte/`: Einzelne Projektseiten und Projektübersicht
-- `docs/public/`: Statische Dateien, die unverändert ausgeliefert werden
-- `notes/`: Notizen, zum Beispiel `projects-to-incorporate.txt`
-- `.github/workflows/`: GitHub-Actions-Workflow
-- `.claude/`: Einstellungen für Claude Code
-
-## Lokal starten
-
-Abhängigkeiten installieren:
+## Lokal
 
 ```sh
 npm install
+npm run docs:dev      # Entwicklungsserver
+npm run docs:build    # Produktionsbuild nach docs/.vitepress/dist
+npm test              # Build-Prüfung, läuft auch in GitHub Actions
 ```
-
-Entwicklungsserver mit Live-Reload starten:
-
-```sh
-npm run docs:dev
-```
-
-Produktionsbuild erzeugen:
-
-```sh
-npm run docs:build
-```
-
-Den erzeugten Build lokal ansehen:
-
-```sh
-npm run docs:preview
-```
-
-## Tests
-
-Es gibt keine automatisierten Tests. Das Skript `test` führt nur einen VitePress-Build aus, der prüft, ob sich die Seiten fehlerfrei bauen lassen:
-
-```sh
-npm test
-```
-
-Die CI-Pipeline führt laut Commit-Historie ebenfalls nur diese Build-Prüfung aus.
 
 ## Betrieb
 
-Ein Deployment-Ziel ist im Repository nicht dokumentiert. Die Ausgabe des Builds liegt im VitePress-Standardordner `docs/.vitepress/dist` (nicht geprüft, ergibt sich aus der VitePress-Konvention).
-
-## Weiterführend
-
-- `docs/projekte/index.md`: Übersicht aller Projekte
-- `notes/projects-to-incorporate.txt`: Offene Projektideen
-- GitHub-Repository: https://github.com/dev-arts-de/dev-arts.de
+Vercel baut und deployt automatisch bei jedem Push auf `main`. `vercel.json` enthält Weiterleitungen für entfernte Seiten.

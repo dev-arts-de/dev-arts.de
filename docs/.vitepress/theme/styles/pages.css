@@ -1,0 +1,208 @@
+/* ===================================================================
+   Page-level layouts: home sections, CV timeline, skills summary
+   =================================================================== */
+
+/* ─── Home ────────────────────────────────────────────────────── */
+
+.home-body {
+  max-width: var(--w-page);
+  margin: 0 auto;
+  padding: clamp(4rem, 9vw, 7.5rem) var(--gutter) 0;
+}
+
+.home-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.75rem;
+  padding: 2.75rem 0;
+  border-top: 1px solid var(--c-line-soft);
+}
+
+.home-section:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.home-section h2 {
+  margin: 0;
+  font-family: var(--f-display);
+  font-size: var(--t-h2);
+  font-weight: 650;
+  font-stretch: 85%;
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+  color: var(--c-ink);
+}
+
+.home-prose {
+  max-width: var(--w-text);
+  font-family: var(--f-text);
+  font-size: var(--t-body);
+  line-height: 1.72;
+  color: var(--c-ink-soft);
+}
+
+.home-prose p {
+  margin: 0 0 1.1em;
+}
+
+.home-prose p:last-child {
+  margin-bottom: 0;
+}
+
+.home-prose a {
+  color: var(--c-ink);
+  text-decoration: underline;
+  text-decoration-color: var(--c-green);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+}
+
+.home-prose a:hover {
+  color: var(--c-green);
+}
+
+.home-prose strong {
+  color: var(--c-ink);
+  font-weight: 600;
+}
+
+.contact-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.75rem;
+  margin-top: 1.5rem !important;
+  font-family: var(--f-display);
+  font-size: 1.15rem;
+}
+
+@media (min-width: 900px) {
+  .home-section {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    gap: 3rem;
+    padding: 3.5rem 0;
+  }
+
+  .home-section h2 {
+    position: sticky;
+    top: calc(var(--vp-nav-height) + 1.5rem);
+    align-self: start;
+  }
+}
+
+/* ─── Lebenslauf ──────────────────────────────────────────────── */
+
+.cv-timeline {
+  position: relative;
+  margin: 2rem 0 0;
+}
+
+.cv-station {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.25rem;
+  padding: 0 0 2.5rem 1.5rem;
+  border-left: 1px solid var(--c-line);
+}
+
+.cv-station::before {
+  content: '';
+  position: absolute;
+  left: -5px;
+  top: 0.45rem;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--c-fog);
+  border: 1.5px solid var(--c-muted);
+}
+
+.cv-station--current::before {
+  background: var(--c-green);
+  border-color: var(--c-green);
+}
+
+.cv-station:last-child {
+  padding-bottom: 0.5rem;
+}
+
+.vp-doc .cv-time {
+  margin: 0;
+  font-family: var(--f-display);
+  font-size: var(--t-small);
+  font-weight: 500;
+  color: var(--c-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.vp-doc .cv-role {
+  margin: 0.15rem 0 0;
+  font-size: 1.35rem;
+}
+
+.vp-doc .cv-org {
+  margin: 0.1rem 0 0;
+  font-family: var(--f-display);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--c-green);
+}
+
+.vp-doc .cv-text > p:first-child {
+  margin-top: 0.75rem;
+}
+
+.vp-doc .cv-text > p {
+  margin: 0.75rem 0 0;
+}
+
+/* ─── Kenntnisse: summary list ───────────────────────────────── */
+
+.vp-doc .stack-summary {
+  display: grid;
+  gap: 1.25rem;
+  margin: 2rem 0 0;
+  padding: 1.25rem 0 0;
+  border-top: 1px solid var(--c-line);
+}
+
+.vp-doc .stack-summary dt {
+  font-family: var(--f-display);
+  font-size: var(--t-small);
+  font-weight: 500;
+  color: var(--c-muted);
+}
+
+.vp-doc .stack-summary dd {
+  margin: 0.25rem 0 0;
+  font-family: var(--f-display);
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--c-ink);
+}
+
+@media (min-width: 640px) {
+  .vp-doc .stack-summary {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+  }
+}
+
+/* ─── Abschlussarbeit PDF ────────────────────────────────────── */
+
+.pdf-viewer {
+  height: 80vh;
+  margin-top: 2rem;
+  border: 1px solid var(--c-line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.pdf-viewer iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
