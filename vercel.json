@@ -1,0 +1,20 @@
+{
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/projekte/daily-pi-poetry",
+      "destination": "/projekte/alltagswerkzeuge",
+      "permanent": true
+    },
+    {
+      "source": "/projekte/merkelfy",
+      "destination": "/projekte/",
+      "permanent": true
+    },
+    {
+      "source": "/downloads/cv-arthur-schimpf.pdf",
+      "destination": "/lebenslauf",
+      "permanent": false
+    }
+  ]
+}

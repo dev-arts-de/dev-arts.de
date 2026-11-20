@@ -1,0 +1,368 @@
+/* ===================================================================
+   Base: body, nav, footer, document typography
+   =================================================================== */
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--c-fog);
+  color: var(--c-ink);
+  font-family: var(--f-display);
+  font-optical-sizing: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--c-green);
+  color: var(--c-fog-raised);
+}
+
+:focus-visible {
+  outline: 2px solid var(--c-green);
+  outline-offset: 3px;
+}
+
+/* ─── Nav ─────────────────────────────────────────────────────── */
+
+.VPNav,
+.VPNavBar,
+.VPNavBar.has-sidebar,
+.VPNavBar:not(.home.top) .content-body,
+.VPNavBar .content-body {
+  background: transparent !important;
+}
+
+.VPNavBar .divider,
+.VPNavBar .divider-line {
+  display: none;
+}
+
+.VPNav {
+  border-bottom: 1px solid var(--c-line-soft);
+}
+
+/* The blur sits on a pseudo-element: backdrop-filter on .VPNav itself would
+   become the containing block for the fixed mobile menu and collapse it. */
+.VPNavBar {
+  isolation: isolate;
+}
+
+.VPNavBar::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: color-mix(in srgb, var(--c-fog) 82%, transparent);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.VPNavBarTitle .title {
+  font-family: var(--f-display);
+  font-weight: 700;
+  font-stretch: 85%;
+  font-size: 1.125rem;
+  letter-spacing: -0.01em;
+  border-bottom: 0 !important;
+}
+
+.VPNavBarMenuLink {
+  font-family: var(--f-display);
+  font-size: 0.975rem !important;
+  font-weight: 500 !important;
+  color: var(--c-ink-soft) !important;
+}
+
+.VPNavBarMenuLink:hover {
+  color: var(--c-ink) !important;
+}
+
+.VPNavBarMenuLink.active {
+  color: var(--c-ink) !important;
+  text-decoration: underline;
+  text-decoration-color: var(--c-green);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 8px;
+}
+
+.VPNavScreen {
+  background: var(--c-fog) !important;
+}
+
+/* ─── Footer ──────────────────────────────────────────────────── */
+
+.VPFooter {
+  background: transparent !important;
+  border-top: 1px solid var(--c-line-soft) !important;
+}
+
+.VPFooter .message,
+.VPFooter .copyright {
+  font-family: var(--f-display);
+  font-size: var(--t-small) !important;
+  color: var(--c-muted) !important;
+}
+
+.VPFooter a {
+  color: var(--c-ink-soft);
+  text-decoration: none;
+}
+
+.VPFooter a:hover {
+  color: var(--c-green);
+}
+
+/* ─── Document typography ────────────────────────────────────── */
+
+.VPDoc {
+  padding-top: 3.5rem !important;
+}
+
+.vp-doc {
+  font-family: var(--f-text);
+  font-size: var(--t-body);
+  line-height: 1.72;
+  color: var(--c-ink-soft);
+  font-variant-numeric: oldstyle-nums proportional-nums;
+}
+
+.vp-doc p,
+.vp-doc ul,
+.vp-doc ol {
+  margin: 1.1em 0;
+}
+
+.vp-doc strong {
+  color: var(--c-ink);
+  font-weight: 600;
+}
+
+.vp-doc h1,
+.vp-doc h2,
+.vp-doc h3,
+.vp-doc h4 {
+  font-family: var(--f-display);
+  color: var(--c-ink);
+  font-variant-numeric: lining-nums;
+}
+
+.vp-doc h1 {
+  font-size: var(--t-h1);
+  line-height: 1;
+  font-weight: 700;
+  font-stretch: 80%;
+  letter-spacing: -0.025em;
+  margin-bottom: 1.5rem;
+}
+
+.vp-doc h2 {
+  font-size: var(--t-h2);
+  line-height: 1.12;
+  font-weight: 650;
+  font-stretch: 85%;
+  letter-spacing: -0.015em;
+  margin: 3.25rem 0 0.75rem;
+  padding-top: 0;
+  border-top: 0;
+}
+
+.vp-doc h3 {
+  font-size: var(--t-h3);
+  line-height: 1.25;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  margin: 2.25rem 0 0.5rem;
+}
+
+.vp-doc .header-anchor {
+  display: none;
+}
+
+.vp-doc a {
+  color: var(--c-ink);
+  font-weight: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--c-green);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+  transition: color 0.15s ease;
+}
+
+.vp-doc a:hover {
+  color: var(--c-green);
+}
+
+.vp-doc hr {
+  border: 0;
+  border-top: 1px solid var(--c-line);
+  margin: 3rem 0;
+}
+
+.vp-doc .lead {
+  font-size: var(--t-lead);
+  line-height: 1.5;
+  color: var(--c-ink);
+  max-width: 36rem;
+}
+
+.vp-doc ul {
+  padding-left: 1.1rem;
+}
+
+.vp-doc li + li {
+  margin-top: 0.4rem;
+}
+
+.vp-doc li::marker {
+  color: var(--c-green);
+}
+
+/* Code */
+
+.vp-doc :not(pre) > code {
+  font-variant-numeric: normal;
+  padding: 0.12em 0.38em;
+  border-radius: 4px;
+}
+
+.vp-doc div[class*='language-'] {
+  border-radius: var(--radius);
+  border: 1px solid var(--c-line-soft);
+  margin: 1.5rem 0;
+}
+
+.vp-doc div[class*='language-'] code {
+  font-size: 0.85rem;
+  line-height: 1.65;
+}
+
+/* Tables */
+
+.vp-doc table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--f-display);
+  font-size: 0.95rem;
+  margin: 1.75rem 0;
+}
+
+.vp-doc tr,
+.vp-doc tr:nth-child(2n) {
+  background: transparent;
+  border-top: 0;
+}
+
+.vp-doc th,
+.vp-doc td {
+  border: 0;
+  border-bottom: 1px solid var(--c-line-soft);
+  padding: 0.6rem 1rem 0.6rem 0;
+  text-align: left;
+  vertical-align: top;
+}
+
+.vp-doc th {
+  color: var(--c-muted);
+  font-weight: 500;
+  background: transparent;
+}
+
+.vp-doc td:first-child {
+  color: var(--c-ink);
+  font-weight: 550;
+}
+
+@media (min-width: 640px) {
+  .vp-doc td:first-child {
+    white-space: nowrap;
+  }
+}
+
+/* Aside outline */
+
+.VPDocAsideOutline .outline-title {
+  font-family: var(--f-display);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--c-ink);
+}
+
+.VPDocAsideOutline .outline-link {
+  font-family: var(--f-display);
+}
+
+/* Buttons and plain action links */
+
+.action-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--f-display);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.9rem 1.35rem;
+  border-radius: 999px;
+  background: var(--c-ink);
+  color: var(--c-fog-raised) !important;
+  text-decoration: none !important;
+  transition: background-color 0.15s ease;
+}
+
+.btn:hover {
+  background: var(--c-green-strong);
+}
+
+.dark .btn {
+  color: var(--c-fog) !important;
+}
+
+.text-link {
+  font-family: var(--f-display);
+  font-weight: 600;
+  color: var(--c-ink) !important;
+  text-decoration: underline !important;
+  text-decoration-color: var(--c-green) !important;
+  text-decoration-thickness: 2px !important;
+  text-underline-offset: 5px !important;
+}
+
+.text-link:hover {
+  color: var(--c-green) !important;
+}
+
+.mail-link {
+  font-family: var(--f-display);
+  font-weight: 600;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* Wider reading column on pages without the outline aside */
+@media (min-width: 960px) {
+  .VPDoc:not(.has-aside) .container,
+  .VPDoc:not(.has-aside) .content-container {
+    max-width: 820px !important;
+  }
+}

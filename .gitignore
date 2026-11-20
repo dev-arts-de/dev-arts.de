@@ -26,3 +26,6 @@ yarn-error.log*
 
 # Notes that should not be public
 notes/
+
+# Playwright screenshots from local checks
+.playwright-mcp/

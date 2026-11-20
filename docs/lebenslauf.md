@@ -1,141 +1,69 @@
 ---
-sidebar: false
+title: Lebenslauf
+description: Berufliche Stationen von Arthur Schimpf, Softwareentwickler in Karlsruhe.
 aside: false
 ---
 
-
 # Lebenslauf
 
----
+<p class="lead">Softwareentwickler mit Schwerpunkt Backend und CI/CD. Sieben Jahre Erfahrung seit Beginn der Ausbildung, davon vier in Festanstellung.</p>
 
-<div class="cv-header">
-  <img src="/images/me-portfolio.jpeg" alt="Arthur Schimpf" class="cv-portrait" width="1066" height="1600" decoding="async" />
-  <div class="cv-header-text">
+## Stationen
 
-## Arthur Schimpf
+<div class="cv-timeline">
 
-Softwareentwickler · Karlsruhe · <MailLink />
+<CvStation zeit="seit Mai 2026" rolle="Software Engineer" firma="init SE" ort="Karlsruhe" aktuell>
 
-  </div>
+Die init entwickelt Software für den öffentlichen Personenverkehr. Ich arbeite an der CI/CD-Strecke für eine neue, intern aufgebaute Cloud-Umgebung: Auswahl und Konfiguration der Pipeline-Werkzeuge, Anbindung an Container-Registry und Deployment-Ziele, wiederverwendbare Pipeline-Bausteine für unterschiedliche Anwendungstypen und die Begleitung der Teams beim Umstieg.
+
+</CvStation>
+
+<CvStation zeit="August 2025 bis Februar 2026" rolle="Softwareentwickler Java" firma="Hellmann Worldwide Logistics" ort="Osnabrück, remote">
+
+Mitarbeit an der Ablösung eines AS400-Systems durch Microservices, für rund 100 Anwender im In- und Ausland. Kern war eine ETL-Strecke: Daten aus dem Altsystem extrahieren, über Kafka weiterreichen, in einem eigenen Service validieren und ins neue Domänenmodell überführen. Fachlich ging es um Offerten, Angebote und Nebenkostenberechnung. Dazu REST-Services für die Anbindung interner Systeme und ein Angular-Frontend für die operativen Nutzer.
+
+Team aus einem Senior-Entwickler, einem Product Owner und zwei Fachexperten. Java, Spring Boot, Kafka, PostgreSQL, Angular, OpenAPI.
+
+</CvStation>
+
+<CvStation zeit="März 2023 bis Juli 2025" rolle="Softwareentwickler" firma="Infokom GmbH" ort="Karlsruhe">
+
+Die Infokom ist der IT-Dienstleister der Eurobaustoff-Gruppe. Mein Hauptprojekt war eine Webanwendung zur Erfassung und Verarbeitung von Rechnungen für die Finanzbuchhaltung, die ich von Anfang an verantwortet habe: Architektur, Datenmodell, Übernahme der Bestandsdaten, CI/CD und der Scrum-Rahmen mit Board und Sprints. Die ersten anderthalb Jahre war ich der einzige Entwickler. Eingehende E-Rechnungen nach ZUGFeRD und XRechnung kamen über Kafka ins System. Vaadin, Spring Boot, Hibernate, PostgreSQL, GitLab CI, Testcontainers.
+
+Außerdem habe ich an der Konzeption einer AS400-Migration auf CockroachDB mitgearbeitet, zusammen mit einem Team von Cockroach Labs, und als zweiter Entwickler an einer internen Chat-Anwendung auf Basis von Spring AI. Gegen Ende habe ich Auszubildende und duale Studierende in technischen Themen begleitet.
+
+</CvStation>
+
+<CvStation zeit="Juli 2022 bis Februar 2023" rolle="Junior Web Developer" firma="abas Software GmbH, heute Forterro" ort="Karlsruhe">
+
+Professional Services. Shop-Plugins, die das abas ERP mit externen Onlineshops verbinden, dazu kundenspezifische Themes und Erweiterungen auf einem hauseigenen Framework mit Spring Boot und Vue.js. Feste Budgets und Termine pro Kundenprojekt.
+
+</CvStation>
+
+<CvStation zeit="September 2019 bis Juni 2022" rolle="Ausbildung zum Fachinformatiker für Anwendungsentwicklung" firma="abas Software GmbH und Heinrich-Hertz-Schule" ort="Karlsruhe">
+
+Duale Ausbildung mit Mitarbeit an Webanwendungen und Integrationsprojekten. Abschlussprojekt war die [Stapelplanung](/projekte/abschlussarbeit), eine Webanwendung zur Verwaltung zu kommissionierender Ware mit Anbindung an das abas ERP.
+
+</CvStation>
+
+<CvStation zeit="bis 2019" rolle="Fachabitur, Schwerpunkt Wirtschaft" firma="Ludwig-Erhard-Schule" ort="Karlsruhe">
+
+Betriebswirtschaft, Volkswirtschaft und Wirtschaftsmathematik.
+
+</CvStation>
+
 </div>
 
-## Kurzprofil
+## Technik
 
-Softwareentwickler mit sechs Jahren Berufserfahrung, davon vier Jahre in der dualen Ausbildung und zwei Jahre in Festanstellung. Schwerpunkt auf Backend-Entwicklung mit Java und Spring Boot, ergänzt durch solide Frontend-Kenntnisse in Vue.js, Angular und React. Erfahrung in der Architektur und Umsetzung von Systemen von Grund auf, sowohl als alleiniger Entwickler als auch in kleinen Teams.
+Java bis 21, Spring Boot 3, Quarkus, Kotlin, PostgreSQL, Flyway, Hibernate, Kafka, Angular, Vue.js, React und Next.js, Vaadin, TypeScript, Docker, GitHub Actions, GitLab CI, Kubernetes, JUnit 5, Testcontainers, Playwright, OpenAPI.
 
-Ich arbeite strukturiert, kommuniziere direkt und schreibe Code, der in einem Jahr noch verständlich ist. Der wirtschaftliche Hintergrund durch das kaufmännische Abitur hilft mir, technische Entscheidungen im fachlichen Kontext zu sehen. Seit Mai 2026 bei der init SE in Karlsruhe als Software Engineer mit Schwerpunkt CI/CD und Cloud-Infrastruktur.
+Wie gut ich was kann und wo ich es eingesetzt habe, steht ausführlich unter [Kenntnisse](/kenntnisse).
 
----
+## Eigene Projekte
 
-## Berufliche Stationen
+Neben der Arbeit baue und betreibe ich eigene Anwendungen, von einem Dokumentenarchiv mit Claude-Anbindung bis zu einer iOS-App. Alles dazu unter [Projekte](/projekte/).
 
-<div class="cv-station-header">
-  <div class="cv-station-info">
-    <h3>Software Engineer</h3>
-    <p class="cv-station-meta">init SE · Karlsruhe · seit Mai 2026</p>
-  </div>
-  <img src="/images/init-se-logo.png" class="cv-logo" alt="init SE" />
-</div>
+## Als PDF
 
-Seit dem 1. Mai 2026 arbeite ich bei der init SE in Karlsruhe als Software Engineer mit Schwerpunkt CI/CD und Cloud-Infrastruktur. Konkret geht es um die Integration einer Continuous-Integration- und Deployment-Pipeline in eine neue Cloud-Umgebung, die intern aufgebaut wird: Wahl und Konfiguration der Pipeline-Werkzeuge, Anbindung an Container-Registries und Deployment-Targets, wiederverwendbare Pipeline-Bausteine für unterschiedliche Anwendungstypen, Begleitung der Entwicklungsteams beim Übergang. Die init SE entwickelt Software für den öffentlichen Personenverkehr, ein Bereich mit langer Lebenszeit und entsprechend hohen Ansprüchen an stabile Liefermechanik.
-
----
-
-<div class="cv-station-header">
-  <div class="cv-station-info">
-    <h3>Digital Transformation Projects Programmer</h3>
-    <p class="cv-station-meta">Hellmann Worldwide Logistics SE · Osnabrück (remote) · 2025 bis 2026</p>
-  </div>
-  <img src="/images/hellmann-logo.png" class="cv-logo" alt="Hellmann" />
-</div>
-
-Ich habe in einem kleinen, spezialisierten Team an der Migration eines AS400-Systems in eine moderne Microservice-Architektur gearbeitet. Der technische Kern war eine vollständige ETL-Pipeline: Daten aus dem Altsystem extrahiert, über einen eigenen Service transformiert und validiert, ins neue Domänenmodell überführt. Ein Angular-Frontend für die operativen Nutzer kam dazu.
-
-Die Anforderungen kamen direkt aus den Fachbereichen. Offerten, Angebote, Nebenkostenberechnungen, also die Kernprozesse, mit denen Hellmann seine Logistikleistungen bepreist. Team: ein Senior-Entwickler, ein Product Owner, zwei Fachliche. Technisch: Java, Spring Boot, REST, Angular, PostgreSQL.
-
-Die Stelle entfiel durch eine konzernweite Restrukturierung. Wirtschaftlich bedingt, nicht leistungsbedingt.
-
----
-
-<div class="cv-station-header">
-  <div class="cv-station-info">
-    <h3>Softwareentwickler</h3>
-    <p class="cv-station-meta">Infokom GmbH (Tochtergesellschaft der EurobaustoffHandels-AG) · Karlsruhe · 2023 bis 2025</p>
-  </div>
-  <img src="/images/infokom-logo.png" class="cv-logo" alt="Infokom" />
-</div>
-
-Die Infokom verantwortet die IT-Entwicklung der Eurobaustoff-Gruppe. Ich war Teil eines kleinen Entwicklungsteams und habe an drei Projekten gearbeitet.
-
-ZFWEB ist eine Web-Anwendung zur Verwaltung und Verarbeitung von Rechnungsdaten, die ich von Anfang an verantwortet habe: Architektur, erste Versionen, zentrale Funktionen, CI/CD-Pipeline, Scrum-Prozess mit Board und Sprint-Struktur. In den ersten anderthalb Jahren war ich der primäre Entwickler, bevor weitere Kollegen einstiegen. Thematisch: Rechnungserfassung, E-Rechnungen nach ZUGFeRD und XRechnung, Archivierung. Technisch: Vaadin, Spring Boot, PostgreSQL, Hibernate, GitLab CI.
-
-Daneben war ich an der Konzeption einer AS400-Migration beteiligt: Millionen von Datensätzen sollten in eine moderne Umgebung auf Basis von CockroachDB überführt werden. Das Projekt war auf mehrere Jahre angelegt und erforderte enge Abstimmung mit Fachbereichen sowie die Zusammenarbeit mit einem Spezialistenteam von CockroachDB selbst. Was ich dort an Altsystemanalyse, Anforderungserhebung und Datenbankdesign gelernt habe, kam bei Hellmann direkt wieder zum Einsatz.
-
-Das dritte Projekt war InfoGPT, eine interne Chat-Anwendung für die Unternehmensgruppe. Ich war als zweiter Entwickler beteiligt, gemeinsam mit einem englischsprachigen Kollegen. Technisch ebenfalls auf Vaadin-Basis.
-
-Gegen Ende der Tätigkeit begleitete ich Auszubildende und duale Studenten in technischen Themen. Ich entschied mich zum Wechsel, weil ich meinen Fokus konsequent auf Backend-Entwicklung und Architektur legen wollte.
-
----
-
-<div class="cv-station-header">
-  <div class="cv-station-info">
-    <h3>Webentwickler</h3>
-    <p class="cv-station-meta">abas Software GmbH (heute: Forterro) · Karlsruhe · 2022 bis 2023</p>
-  </div>
-  <img src="/images/abas-logo.png" class="cv-logo" alt="abas" />
-</div>
-
-Nach der Ausbildung war ich ein halbes Jahr als Webentwickler im Professional Services tätig. Das Kernprodukt: Shop-Plugins, die das abas ERP-System mit externen E-Commerce-Shops verbinden. Aufgabe war die technische Integration sowie die Implementierung kundenspezifischer Themes und Funktionserweiterungen.
-
-Ich arbeitete mit einem hausinternen Framework auf Basis von Spring Boot im Backend und Vue.js im Frontend, dem gleichen Stack, der mich in späteren Stationen weiterhin begleitet hat. Kundenprojekte mit klaren Zeit- und Budgetvorgaben: Das prägt früh, was Softwarelieferung in der Praxis bedeutet.
-
----
-
-<div class="cv-station-header">
-  <div class="cv-station-info">
-    <h3>Auszubildender Fachinformatiker Anwendungsentwicklung</h3>
-    <p class="cv-station-meta">abas Software GmbH · Karlsruhe · 2019 bis 2022</p>
-  </div>
-  <img src="/images/abas-logo.png" class="cv-logo" alt="abas" />
-</div>
-
-Duale Ausbildung an der Heinrich-Hertz-Schule Karlsruhe, abgeschlossen 2022. Parallel zur schulischen Ausbildung praktische Mitarbeit an Webanwendungen und Integrationsprojekten. Grundlegende Kenntnisse in Java, Spring Boot, Web-Technologien und professionellen Entwicklungsprozessen.
-
----
-
-## Ausbildung
-
-**Fachinformatiker Anwendungsentwicklung**
-Heinrich-Hertz-Schule Karlsruhe · Abschluss 2022
-
-**Fach-Abitur Wirtschaft (BWL / VWL)**
-Ludwig-Erhard Gymnasium Karlsruhe · 2019
-
----
-
-## Technische Kenntnisse
-
-Java (LTS bis 21), Spring Boot 3, Spring MVC / Data JPA / Security / AI, PostgreSQL, MySQL, Flyway, Hibernate/JPA, Kafka, Vue.js 3, React / Next.js, Angular, Vaadin (21 bis 25), TypeScript, Docker, GitLab CI, Kubernetes, Testcontainers, JUnit 4/5, OpenAPI.
-
-Eine ausführliche Beschreibung mit konkreten Projektreferenzen und ehrlicher Einschätzung des jeweiligen Kenntnisstands findet sich unter [Technische Kenntnisse](/kenntnisse).
-
----
-
-## Weitere Informationen
-
-Eigene Softwareprojekte (TinyBill, DailyDev und weitere) unter [dev-arts.de/projekte](/projekte/).
-
----
-
-## Lebenslauf als PDF
-
-<div class="cv-download-area">
-  <a href="/downloads/cv-arthur-schimpf.pdf" download class="cv-download-link">
-    Lebenslauf herunterladen (PDF)
-  </a>
-  <p style="margin: 0.75rem 0 0 0; font-size: 0.85rem; color: var(--vp-c-text-3);">
-    Bei Fragen stehe ich jederzeit per E-Mail zur Verfügung:
-    <MailLink />
-
-  </p>
-</div>
+Einen aktuellen Lebenslauf als PDF schicke ich gern auf Anfrage: <MailLink />

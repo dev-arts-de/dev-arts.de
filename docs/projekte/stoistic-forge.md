@@ -1,91 +1,61 @@
 ---
-aside: true
+title: Stoistic Forge
+description: Ein Blog über stoische Philosophie, dessen Artikel eine mehrstufige KI-Pipeline schreibt, prüft, bebildert und veröffentlicht. Auf Deutsch und Englisch.
+gruppe: aktuell
+order: 4
+zeitraum: seit April 2026
+status: Online, Entwicklung pausiert
+technik: [Java 21, Quarkus, PostgreSQL, Flyway, Claude API, Fal.ai, VitePress, Vue, GitHub Actions]
+link: { href: 'https://www.stoistic-forge.de', text: 'stoistic-forge.de' }
+aside: false
 ---
 
-# Stoistic Forge
+## Worum es geht
 
-**KI-Blog · Java/Quarkus · Claude · Fal.ai · [stoistic-forge.de](https://stoistic-forge.de)**
+Seneca, Epiktet und Marc Aurel lese ich schon länger. Online findet man unter dem Stichwort Stoizismus aber viel verkürzte Lebensberatung, die mit den Originaltexten wenig zu tun hat. Stoistic Forge ist der Versuch, das besser zu machen, und zwar ohne dass ich jeden Artikel selbst schreibe: eine Pipeline erzeugt aus den Originalquellen eigene Artikel, prüft sie und verwirft, was nicht gut genug ist.
 
-Stoistic Forge ist ein Blog, der täglich neue Artikel über die stoische Philosophie veröffentlicht. Die Artikel werden vollständig von einem Pipeline-System geschrieben, das ich selbst gebaut habe. Themen aus dem antiken Stoizismus, übersetzt in eine Sprache, die heute noch trägt: was Epiktet, Marc Aurel oder Seneca dazu gesagt hätten, wie man mit Rückschlägen umgeht, wie man unter Druck klar bleibt, wie man die Dinge, die nicht in der eigenen Hand liegen, loslässt.
-
-Der Blog läuft seit dem Start vollständig automatisiert. Ich habe ihn nie aktiv mit eigenen Artikeln befüllt. Was dort steht, ist das Ergebnis eines mehrstufigen Generierungs- und Prüfprozesses, der zweimal am Tag ohne mein Zutun durchläuft.
-
-## Warum dieses Projekt
-
-Die stoische Philosophie hat mich persönlich schon länger interessiert, lange bevor ich angefangen habe darüber Software zu bauen. Die Texte von Marc Aurel sind sehr kurz, sehr direkt, und sie sprechen über Probleme, die heute genau so existieren. Was mich gestört hat, war die Lücke zwischen den klassischen Quellen und dem, was online unter dem Label "Stoizismus" kursiert. Vieles davon ist verkürzte Lebensberatung mit antikem Anstrich.
-
-Stoistic Forge ist mein Versuch, diese Lücke automatisiert zu schließen. Eine Pipeline, die auf der Basis der Originaltexte täglich neue, eigene Artikel schreibt, kontrolliert, bewertet und gegebenenfalls verwirft, ohne dass ich für jeden einzelnen Beitrag eingreifen muss.
+Technisch wollte ich herausfinden, was es braucht, damit ein Sprachmodell jeden Tag zuverlässig veröffentlicht. Ein einzelner Aufruf liefert meistens etwas Brauchbares. Für einen Blog, der unbeaufsichtigt läuft, reicht „meistens“ aber nicht.
 
 ## Die tägliche Pipeline
 
-Zweimal am Tag, um 06:00 und um 15:00 mitteleuropäischer Zeit, startet ein Scheduler einen Pipeline-Lauf. Fünf Stufen, jede mit klarem Vertrag. Scheitert eine Stufe, wird der Lauf abgebrochen und im Generation-Log dokumentiert.
+Zweimal am Tag, um 6 und um 15 Uhr, startet ein Scheduler einen Lauf mit fünf Stufen. Scheitert eine, bricht der Lauf ab und landet im Log.
 
 ```
-06:00 / 15:00 CET  →  ArticlePipeline
+06:00 / 15:00  ArticlePipeline
 
   1  TopicSelectionAgent       Claude Haiku
   2  ArticleGenerationAgent    Claude Sonnet
-  3  QualityReviewAgent        Claude Sonnet · ≤3 Retries
-  4  ImageGenerationService    Fal.ai · Flux Schnell
-  5  Publish + ntfy + Vercel Deploy Hook
+  3  QualityReviewAgent        Claude Sonnet, bis zu 3 Versuche
+  4  ImageGenerationService    Fal.ai, Flux Schnell
+  5  Veröffentlichen, Push-Nachricht, Frontend neu bauen
 ```
 
-**Stufe 1: TopicSelectionAgent.** Wählt das Thema des Tages. Bekommt die Liste schon veröffentlichter Themen und die aktuellen Kategorien und entscheidet daraus, worüber als nächstes geschrieben wird. Haiku reicht, die Aufgabe ist kompakt.
+Die Themenwahl bekommt die bisher veröffentlichten Themen und Kategorien und sucht daraus das nächste aus. Dafür reicht das kleine Modell. Den Artikel schreibt Sonnet auf Basis eines Styleguides und passender Stellen aus den Originaltexten. Danach bewertet ein eigener Review-Schritt Treue zur stoischen Lehre, Sprache, leere Floskeln und Länge. Fällt der Artikel durch, wird neu geschrieben, höchstens dreimal. Danach bekommt der Tag lieber keinen Artikel als einen schlechten.
 
-**Stufe 2: ArticleGenerationAgent.** Schreibt den Artikel. Hier läuft Sonnet, weil sprachlich anspruchsvoll. Eingabe sind das Thema aus Stufe 1, der Styleguide und passende Ausschnitte aus den Originaltexten. Ausgabe ist ein vollständiger Artikel mit Einleitung, Hauptteil und kurzer Schlussfolgerung.
+Das Titelbild entsteht über Fal.ai, der Prompt dafür wird aus dem Artikel abgeleitet. Zum Schluss landet alles in PostgreSQL, ein Deploy-Hook baut das statische Frontend neu, und ich bekomme eine Push-Nachricht über ntfy mit dem Link.
 
-**Stufe 3: QualityReviewAgent.** Bewertet den Artikel: Treue zur stoischen Lehre, sprachliche Qualität, Vermeidung leerer Floskeln, Länge im akzeptierten Bereich. Wenn der Review fehlschlägt, geht Stufe 2 erneut los, maximal dreimal. Schlägt auch der dritte Versuch fehl, bekommt der Tag keinen Artikel.
+## Das System verbessert sich selbst, mit Freigabe
 
-**Stufe 4: ImageGenerationService.** Erzeugt das Titelbild über Fal.ai mit Flux Schnell. Der Prompt wird aus dem Artikel abgeleitet und steuert die Bildsprache: antike Säulen, klassische Skulpturen, ruhige Landschaften, gedeckte Farben.
+Montags früh läuft ein zweiter Scheduler. Ein Agent wertet die Reviews der Woche aus und schlägt Änderungen am Styleguide vor, wenn dieselben Schwächen wiederholt auftauchen. Ein anderer schlägt Änderungen am Datenbankschema vor, ein dritter kuratiert die Startseite, ein vierter testet Varianten der Prompts über eine feste Zahl von Läufen gegeneinander. Schemavorschläge wende ich nie automatisch an, die lese ich selbst. Sonntagabends kommt ein Wochenbericht als HTML-Mail.
 
-**Stufe 5: Publish und Notify.** Artikel landet in PostgreSQL, Vercel Deploy Hook löst den Frontend-Rebuild aus. Parallel geht eine ntfy-Push raus mit Titel und Direktlink, damit ich auf dem Handy sehe, dass der Lauf durch ist.
+## Später dazugekommen
 
-## Wöchentliche Verbesserungs-Agenten
+Seit Juni 2026 übersetzt das Backend alle Inhalte ins Englische, mit eigenem Glossar für Begriffe und Personen und einem Backfill für ältere Artikel. Die englische Seite hat ihren eigenen Deploy-Hook. Außerdem lassen sich Sprachmodell, Embeddings und Sprachausgabe per Schalter auf andere Anbieter umstellen, neben Claude auch Gemini und ein lokales Modell über Ollama. Bei erreichten Kontingentgrenzen pausiert die Pipeline kontrolliert, statt in Fehler zu laufen, und vorübergehende Serverfehler werden automatisch wiederholt.
 
-Neben der täglichen Artikelproduktion läuft jeden Montag um 04:00 ein zweiter Scheduler. Hier geht es nicht um neue Inhalte, sondern um die Verbesserung des Systems selbst.
-
-```
-Mo 04:00  →  ImprovementAgent        Style-Vorschläge aus Reviews
-             SchemaProposalAgent     DB-Schema-Vorschläge
-             HomepageAgent           Featured-Section kuratieren
-             PromptAgent             Prompt-A/B-Experimente
-
-So 20:00  →  ReportAgent             Wochenbericht per Email
-```
-
-Der **ImprovementAgent** analysiert die Quality-Reviews der vergangenen Woche und sucht nach Mustern: Welche Schwachstellen tauchen wiederholt auf? Welche Themen führen häufig zu Retries? Daraus formuliert er Vorschläge zur Aktualisierung der Style-Konfiguration.
-
-Der **SchemaProposalAgent** macht das Gleiche für die Datenbankstruktur. Wenn neue Inhaltstypen oder Metadaten sinnvoll wären, schlägt er Schema-Änderungen vor. Reine Empfehlungen, keine automatische Anwendung.
-
-Der **HomepageAgent** entscheidet, welche Artikel in der Featured-Section sichtbar sind. Anhand der Qualitätsbewertungen, der Themenverteilung und einer einfachen Heuristik zur Abwechslung. Läuft zusätzlich täglich um 07:30, nach dem morgendlichen Artikel.
-
-Der **PromptAgent** experimentiert mit kontrollierten Variationen der Prompts. Eine alternative Formulierung wird über eine festgelegte Zahl von Läufen getestet, die Ergebnisse fließen in die Bewertung zurück. Über die Wochen entsteht so eine Art A/B-Testing für die Prompts selbst.
-
-Sonntags um 20:00 erstellt der **ReportAgent** einen HTML-Wochenbericht und schickt ihn per Email: welche Artikel sind erschienen, wie waren die Bewertungen, gab es Pipeline-Fehler.
-
-## Technischer Aufbau
+## Technik
 
 ```
-Runtime         Java 21 · Quarkus 3.34 · Uber-Jar
-Datenbank       PostgreSQL · Flyway
-KI              Anthropic Claude (Haiku, Sonnet) · Fal.ai Flux
-Notifications   ntfy.sh (Push) · GMX SMTP (Email-Reports)
-Scheduler       Quarkus Scheduler auf Quartz-Basis
-Hosting         systemd auf Hetzner · Caddy als Reverse Proxy
-Frontend        VitePress + Vue 3 · separates Repo
-Deployment      GitHub Actions · main → Produktion · staging → Staging
+Laufzeit        Java 21, Quarkus, Uber-Jar unter systemd
+Daten           PostgreSQL, Hibernate mit Panache, Flyway
+KI              Claude Haiku und Sonnet, Gemini und Ollama als Alternative, Fal.ai
+Monitoring      SmallRye Health, Micrometer mit Prometheus-Export
+Frontend        VitePress und Vue, statisch gebaut, eigenes Repository
+Auslieferung    GitHub Actions, main nach Produktion, staging nach Staging
+Tests           JUnit, REST Assured
 ```
 
-Quarkus statt Spring Boot war eine bewusste Wahl. Schneller Start, geringer Speicherverbrauch, modernes Java-Ökosystem. Für einen langlaufenden Service auf einem kleinen Hetzner-Server zahlt sich das aus. Die Anwendung läuft als Uber-Jar über systemd, ohne Docker dazwischen, bewusst minimal gehalten.
+Quarkus statt Spring Boot habe ich wegen der kurzen Startzeit und des geringen Speicherbedarfs gewählt, der Dienst läuft auf einem kleinen Server neben anderen. Er läuft bewusst ohne Container direkt unter systemd, mit Caddy davor.
 
-Push-Benachrichtigungen gehen über ntfy.sh: mein eigener Endpoint, kein API-Key, kein Datenleck. Email-Reports über GMX-SMTP, weil ich dort sowieso einen Account habe.
+## Was ich gelernt habe
 
-Das Frontend ist eine eigene VitePress-Anwendung. Sie liest Artikel über die REST-API des Backends und wird nach jedem neuen Artikel über den Vercel Deploy Hook neu gebaut. So bleibt die ausgelieferte Seite statisch, während die Inhaltsverwaltung dynamisch über die Datenbank läuft.
-
-## Was ich daraus mitgenommen habe
-
-Eine einzige Anfrage an ein Sprachmodell produziert in den meisten Fällen einen brauchbaren Artikel. Wenn man tagein, tagaus Inhalte veröffentlicht, reicht "in den meisten Fällen" nicht. Die Pipeline mit Quality-Review, Retry-Logik und wöchentlicher Selbstverbesserung ist die Brücke zwischen einem netten Demo-Lauf und einem System, das man tatsächlich automatisch laufen lassen kann. Ich schaue stichprobenartig in Artikel rein und greife nur in die Style-Konfiguration ein, wenn etwas systematisch nicht passt. Den Rest macht das System.
-
----
-
-[stoistic-forge.de](https://stoistic-forge.de){.cv-download-link}
+Die Qualität hängt viel mehr am Styleguide und an der Strenge des Reviews als am Modell. Wer beim Review großzügig ist, bekommt mittelmäßige Texte. Ich lese stichprobenweise mit und greife nur ein, wenn ein Fehler systematisch auftritt. Am Code habe ich zuletzt im Juli 2026 gearbeitet.

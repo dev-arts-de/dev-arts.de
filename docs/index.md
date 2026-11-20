@@ -1,175 +1,108 @@
 ---
 layout: home
-
-hero:
-  name: "Arthur Schimpf"
-  text: "Softwareentwickler"
-  tagline: "Karlsruhe · Java · Spring Boot · Seit 2019 schreibe ich Software, die auch in einem Jahr noch verständlich ist."
-  image: "/images/me-portfolio.jpeg"
-  actions:
-    - theme: brand
-      text: "Lebenslauf ansehen"
-      link: /lebenslauf
-    - theme: alt
-      text: "Projekte"
-      link: /projekte/
+markdownStyles: false
+title: Arthur Schimpf
+titleTemplate: Softwareentwickler in Karlsruhe
 ---
 
-<script setup>
-import { onMounted, onBeforeUnmount, nextTick } from 'vue';
+<HomeHero />
 
-let revealObserver = null;
+<div class="home-body">
 
-onMounted(() => {
-  nextTick(() => {
-    revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const delay = parseInt(entry.target.dataset.delay || 0);
-          setTimeout(() => entry.target.classList.add('is-visible'), delay);
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.06, rootMargin: '0px 0px -32px 0px' });
+<section class="home-section">
 
-    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-  });
-});
+## Kurz zu mir
 
-onBeforeUnmount(() => {
-  if (revealObserver) revealObserver.disconnect();
-});
-</script>
+<div class="home-prose">
 
-<div class="home-section">
+Ich heiße Arthur und schreibe seit 2019 beruflich Software. Angefangen hat das mit einer dualen Ausbildung bei abas Software in Karlsruhe, danach kamen eine Rechnungsplattform bei der Infokom, eine Migration bei Hellmann und jetzt Plattformarbeit bei der init SE.
 
-<div class="reveal">
+Mein Schwerpunkt ist das Backend: Java, Spring Boot, PostgreSQL, und alles, was nötig ist, damit so ein Dienst zuverlässig in Produktion kommt. In den letzten Jahren ist der zweite Teil immer wichtiger geworden. Pipelines, Container, Deployments mit Healthcheck und Rollback interessieren mich inzwischen genauso wie der Code, der darin läuft.
 
-## Wer ich bin
-
-Ich bin Softwareentwickler aus Karlsruhe und arbeite seit 2019 professionell mit Code. Was mich antreibt, ist nicht die Technologie selbst, sondern das was dahintersteckt: echte Probleme lösen, Software schreiben die jemand wirklich benutzt, und in einem Team arbeiten das einen gemeinsamen Nenner hat über das Warum. Technologie ist für mich ein Handwerk. Ich betreibe es, weil ich damit Dinge entstehen lasse, die Bedeutung haben, und nicht um der Technologie selbst willen.
+Vor der Ausbildung habe ich Fachabitur mit Schwerpunkt Wirtschaft gemacht. Das hilft mir bis heute, wenn ich mit Leuten aus Buchhaltung oder Vertrieb über Anforderungen rede und verstehen muss, warum ein Prozess so ist, wie er ist.
 
 </div>
 
-<div class="reveal" data-delay="80">
+</section>
 
-Begonnen hat alles mit einem kaufmännischen Abitur am Ludwig-Erhard Gymnasium in Karlsruhe: BWL, Volkswirtschaft, Wirtschaftsmathematik. Nicht weil ich Buchhalter werden wollte, sondern weil ich verstehen wollte wie Organisationen funktionieren, wie Entscheidungen unter Unsicherheit getroffen werden, wie Systeme aufgebaut sind. Dieser wirtschaftliche Hintergrund begleitet mich bis heute. Er hilft mir zu verstehen, warum eine Software so gebaut sein muss wie sie gebaut ist, nicht nur wie. Wenn ich mit Fachleuten aus dem Controlling oder dem Vertrieb zusammenarbeite, finde ich Anknüpfungspunkte, die rein technisch geprägte Kollegen manchmal suchen müssen. Das ist ein Vorteil, den ich bewusst einsetze.
+<section class="home-section">
 
-</div>
+## Was ich gerade mache
 
-<div class="reveal" data-delay="120">
+<div class="home-prose">
 
-Dann kam die duale Ausbildung bei abas Software in Karlsruhe: vier Jahre, in denen ich gleichzeitig Fachinformatiker Anwendungsentwicklung studiert und täglich an echter Unternehmenssoftware mitgearbeitet habe. Java, Spring Boot, ERP-Integrationen, Web-Technologien. Die technische Grundlage. Nach der Ausbildung blieb ich ein weiteres halbes Jahr als Webentwickler und baute Shop-Plugins, die das abas ERP-System mit externen E-Commerce-Plattformen verknüpften. Kundenprojekte mit klaren Zeit- und Budgetvorgaben. Das hat früh ein Verständnis geschärft, was es bedeutet, wenn echte Nutzer auf echte Ergebnisse warten. Vor allem aber: gelernt, wie professionelle Teams Software bauen. Dass guter Code nicht von alleine entsteht, sondern durch Absprachen, Reviews, und die Bereitschaft, sich gegenseitig ehrlich zu sagen was nicht stimmt.
+Seit Mai 2026 bin ich Software Engineer bei der init SE in Karlsruhe. Die init baut Software für den öffentlichen Nahverkehr, also Systeme, die über viele Jahre laufen und bei denen eine kaputte Auslieferung echte Folgen hat. Ich arbeite dort an der CI/CD-Strecke für eine neue Cloud-Umgebung: welche Werkzeuge die Pipelines bekommen, wie Images gebaut und in die Registry geschoben werden, welche Bausteine sich zwischen Teams wiederverwenden lassen und wie die Entwicklungsteams umsteigen, ohne dass ihre Releases stocken.
 
-</div>
-
-<div class="reveal" data-delay="160">
-<img src="/images/workspace.jpeg" alt="Workspace" class="c-img" width="900" height="1600" loading="lazy" decoding="async" />
-</div>
-
-<hr class="home-divider">
-
-<div class="reveal">
-
-## Wie ich über Code denke
-
-<p class="c-pullquote">Guter Code hat weniger mit Intelligenz zu tun als mit Disziplin und Empathie.</p>
-
-Disziplin, weil es erheblich einfacher ist, schnell schlechten Code zu schreiben als langsam guten. Empathie, weil Code immer für Menschen lesbar sein muss, nicht nur für den Compiler. Die Frage, die mich bei jeder Entscheidung begleitet: Wird ein Kollege, der in einem Jahr auf diesen Code schaut, sofort verstehen was hier passiert? Wenn nicht, ist etwas falsch. Nicht am Kollegen, sondern am Code.
+Das passt gut zu dem, was ich privat ohnehin mache. Meine eigenen Projekte laufen auf drei kleinen Hetzner-Servern, die ich selbst betreibe, mit einer Deploy-Kette aus GitHub Actions, einer Container-Registry und einem Rollback, falls der Healthcheck nach dem Update fehlschlägt. Wie das aufgebaut ist, steht auf der [Projektseite zur Infrastruktur](/projekte/infrastruktur).
 
 </div>
 
-<div class="reveal" data-delay="80">
+</section>
 
-Das führt mich zu kurzen Methoden, zu sprechenden Variablennamen, zu Klassen die eine Sache gut können anstatt viele Dinge mittelmäßig. Nicht aus Ideologie. Sondern aus der praktischen Erfahrung, dass lesbarer Code einfacher zu testen ist, leichter zu erweitern, günstiger im Betrieb. Ich habe Code gesehen, der perfekt lief und trotzdem ein Albtraum war, weil niemand mehr wusste was er tat. Und ich habe Code gesehen, der nicht das Schnellste war, aber ein Team über Jahre glücklich gehalten hat, weil er verständlich blieb. Die zweite Art schreiben zu wollen ist keine Schwäche. Es ist Handwerk.
+<section class="home-section">
 
-</div>
+## Woher ich komme
 
-<div class="reveal" data-delay="120">
+<div class="home-prose">
 
-Gleichzeitig glaube ich nicht an Reinheitsdogmen. Sauberer Code ist kein Selbstzweck. Er ist ein Mittel, um Software langfristig wartbar und erweiterbar zu halten. Wenn der Kontext pragmatische Abstriche erfordert, etwa unter Zeitdruck, in einem Prototyp oder in einer Legacy-Umgebung, dann mache ich die Abstriche bewusst und dokumentiere sie.
+Bei **abas** habe ich von 2019 bis 2022 die Ausbildung zum Fachinformatiker für Anwendungsentwicklung gemacht und danach noch ein gutes halbes Jahr als Webentwickler Shop-Plugins für das abas ERP gebaut. Dort habe ich gelernt, wie ein professionelles Team arbeitet, und auch, wie es sich anfühlt, wenn der erste große Pull Request fast komplett zurückkommt. Mit Begründung für jeden Punkt. Das war unangenehm und hat mir mehr gebracht als jedes Tutorial.
 
-</div>
+Bei der **Infokom**, dem IT-Dienstleister der Eurobaustoff-Gruppe, war ich von März 2023 bis Juli 2025. Den größten Teil der Zeit habe ich eine Webanwendung für die Rechnungsverarbeitung der Finanzbuchhaltung gebaut, die ersten anderthalb Jahre als einziger Entwickler: Architektur, Datenmodell, CI/CD, E-Rechnungen nach ZUGFeRD und XRechnung. Dazu kamen die Konzeption einer AS400-Migration und eine interne Chat-Anwendung auf Basis von Spring AI.
 
-<hr class="home-divider">
+Bei **Hellmann Worldwide Logistics** habe ich von August 2025 bis Februar 2026 remote in einem kleinen Team an der Ablösung eines AS400-Systems gearbeitet. Wir haben eine ETL-Strecke gebaut, die Offerten, Angebote und Nebenkosten aus dem Altsystem holt, über Kafka weiterreicht, validiert und in ein neues Domänenmodell schreibt. Ein großer Teil der Arbeit war Lesen: herausfinden, was dreißig Jahre alter Code eigentlich tut und welche Regeln darin stecken, die nirgends aufgeschrieben sind.
 
-<div class="reveal">
-
-## Wie ich mit Menschen arbeite
-
-Ich bin kein Entwickler, der mit Kopfhörern in der Ecke sitzt und hofft, nicht angesprochen zu werden. Ich arbeite gern mit Menschen. Diskussionen über Architekturentscheidungen, Code Reviews die tatsächlich etwas verändern, Retrospektiven in denen ehrlich gesagt wird was nicht geklappt hat: das ist für mich keine notwendige Pflicht neben der eigentlichen Arbeit. Es ist ein zentraler Teil davon.
+Die Details stehen im [Lebenslauf](/lebenslauf).
 
 </div>
 
-<div class="reveal" data-delay="80">
+</section>
 
-<p class="c-pullquote">Fünf Minuten Gespräch lösen Probleme, über die man sonst stundenlang hin- und herschreibt.</p>
+<section class="home-section">
 
-Ich glaube an direkte Kommunikation. Nicht an Direktheit als Rechtfertigung für Unhöflichkeit, sondern an die Überzeugung, dass klare Aussagen ein Team schneller voranbringen als diplomatische Andeutungen. Ich sage, wenn ich etwas nicht weiß. Ich sage, wenn eine Deadline nicht realistisch ist. Ich sage auch, wenn ich einen anderen Ansatz für besser halte, und ich kann begründen warum, ohne dabei persönlich zu werden.
+## Wie ich arbeite
 
-</div>
+<div class="home-prose">
 
-<div class="reveal" data-delay="120">
+Ich schreibe Code so, dass ihn jemand in einem Jahr ohne mich versteht. Das heißt meistens: kurze Methoden, Namen, die sagen, was passiert, und Tests für die Stellen, an denen es wirklich brechen kann. Wenn ich unter Zeitdruck eine Abkürzung nehme, schreibe ich dazu, warum, damit sie später jemand wieder zurückbauen kann.
 
-Für Code Reviews gilt dasselbe Prinzip. Ein Review ist keine Beurteilung des Entwicklers, sondern eine Prüfung des Codes. Beides auseinanderzuhalten ist wichtig, und ich versuche in jeder Rückmeldung, die ich gebe, genau das zu tun. Ich schätze Reviews, die mir ehrlich sagen was verbesserungswürdig ist. Die beste Rückmeldung, die ich in meiner Karriere bekommen habe, war von einem Kollegen bei abas, der meinen ersten größeren Pull Request fast vollständig zurückgewiesen hat, mit ausführlicher Begründung für jeden Punkt. Das war unbequem. Und eines der lehrreichsten Erlebnisse, die ich in dieser Branche hatte.
+Mit Menschen arbeite ich gern und direkt. Wenn eine Deadline nicht zu halten ist, sage ich das früh. Wenn ich etwas nicht weiß, auch. In Code Reviews kommentiere ich den Code und nicht die Person, und ich erwarte das umgekehrt genauso. Ein kurzes Gespräch klärt oft mehr als ein langer Thread im Ticket.
 
-</div>
-
-<hr class="home-divider">
-
-<div class="reveal">
-
-## Was mich gerade beschäftigt
-
-Von Anfang 2025 bis Anfang 2026 habe ich bei Hellmann Worldwide Logistics in einem kleinen, spezialisierten Team gearbeitet. Die Aufgabe war die Migration eines AS400-Systems in eine moderne Microservice-Architektur. Wir haben eine vollständige ETL-Pipeline gebaut, Daten aus dem Altsystem extrahiert, über einen eigenen Service transformiert und validiert, ins neue Domänenmodell eingespielt. Ein Angular-Frontend für die operativen Nutzer kam dazu. Es ging um Offerten, Angebote, Nebenkostenberechnungen, also die Kernprozesse, mit denen Hellmann seine Logistikleistungen bepreist.
+Seit einiger Zeit arbeite ich viel mit Claude Code. Für meine eigenen Projekte schreibe ich vorher einen Plan mit Arbeitspaketen und Abnahmekriterien, lasse den Agenten umsetzen und prüfe das Ergebnis wie einen Pull Request von einem Kollegen. Das funktioniert gut, solange Tests und Pipeline streng genug sind, um Fehler aufzufangen.
 
 </div>
 
-<div class="reveal" data-delay="80">
+</section>
 
-Diese Arbeit klingt technisch trocken. Im Alltag war sie das Gegenteil. Detektivarbeit: Was macht dieser dreißig Jahre alte Code eigentlich? Warum wurde damals so entschieden? Welche Geschäftsregeln stecken in Prozessen, die nie dokumentiert wurden? Und gleichzeitig Architekturarbeit: Wie überführt man das in eine neue Welt, ohne Funktionen zu verlieren, die jemand benutzt, auch wenn sie in keinem Lastenheft stehen? Was man an Legacy-Systemen lernt, trägt man in jedes neue System.
+<section class="home-section">
 
-</div>
+## Neben der Arbeit
 
-<div class="reveal" data-delay="120">
+<div class="home-prose">
 
-Hellmann hat im Zuge einer konzernweiten Restrukturierung einen erheblichen Teil der Belegschaft abgebaut. Meine Stelle war davon betroffen, wirtschaftlich bedingt und nicht leistungsbedingt. Seit Mai 2026 arbeite ich bei der init SE in Karlsruhe als Software Engineer und verantworte dort die Integration einer CI/CD-Pipeline in eine neue Cloud-Infrastruktur. Das bewegt sich genau in dem Bereich, der mich am meisten interessiert: die Verbindung von Anwendungscode mit der Plattform, auf der er später läuft.
+Ich wohne mit meiner Freundin Selina im Norden von Karlsruhe. Nach Feierabend baue ich oft an eigenen Projekten weiter, zuletzt an [Fundus](/projekte/fundus), einem Archiv für unsere Dokumente, und an [Arcane Spire](/projekte/arcane-spire), einem Kartenspiel für iPhone, Mac und Android. Eine Übersicht gibt es unter [Projekte](/projekte/).
 
-</div>
-
-<hr class="home-divider">
-
-<div class="reveal">
-
-## Außerhalb der Arbeit
-
-Meine Freundin und ich haben seit April 2025 eine gemeinsame Wohnung in Karlsruhe. Die Renovierung hat uns das erste Jahr beschäftigt. Wer das selbst schon gemacht hat weiß, dass es erheblich mehr Planung, Koordination und Geduld braucht als erwartet. Parallel gibt es eigene Softwareprojekte, an denen ich in der Freizeit arbeite. Nicht primär um Geld zu verdienen, sondern weil das Bauen von Dingen eine eigene Freude hat, besonders wenn dabei etwas hängenbleibt, das sich auch beruflich auszahlt.
+Ansonsten schneide ich gern Videos, weil am Ende etwas Sichtbares herauskommt, und spiele Story-Spiele. The Last of Us Part II hat mich tagelang beschäftigt, zuletzt war es Clair Obscur: Expedition 33.
 
 </div>
 
-<div class="reveal" data-delay="80">
+</section>
 
-Ich bin seit Jahren an Videografie interessiert, konkret Filmen und Schneiden, weniger als Hobby denn als Gegenpol zum abstrakten Denken im Beruf. Ein Video zu schneiden hat ein konkretes, sichtbares Ergebnis auf das man zeigen kann. Außerdem gute Serien und Story-Games wenn die Zeit es erlaubt. The Last of Us Part II war das einzige Spiel, das mich tagelang beschäftigt hat, nicht wegen der Spielmechanik, sondern wegen der Geschichte.
-
-</div>
-
-<div class="reveal" data-delay="120">
-<div class="c-img-grid">
-  <img src="/images/me-and-selina.jpeg" alt="Arthur und Selina" width="1200" height="1600" loading="lazy" decoding="async" />
-  <img src="/images/apartment.jpeg" alt="Die neue Wohnung" width="1200" height="1600" loading="lazy" decoding="async" />
-</div>
-</div>
-
-<hr class="home-divider">
-
-<div class="reveal">
+<section class="home-section">
 
 ## Kontakt
 
-Ich freue mich über Nachrichten: Projektideen, Fragen oder einfach ein Gespräch. Direkt per E-Mail ist am schnellsten.
+<div class="home-prose">
 
-<MailLink />
+Am schnellsten erreichen Sie mich per E-Mail.
+
+<p class="contact-line">
+  <MailLink />
+  <a href="https://www.linkedin.com/in/arthur-schimpf-832b64240/" target="_blank" rel="noopener">LinkedIn</a>
+  <a href="https://github.com/dev-arts-de" target="_blank" rel="noopener">GitHub</a>
+</p>
 
 </div>
+
+</section>
 
 </div>

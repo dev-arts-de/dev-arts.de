@@ -1,16 +1,40 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#fdfcf8"/>
-      <stop offset="100%" stop-color="#efede8"/>
-    </linearGradient>
-  </defs>
-  <rect width="1200" height="630" fill="url(#bg)"/>
-  <rect x="80" y="80" width="60" height="2" fill="#1e4168" opacity="0.6"/>
-  <text x="80" y="120" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="500" fill="#88888d" letter-spacing="2">DEV-ARTS.DE</text>
-  <text x="80" y="290" font-family="Inter, system-ui, sans-serif" font-size="86" font-weight="700" fill="#1c1c1e" letter-spacing="-2">Arthur Schimpf</text>
-  <text x="80" y="350" font-family="Inter, system-ui, sans-serif" font-size="36" font-weight="400" fill="#3a3a3d" letter-spacing="-0.5">Softwareentwickler &#183; Karlsruhe</text>
-  <text x="80" y="420" font-family="Inter, system-ui, sans-serif" font-size="24" font-weight="400" fill="#88888d">Java &#183; Spring Boot &#183; Kotlin &#183; seit 2019</text>
-  <rect x="80" y="540" width="80" height="2" fill="#1e4168"/>
-  <text x="80" y="575" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="500" fill="#1e4168">dev-arts.de</text>
+  <rect width="1200" height="630" fill="#eceef0"/>
+    <line x1="860" y1="175" x2="860.0" y2="23.0" stroke="#1f6f5c" stroke-width="1" opacity="0.25" stroke-linecap="round"/>
+  <line x1="860" y1="175" x2="896.1" y2="-6.4" stroke="#1f6f5c" stroke-width="1" opacity="0.25" stroke-linecap="round"/>
+  <line x1="860" y1="175" x2="916.6" y2="38.3" stroke="#1f6f5c" stroke-width="1" opacity="0.25" stroke-linecap="round"/>
+  <line x1="860" y1="175" x2="960.6" y2="24.5" stroke="#1f6f5c" stroke-width="1" opacity="0.25" stroke-linecap="round"/>
+  <line x1="860" y1="175" x2="961.8" y2="73.2" stroke="#1f6f5c" stroke-width="1" opacity="0.25" stroke-linecap="round"/>
+  <line x1="860" y1="175" x2="1007.2" y2="76.7" stroke="#1f6f5c" stroke-width="1" opacity="0.25" stroke-linecap="round"/>
+  <line x1="860" y1="175" x2="989.3" y2="121.4" stroke="#1f6f5c" stroke-width="1" opacity="0.25" stroke-linecap="round"/>
+  <line x1="860" y1="175" x2="1029.7" y2="141.2" stroke="#1f6f5c" stroke-width="1" opacity="0.25" stroke-linecap="round"/>
+  <line x1="860" y1="175" x2="996.0" y2="175.0" stroke="#1f6f5c" stroke-width="1" opacity="0.25" stroke-linecap="round"/>
+  <line x1="860" y1="175" x2="1025.8" y2="208.0" stroke="#1f6f5c" stroke-width="1" opacity="0.25" stroke-linecap="round"/>
+  <line x1="860" y1="175" x2="982.0" y2="225.5" stroke="#1f6f5c" stroke-width="1" opacity="0.25" stroke-linecap="round"/>
+  <line x1="860" y1="175" x2="997.2" y2="266.7" stroke="#1f6f5c" stroke-width="1" opacity="0.25" stroke-linecap="round"/>
+  <line x1="860" y1="175" x2="1147.1" y2="462.1" stroke="#1f6f5c" stroke-width="1.6" opacity="0.55" stroke-linecap="round"/>
+  <line x1="860" y1="175" x2="1094.5" y2="525.9" stroke="#1f6f5c" stroke-width="1.6" opacity="0.55" stroke-linecap="round"/>
+  <line x1="860" y1="175" x2="1027.6" y2="579.7" stroke="#1f6f5c" stroke-width="1.6" opacity="0.55" stroke-linecap="round"/>
+  <line x1="860" y1="175" x2="948.6" y2="620.3" stroke="#1f6f5c" stroke-width="1.6" opacity="0.55" stroke-linecap="round"/>
+  <line x1="860" y1="175" x2="860.0" y2="645.0" stroke="#1f6f5c" stroke-width="1.6" opacity="0.55" stroke-linecap="round"/>
+  <line x1="860" y1="175" x2="771.4" y2="620.3" stroke="#1f6f5c" stroke-width="1.6" opacity="0.55" stroke-linecap="round"/>
+  <line x1="860" y1="175" x2="692.4" y2="579.7" stroke="#1f6f5c" stroke-width="1.6" opacity="0.55" stroke-linecap="round"/>
+  <line x1="860" y1="175" x2="625.5" y2="525.9" stroke="#1f6f5c" stroke-width="1.6" opacity="0.55" stroke-linecap="round"/>
+  <line x1="860" y1="175" x2="572.9" y2="462.1" stroke="#1f6f5c" stroke-width="1.6" opacity="0.55" stroke-linecap="round"/>
+  <line x1="860" y1="175" x2="722.8" y2="266.7" stroke="#1f6f5c" stroke-width="1" opacity="0.25" stroke-linecap="round"/>
+  <line x1="860" y1="175" x2="738.0" y2="225.5" stroke="#1f6f5c" stroke-width="1" opacity="0.25" stroke-linecap="round"/>
+  <line x1="860" y1="175" x2="694.2" y2="208.0" stroke="#1f6f5c" stroke-width="1" opacity="0.25" stroke-linecap="round"/>
+  <line x1="860" y1="175" x2="724.0" y2="175.0" stroke="#1f6f5c" stroke-width="1" opacity="0.25" stroke-linecap="round"/>
+  <line x1="860" y1="175" x2="690.3" y2="141.2" stroke="#1f6f5c" stroke-width="1" opacity="0.25" stroke-linecap="round"/>
+  <line x1="860" y1="175" x2="730.7" y2="121.4" stroke="#1f6f5c" stroke-width="1" opacity="0.25" stroke-linecap="round"/>
+  <line x1="860" y1="175" x2="712.8" y2="76.7" stroke="#1f6f5c" stroke-width="1" opacity="0.25" stroke-linecap="round"/>
+  <line x1="860" y1="175" x2="758.2" y2="73.2" stroke="#1f6f5c" stroke-width="1" opacity="0.25" stroke-linecap="round"/>
+  <line x1="860" y1="175" x2="759.4" y2="24.5" stroke="#1f6f5c" stroke-width="1" opacity="0.25" stroke-linecap="round"/>
+  <line x1="860" y1="175" x2="803.4" y2="38.3" stroke="#1f6f5c" stroke-width="1" opacity="0.25" stroke-linecap="round"/>
+  <line x1="860" y1="175" x2="823.9" y2="-6.4" stroke="#1f6f5c" stroke-width="1" opacity="0.25" stroke-linecap="round"/>
+  <path d="M730 175 A130 130 0 0 0 990 175" fill="none" stroke="#1f6f5c" stroke-width="1" opacity="0.4"/>
+  <circle cx="860" cy="175" r="6" fill="#1f6f5c"/>
+  <text x="80" y="300" font-family="Bricolage Grotesque Variable, sans-serif" font-size="150" font-weight="750" font-stretch="75%" fill="#16202a">Arthur</text>
+  <text x="80" y="430" font-family="Bricolage Grotesque Variable, sans-serif" font-size="150" font-weight="750" font-stretch="75%" fill="#16202a">Schimpf</text>
+  <text x="84" y="520" font-family="Bricolage Grotesque Variable, sans-serif" font-size="38" font-weight="500" fill="#1f6f5c">Softwareentwickler in Karlsruhe</text>
 </svg>

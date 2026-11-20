@@ -11,9 +11,9 @@ Information gemäß Art. 13 und 14 der EU-Datenschutz-Grundverordnung (DSGVO) f�
 
 Verantwortlicher im Sinne der DSGVO und sonstiger nationaler Datenschutzgesetze ist:
 
-Arthur Schimpf
-Hans-Thoma-Str. 4
-76351 Linkenheim-Hochstetten
+Arthur Schimpf<br>
+Hans-Thoma-Str. 4<br>
+76351 Linkenheim-Hochstetten<br>
 Deutschland
 
 E-Mail: [Arthur.Schimpf@gmx.de](mailto:Arthur.Schimpf@gmx.de)
@@ -39,7 +39,7 @@ Die Erhebung dieser Daten ist technisch erforderlich, um die Webseite anzuzeigen
 
 ## Schriftarten
 
-Die Webseite verwendet die Schriftart Inter. Die Schriftdateien werden vom selben Server ausgeliefert, auf dem die Webseite gehostet wird. Es findet keine Verbindung zu Google Fonts oder einem anderen externen Schriftarten-Dienst statt. Es werden keine Daten an Dritte übertragen.
+Die Webseite verwendet die Schriftarten Bricolage Grotesque und Source Serif 4. Die Schriftdateien sind Teil der Webseite und werden vom selben Server ausgeliefert. Es findet keine Verbindung zu Google Fonts oder einem anderen externen Schriftartendienst statt.
 
 ## Lokaler Speicher des Browsers
 
@@ -70,13 +70,13 @@ Zur Ausübung Ihrer Rechte genügt eine formlose Nachricht an die unter "Verantw
 
 ## Zuständige Aufsichtsbehörde
 
-Der Landesbeauftragte für den Datenschutz und die Informationsfreiheit Baden-Württemberg
-Königstraße 10a
-70173 Stuttgart
+Der Landesbeauftragte für den Datenschutz und die Informationsfreiheit Baden-Württemberg<br>
+Königstraße 10a<br>
+70173 Stuttgart<br>
 [baden-wuerttemberg.datenschutz.de](https://www.baden-wuerttemberg.datenschutz.de)
 
 ## Änderungen dieser Datenschutzerklärung
 
 Diese Datenschutzerklärung wird angepasst, wenn sich die Rechtslage oder die hier beschriebene Datenverarbeitung verändert. Die jeweils aktuelle Fassung ist unter dieser Adresse abrufbar.
 
-Stand: Mai 2026
+Stand: November 2026

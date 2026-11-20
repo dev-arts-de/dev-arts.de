@@ -3,65 +3,59 @@
    =================================================================== */
 
 @media print {
+  :root,
+  .dark {
+    --c-fog: #fff;
+    --c-fog-raised: #fff;
+    --c-ink: #111;
+    --c-ink-soft: #222;
+    --c-muted: #444;
+    --c-green: #175646;
+    --c-line: rgba(0, 0, 0, 0.25);
+    --c-line-soft: rgba(0, 0, 0, 0.15);
+  }
+
+  .ph-back,
+  .fan,
   .VPNav,
-  .VPSidebar,
+  .VPLocalNav,
   .VPFooter,
   .VPDocFooter,
-  .VPLocalNav,
-  .cv-download-area {
+  .VPDocAside,
+  .pager,
+  .no-print {
     display: none !important;
   }
 
-  .VPContent {
+  .VPContent,
+  .VPDoc,
+  .vp-doc {
     padding: 0 !important;
     margin: 0 !important;
-  }
-
-  .VPDoc {
-    padding: 0 !important;
-  }
-
-  .vp-doc {
     max-width: 100% !important;
-    padding: 0 !important;
-  }
-
-  .cv-header {
-    margin-bottom: 1.5rem;
-  }
-
-  .cv-portrait {
-    width: 80px;
-    height: 80px;
-  }
-
-  .cv-station-header {
-    margin-top: 1.5rem;
-  }
-
-  .cv-logo {
-    height: 22px;
-    opacity: 1;
-    background: none !important;
-    padding: 0 !important;
   }
 
   body {
-    font-size: 11pt;
-    color: #000;
     background: #fff;
+    color: #000;
+    font-size: 10.5pt;
   }
 
-  h1 { font-size: 20pt; }
-  h2 { font-size: 14pt; }
-  h3 { font-size: 12pt; }
+  .vp-doc {
+    color: #222;
+  }
 
-  a {
+  .vp-doc h1 { font-size: 22pt; }
+  .vp-doc h2 { font-size: 14pt; margin-top: 1.5rem; }
+  .vp-doc h3 { font-size: 12pt; }
+
+  .cv-station {
+    break-inside: avoid;
+    padding-bottom: 1.25rem;
+  }
+
+  .vp-doc a {
     color: #000 !important;
     text-decoration: none !important;
-  }
-
-  hr {
-    border-top: 1px solid #ccc;
   }
 }

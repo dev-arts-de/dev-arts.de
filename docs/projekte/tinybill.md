@@ -1,45 +1,42 @@
 ---
-aside: true
+title: TinyBill und quitt
+description: Drei Anläufe für dasselbe Problem, Rechnungen schreiben. Ein kostenloser Generator, eine Kotlin-API und heute eine eigene Rechnungs-App mit E-Rechnung.
+gruppe: aktuell
+order: 7
+zeitraum: 2025 bis heute
+status: quitt in Arbeit, TinyBill offline
+technik: [TypeScript, Next.js 16, Drizzle, PostgreSQL, Typst, Kotlin, Spring Boot, Angular, Vaadin]
+aside: false
 ---
 
-# TinyBill
+## Woher das Thema kommt
 
-**Web-Anwendung · Kostenlos · [tinybill.de](https://tinybill.de)**
+Bei der Infokom habe ich gut zwei Jahre an einer Anwendung für die Rechnungsverarbeitung gearbeitet. Dabei lernt man, wie viel in einer Rechnung steckt: Steuersätze, Rundung, Skonto, Pflichtangaben und elektronische Formate wie ZUGFeRD und XRechnung. Dieses Wissen wollte ich nicht einfach liegen lassen, und gleichzeitig habe ich für meine eigenen Rechnungen kein Werkzeug gefunden, das kostenlos, einfach und ohne Konto funktioniert.
 
-TinyBill ist ein Dokumentengenerator für Rechnungen, Angebote und allgemeine Geschäftsdokumente. Wer eine Rechnung stellen will (als Freelancer, kleines Unternehmen oder Einzelperson) findet selten ein Tool, das genau das macht was es soll, ohne monatliche Abonnementgebühren und ohne überkomplizierte Oberflächen. TinyBill ist die Antwort auf dieses Problem: kostenlos nutzbar, ohne Account, ohne Abo.
+## TinyBill, Version 1
 
-<img src="/images/tinybill-screenshot.png" alt="TinyBill Screenshot" class="c-screenshot" width="1053" height="1200" loading="lazy" decoding="async" />
+Die erste Version ging im Sommer 2025 unter tinybill.de online: ein kostenloser Generator für Rechnungen als PDF, ohne Anmeldung und ohne dass Daten auf dem Server bleiben. Gebaut habe ich sie mit Spring Boot und Vaadin, weil ich Vaadin von der Infokom gut kannte und schnell etwas Benutzbares haben wollte.
 
-## Wie es entstand
+Eigentlich wollte ich ZUGFeRD schon in diese Version einbauen. Als ich Nutzer gefragt habe, wollte das aber fast niemand. Gewünscht waren eine stabilere PDF-Erzeugung und eine bessere Vorschau, also habe ich das gebaut.
 
-TinyBill ist direkt aus meiner Arbeit bei der Infokom GmbH hervorgegangen. Zwei Jahre habe ich dort an einem Full-Stack-System für die Finanzbuchhaltung gearbeitet, konkret: eine Webanwendung zur Verwaltung von Rechnungsdaten für sechzehn Mitarbeiter. Was nach einem kleinen Projekt klingt, war technisch anspruchsvoll. Rechnungsdaten haben eine eigene Komplexität, die man erst entdeckt, wenn man tief drin steckt: Steuersätze, Rundungsdifferenzen, Skontoregelungen, länderspezifische Formate, elektronische Rechnungsstandards wie ZUGFeRD und XRechnung. Ich habe in dieser Zeit mehr über Rechnungslegung gelernt als in allen Wirtschaftsfächern meines Abiturs zusammen.
+## TinyBill, Version 2
 
-Nach diesen zwei Jahren hatte ich eine Wissensbasis, die ich nicht einfach vergessen wollte. Gleichzeitig fiel mir auf, dass es keine befriedigende kostenlose Lösung für einfache Rechnungserstellung gibt, entweder zu teuer, zu komplex, oder mit schlechter UX. Das war der Auslöser für TinyBill.
+Für die zweite Version habe ich neu angefangen und mir dabei Kotlin beigebracht. Das Backend ist eine reine REST-API mit Spring Boot in Kotlin. Der Zugriff läuft pro Workspace über einen API-Schlüssel, die API erzeugt PDFs aus drei Vorlagen und druckt einen Zahlungs-QR-Code im EPC-Format auf die Rechnung, den Banking-Apps direkt als Überweisung einlesen. Ein Angular-Frontend war der erste Client, weitere sollten folgen.
 
-## Technische Grundlage
+Was mir an Kotlin gefallen hat: Null-Safety zwingt dazu, über fehlende Werte nachzudenken, bevor sie zum Fehler werden, und Data Classes sparen bei Rechnungspositionen viel Schreibarbeit. An Version 2 habe ich zuletzt im März 2026 gearbeitet, und tinybill.de ist inzwischen offline.
 
-Version 1 von TinyBill basiert auf Vaadin, einem Java-Framework, das Backend und Frontend direkt verbindet. Vaadin ist in der Entwicklerwelt nicht besonders populär, und das zu Unrecht. Für interne Business-Anwendungen, bei denen Java bereits im Backend läuft, ist es eine sehr produktive Wahl: man schreibt die gesamte Anwendungslogik in Java, und Vaadin übersetzt das in eine reaktive Benutzeroberfläche. Kein separates JavaScript-Frontend, kein REST-API-Overhead für jede Kleinigkeit. Die Infokom-Erfahrung hat mich gut mit Vaadin vertraut gemacht, und so war es die natürliche Wahl für einen schnellen Start.
+## quitt
 
-Datenbankanbindung über Hibernate und JPA, PostgreSQL als Datenbank, Spring Security für die Authentifizierung. Der Standard-Stack, den ich aus Jahren täglicher Arbeit gut kenne.
+Was ich am Ende wirklich gebraucht habe, war ein Werkzeug für meine eigenen Rechnungen. Daraus ist quitt geworden, eine interne Rechnungs-App, an der ich seit Herbst 2026 baue. Sie kann Abschlags- und Schlussrechnungen, erzeugt beim Ausstellen eine E-Rechnung nach ZUGFeRD (EN 16931) und XRechnung, verschickt Rechnungen und Zahlungserinnerungen per Mail, prüft Umsatzsteuer-IDs online und exportiert alles für die Steuerberatung.
 
-## TinyBill Version 2
+```
+Laufzeit       Node.js 24, Next.js 16, React 19, TypeScript
+Daten          PostgreSQL, Drizzle ORM, pg-boss für Hintergrundjobs
+Dokumente      Typst für den PDF-Satz, E-Rechnung über @e-invoice-eu/core
+Anmeldung      better-auth mit Passkeys
+Tests          Vitest, Playwright, Testcontainers, fast-check
+Qualität       ESLint mit Security-Regeln, dependency-cruiser, knip
+Betrieb        Docker hinter Caddy auf eigener Infrastruktur
+```
 
-Version 2 ist ein kompletter Neustart und mein aktuelles Lernprojekt für Kotlin. Die Entscheidung für einen Neustart kam nicht aus Unzufriedenheit mit Version 1, sondern aus einer architektonischen Überzeugung: ein monolithisches Frontend ist langfristig eine Einschränkung. Wer das Backend als reine API baut, kann darüber jedes beliebige Frontend legen, eine Webanwendung, ein mobiles Interface, ein Shopify-Plugin, was auch immer gebraucht wird.
-
-Die Ziele für Version 2:
-
-**API-first:** Das Backend stellt eine sauber dokumentierte REST-API bereit. Kein Framework-spezifischer Rendering-Mechanismus, kein Vaadin-Overhead, kein UI-Code im Backend. Reines HTTP, klare Schnittstellen, OpenAPI-Dokumentation.
-
-**Kotlin statt Java:** Kotlin ist die Sprache, mit der ich gerade arbeiten will. Den besten Weg eine Sprache zu lernen ist, sie in einem echten Projekt einzusetzen, mit echten Nutzern, echten Fehlern, echten Anforderungen. TinyBill v2 ist mein Kotlin-Projekt. Was mich daran überzeugt: Null-Safety zwingt zum expliziten Umgang mit dem was fehlen kann. Data classes reduzieren Boilerplate dramatisch. Extension functions machen Code lesbar, ohne die Architektur aufzuweichen. Kotlin fühlt sich an wie Java, das von jemandem überarbeitet wurde, der die Schmerzpunkte kennt.
-
-**Headless:** Kein vorgegebenes Frontend in Version 2. Die API kann von verschiedenen Clients genutzt werden. Geplant ist zunächst eine Vue-Webanwendung als primärer Client, langfristig auch ein Angular-Frontend und möglicherweise ein Shopify-Plugin für kleinere Händler.
-
-## Was TinyBill mir beibringt
-
-Neben den technischen Aspekten ist TinyBill auch ein Projekt, das mich zwingt, über Produktentscheidungen nachzudenken. Wer entscheidet, welche Features gebaut werden? Was ist wirklich nützlich für echte Nutzer, und was ist eine interessante technische Übung ohne praktischen Wert? Diese Fragen stelle ich mir bei TinyBill regelmäßig, und die Antworten fallen manchmal anders aus als erwartet.
-
-Ein konkretes Beispiel: Ich hatte lange geplant, ZUGFeRD (einen Standard für elektronische Rechnungen mit eingebettetem XML) in Version 1 zu integrieren. Technisch interessant, gut dokumentiert. Dann habe ich Nutzer gefragt, ob sie das brauchen. Die Antwort war fast durchgehend: Nein. Was sie brauchten, war eine stabilere PDF-Generierung und eine bessere Vorschau. Das war ernüchternd und lehrreich zugleich. Ich habe die ZUGFeRD-Implementation auf unbestimmte Zeit zurückgestellt und mich auf die tatsächlich genutzten Features konzentriert.
-
----
-
-[Zu TinyBill](https://tinybill.de){.cv-download-link}
+Weil es um Geld geht, sind die Tests hier strenger als in meinen anderen Projekten. Beträge, Datumslogik und Rechnungssummen werden zusätzlich mit Property-based Tests geprüft, die viele zufällige Eingaben durchspielen, statt nur die Fälle, an die ich beim Schreiben gedacht habe. dependency-cruiser prüft die erlaubten Abhängigkeiten zwischen den Modulen, und knip findet ungenutzten Code.

@@ -1,17 +1,14 @@
 ---
-aside: true
+title: beercraftshop
+description: Ein mehrseitiger Onlineshop für Craft Beer, mein Schulprojekt in PHP.
+gruppe: frueher
+order: 7
+zeitraum: '2020'
+status: Offline
+technik: [PHP, HTML, CSS, SQL]
+aside: false
 ---
 
-# beercraftshop
+Ein Schulprojekt an der Heinrich-Hertz-Schule: ein Onlineshop für Craft Beer mit Produktseiten, Warenkorb, Bestellung und Datenbank. Spektakulär war das nicht, aber es war die erste Anwendung, bei der ich den ganzen Weg selbst gebaut habe, vom Formular über die Verarbeitung auf dem Server bis zur Datenbank und zurück.
 
-**Online-Shop · PHP · Schulprojekt · ~2020**
-
-beercraftshop war ein mehrseitiger Online-Shop für Craft Beer, entstanden als Schulprojekt in der Ausbildung an der Heinrich-Hertz-Schule in Karlsruhe. Produktseiten, Warenkorb, Bestellprozess, Datenbankanbindung. Klassischer Aufbau, klassische Aufgabe.
-
-## Was dahintersteckt
-
-Das Projekt klingt unspektakulär und das war es auch. Aber es war der erste Kontakt mit dem vollständigen Kreislauf einer Web-Anwendung: serverseitige Verarbeitung in PHP, HTML-Ausgabe, Formulardaten empfangen und verarbeiten, Daten in einer Datenbank speichern und wieder auslesen. Das ist die Grundlage auf der alles andere aufbaut.
-
-Was man beim Bauen eines Shops lernt, ist nicht primär Programmierung. Es ist Nutzerperspektive: Was braucht jemand auf einer Produktseite? Was passiert wenn eine Bestellung fehlschlägt? Wie verhält sich die Anwendung wenn die Eingabe nicht das ist, was man erwartet hat? Diese Fragen stellt man sich beim Tutorial-Durcharbeiten nicht. Beim Bauen eines echten, abgabefähigen Projekts schon.
-
----
+Was ich dabei vor allem gelernt habe: Was passiert, wenn eine Eingabe nicht so aussieht wie erwartet, oder wenn eine Bestellung mittendrin schiefgeht. Solche Fragen stellt einem kein Tutorial, ein abzugebendes Projekt schon.

@@ -5,32 +5,30 @@ aside: false
 
 # Impressum
 
-Angaben gemäß § 5 TMG sowie § 18 Abs. 2 MStV.
+Angaben gemäß § 5 DDG sowie § 18 Abs. 2 MStV.
 
 ## Diensteanbieter
 
-Arthur Schimpf
-Hans-Thoma-Str. 4
-76351 Linkenheim-Hochstetten
+Arthur Schimpf<br>
+Hans-Thoma-Str. 4<br>
+76351 Linkenheim-Hochstetten<br>
 Deutschland
 
 E-Mail: [Arthur.Schimpf@gmx.de](mailto:Arthur.Schimpf@gmx.de)
 
-## Steuerliche Angaben
+## Wirtschafts-Identifikationsnummer
 
-Steuernummer: 34310/37667
-
-Wirtschafts-ID: 42 679 093 517
+42 679 093 517
 
 ## Verantwortlich für den Inhalt gemäß § 18 Abs. 2 MStV
 
-Arthur Schimpf
-Hans-Thoma-Str. 4
+Arthur Schimpf<br>
+Hans-Thoma-Str. 4<br>
 76351 Linkenheim-Hochstetten
 
 ## Haftung für Inhalte
 
-Als Diensteanbieter bin ich gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten verantwortlich. Nach §§ 8–10 TMG besteht jedoch keine Verpflichtung, übermittelte oder gespeicherte fremde Informationen zu überwachen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben unberührt. Eine Haftung ist erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden werden entsprechende Inhalte umgehend entfernt.
+Als Diensteanbieter bin ich gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten verantwortlich. Nach §§ 8 bis 10 DDG besteht jedoch keine Verpflichtung, übermittelte oder gespeicherte fremde Informationen zu überwachen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben unberührt. Eine Haftung ist erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden werden entsprechende Inhalte umgehend entfernt.
 
 ## Haftung für Links
 
@@ -42,4 +40,4 @@ Die durch den Seitenbetreiber erstellten Inhalte und Werke unterliegen dem deuts
 
 ## Streitbeilegung
 
-Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: [ec.europa.eu/consumers/odr](https://ec.europa.eu/consumers/odr). Ich bin weder verpflichtet noch bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+Ich bin weder verpflichtet noch bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.

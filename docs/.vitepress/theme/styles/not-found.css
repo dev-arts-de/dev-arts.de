@@ -1,60 +1,56 @@
 /* ===================================================================
-   404 page (theme/NotFound.vue)
+   404
    =================================================================== */
 
 .not-found {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 60vh;
-  text-align: center;
-  padding: 4rem 2rem;
+  position: relative;
+  max-width: var(--w-page);
+  margin: 0 auto;
+  padding: clamp(4rem, 10vw, 8rem) var(--gutter) 6rem;
+  overflow-x: clip;
+}
+
+.not-found-fan {
+  position: absolute;
+  top: 0;
+  right: -10%;
+  width: min(90vw, 520px);
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 .not-found-code {
-  font-size: clamp(6rem, 20vw, 12rem);
-  font-weight: 700;
-  letter-spacing: -0.05em;
-  line-height: 1;
-  color: var(--vp-c-bg-mute);
-  margin-bottom: 1.5rem;
-  user-select: none;
+  position: relative;
+  margin: 0;
+  font-family: var(--f-display);
+  font-size: clamp(6rem, 3rem + 14vw, 12rem);
+  font-weight: 750;
+  font-stretch: 75%;
+  line-height: 0.85;
+  letter-spacing: -0.04em;
+  color: var(--c-ink);
 }
 
 .not-found-msg {
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: var(--vp-c-text-1);
-  letter-spacing: -0.02em;
-  margin-bottom: 0.75rem !important;
-  min-height: 1.8em;
+  position: relative;
+  margin: 1.5rem 0 0;
+  font-family: var(--f-display);
+  font-size: var(--t-h2);
+  font-weight: 650;
+  font-stretch: 85%;
+  color: var(--c-ink);
 }
 
 .not-found-sub {
-  font-size: 0.95rem;
-  color: var(--vp-c-text-3);
-  max-width: 400px;
-  line-height: 1.7;
-  margin-bottom: 2.5rem !important;
+  position: relative;
+  max-width: 30rem;
+  margin: 0.75rem 0 0;
+  font-family: var(--f-text);
+  font-size: var(--t-body);
+  line-height: 1.6;
+  color: var(--c-ink-soft);
 }
 
 .not-found-actions {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.not-found-alt {
-  font-size: 0.9rem;
-  color: var(--vp-c-text-2);
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.15s ease;
-}
-
-.not-found-alt:hover {
-  color: var(--vp-c-brand-1);
+  position: relative;
 }

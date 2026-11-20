@@ -1,39 +1,32 @@
 ---
-aside: true
+title: Bewerber-Schmiede
+description: Werkzeuge für die Bewerbung. Eine Lebenslauf-Analyse mit Bewertung und ATS-Check und ein Generator für Anschreiben, der auf dieser Analyse aufbaut.
+gruppe: aktuell
+order: 6
+zeitraum: seit 2026
+status: Online
+technik: [Next.js 16, React, TypeScript, Prisma, PostgreSQL, Claude API, Stripe, next-intl, Docker]
+link: { href: 'https://www.bewerber-schmiede.de', text: 'bewerber-schmiede.de' }
+aside: false
 ---
 
-# Bewerber-Schmiede
+## Worum es geht
 
-**Web-Anwendung · In Betrieb · [bewerber-schmiede.de](https://bewerber-schmiede.de)**
+Wenn Freunde mich um Hilfe bei ihrer Bewerbung gebeten haben, waren meine Hinweise fast immer dieselben: Erfolge ohne Zahlen, zu allgemeine Formulierungen, unklare Zeiträume, fehlende Begriffe aus der Stellenanzeige. Das ist kein Spezialwissen, aber man muss es jemandem sagen. Die Bewerber-Schmiede macht das automatisch und sofort.
 
-Bewerber-Schmiede ist ein Tool, mit dem man Lebensläufe analysieren kann. Wer seinen Lebenslauf einreicht, bekommt strukturiertes Feedback zu Vollständigkeit, Formulierungen, häufigen Schwachstellen und konkreten Verbesserungsvorschlägen. Das Ziel: nicht eine allgemeine Kritik, sondern spezifische, handlungsrelevante Hinweise.
+Es gibt zwei Werkzeuge:
 
-## Der Hintergrund
+- **Talentblick** analysiert einen hochgeladenen Lebenslauf. Heraus kommen eine Gesamtbewertung, Einzelbewertungen pro Kategorie, ein Check, ob Bewerbermanagementsysteme das Dokument sauber lesen können, und auf Wunsch ein Abgleich mit einer konkreten Stellenanzeige.
+- **Anschreibomat** erzeugt aus dieser Analyse und der Stellenanzeige ein Anschreiben, das man direkt weiterbearbeiten kann.
 
-Die Idee entstand aus Gesprächen. Wer Freunde oder Bekannte bei der Jobsuche unterstützt, gibt immer wieder ähnliche Hinweise: Fehlende Quantifizierungen bei Leistungen, zu generische Formulierungen, unklare Zeiträume, fehlende Keywords für Recruiter-Screening-Systeme. Das ist kein Spezialistenwissen, aber es ist Wissen, das nicht überall gleich zugänglich ist. Ein Tool, das das systematisch und sofort liefert, hat einen praktischen Wert.
+Neue Nutzer bekommen ein Startguthaben, danach gibt es Credits ohne Abo. Als drittes Werkzeug soll [Foxfolio](/projekte/foxfolio) dazukommen, die Idee einer automatisch erzeugten Portfolio-Seite, die ich 2023 schon einmal angefangen hatte.
 
-## Warum dieses Projekt besonders ist
+## Wie es gebaut ist
 
-Bewerber-Schmiede ist in erster Linie ein technisches Experiment, aber eines mit ernstem Charakter. Ich habe dieses Projekt vollständig mit Claude Code als Entwicklungspartner gebaut. Das bedeutet nicht, dass eine KI den Code geschrieben und ich nur zugeschaut habe. Es bedeutet, dass ich mit einem KI-Werkzeug gearbeitet habe, das in der Lage ist, Code zu verstehen, Entscheidungen zu besprechen, Refactoring-Vorschläge zu machen und Fehler zu finden. Diesen Workflow habe ich konsequent auf das gesamte Projekt angewendet, von der ersten Zeile bis zum Deployment.
+Die Anwendung ist mit Next.js 16 und dem App Router gebaut, Daten liegen über Prisma in PostgreSQL: Nutzer, gespeicherte Lebensläufe, Analysen, Anschreiben und Zahlungen. Die Analyse läuft über die Claude-API mit Sonnet. Der Prompt gibt ein festes JSON-Schema vor, die Antwort wird geparst und als Analyse gespeichert, aus der später das Anschreiben entsteht. Die Stellenanzeige kann man als Text einfügen oder als Link angeben, dann liest der Server die Seite selbst aus. Die API-Routen haben ein Rate Limit, bezahlt wird über Stripe, und die Oberfläche ist über next-intl mehrsprachig angelegt.
 
-Das hat meine Arbeitsweise verändert. Nicht in dem Sinne, dass ich jetzt weniger denke, im Gegenteil. Die Auseinandersetzung mit einem Werkzeug, das Gegenvorschläge macht und Begründungen einfordert, hat mich dazu gebracht, Entscheidungen expliziter zu machen als ich es alleine getan hätte. Warum diese Architektur? Warum dieser Trade-off? Warum jetzt Feature A und nicht Feature B? Diese Fragen muss man beantworten können, wenn man mit einem Werkzeug arbeitet, das sie stellt.
+Die Bewerber-Schmiede war mein erstes Projekt, das ich konsequent mit Claude Code als Entwicklungspartner gebaut habe. Ich habe die Architektur und jedes Feature vorher beschrieben, den Agenten umsetzen lassen und das Ergebnis geprüft, als käme es von einem Kollegen. Das hat mich gezwungen, Entscheidungen ausdrücklicher zu treffen, als ich es allein getan hätte, weil ein Werkzeug, das Rückfragen stellt, eine Begründung braucht.
 
-## Entwicklung und Infrastruktur
+## Was ich gelernt habe
 
-Das Besondere an Bewerber-Schmiede aus technischer Sicht ist nicht die Anwendung selbst, sondern wie sie gebaut und betrieben wird. Von Anfang an mit dem Anspruch, dass dieses Projekt die Qualitätsstandards erfüllt, die ich auch an berufliche Projekte anlege.
-
-**CI/CD-Pipeline.** Jede Änderung, die auf den Hauptzweig gepusht wird, durchläuft automatisch eine Build-Pipeline. Kein manuelles Deployment, keine "ich deploye das nachher mal"-Mentalität. Die Pipeline prüft, baut und deployt, oder schlägt mit einer klaren Fehlermeldung fehl.
-
-**Automatisierte Unit-Tests.** Die Geschäftslogik ist durch Unit-Tests abgedeckt. Nicht flächendeckend nach Prozentsatz optimiert, sondern durchdacht: die Teile, die wahrscheinlich brechen, sind getestet. Die Teile, bei denen ein Test mehr Aufwand als Nutzen wäre, sind dokumentiert.
-
-**End-to-End-Tests.** Über die Unit-Tests hinaus gibt es End-to-End-Tests, die die gesamte Anwendung aus Nutzerperspektive testen. Formular ausfüllen, Analyse auslösen, Ergebnis prüfen. Das fängt Fehler, die in isolierten Tests unsichtbar bleiben.
-
-**Automatisiertes Deployment.** Nach erfolgreich durchlaufenen Tests wird automatisch deployed. Kein manueller Eingriff, keine SSH-Session auf dem Server.
-
-## Was ich daraus gelernt habe
-
-Wie viel Disziplin es braucht, auch bei einem Nebenprojekt ohne externe Deadline konsequent auf Qualität zu bestehen. Es ist verlockend, für ein kleines Nebenprojekt den CI/CD-Aufwand als Überengineering zu betrachten und einfach manuell zu deployen. Ich habe das bewusst nicht getan und bin froh darüber. Die Pipeline hat mir mehrfach Fehler gezeigt, die ich ohne sie in Produktion gepusht hätte.
-
----
-
-[Zur Bewerber-Schmiede](https://bewerber-schmiede.de){.cv-download-link}
+Ein Sprachmodell hält sich an ein Schema, das im Prompt steht, aber nicht immer an die Form drumherum. Manchmal kommt das JSON in einem Markdown-Codeblock zurück, also entfernt der Code diesen Rahmen vor dem Parsen. Solche Kleinigkeiten machen den Unterschied zwischen einer Demo und einem Werkzeug, das Leute bezahlen.
