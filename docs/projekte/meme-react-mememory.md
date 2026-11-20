@@ -1,19 +1,14 @@
 ---
-aside: true
+title: meme_react_mememory
+description: Ein Memory-Spiel in React mit Bildern aus dem Büroalltag, gebaut um React zu verstehen.
+gruppe: frueher
+order: 8
+zeitraum: '2019'
+status: Offline
+technik: [React, JavaScript]
+aside: false
 ---
 
-# meme_react_mememory
+Mein erstes Projekt mit einem komponentenbasierten Framework. Ein Memory-Spiel ist dafür ideal: überschaubare Logik, klarer Zustand und ein Ergebnis, das man sofort sieht. Die Karten waren Memes, die damals im Team bei abas herumgingen, was dafür gesorgt hat, dass die Kollegen es tatsächlich gespielt haben.
 
-**Memory-Spiel · React · ~2019**
-
-meme_react_mememory ist ein Memory-Spiel im Browser, bestückt mit Memes aus dem Arbeitsalltag bei abas. Das eigentliche Ziel war nicht das Spiel, sondern React: ich wollte das Framework an einem echten, abgeschlossenen Projekt verstehen. Ein Spiel ist dafür gut geeignet. Überschaubare Logik, klarer Zustand, sichtbares Ergebnis.
-
-## Warum Memes
-
-Die Memes kamen aus dem Büro. Abas war ein Ort mit einer eigenen internen Kultur, und ein Teil davon waren geteilte Bilder und Witze die im Team kursierten. Das Spiel mit bekannten Gesichtern und Inhalten zu füllen hat das Testen kurzweiliger gemacht und dafür gesorgt, dass Kollegen es tatsächlich ausprobiert haben.
-
-## Was ich gelernt habe
-
-React war 2019 für mich die erste Begegnung mit einem komponentenbasierten Frontend-Framework. Zustandsverwaltung mit Hooks, die Idee dass UI eine Funktion von State ist, das Denken in Komponenten statt in DOM-Manipulation. Konzepte die sich in späteren Projekten als gemeinsamer Nenner erwiesen haben, zuerst mit Vue.js bei der Infokom, dann mit Angular bei Hellmann. Wer React verstanden hat, findet sich in den anderen Frameworks schnell zurecht.
-
----
+Mitgenommen habe ich die Grundidee, dass die Oberfläche eine Funktion des Zustands ist und man in Komponenten denkt statt in DOM-Manipulation. Das hat mir später bei Vue und Angular viel Einarbeitung erspart.

@@ -1,28 +1,23 @@
 ---
+title: Stapelplanung
+description: Mein Abschlussprojekt der Ausbildung, eine Webanwendung zur Verwaltung zu kommissionierender Ware mit Anbindung an das abas ERP.
+gruppe: frueher
+order: 3
+zeitraum: '2022'
+status: Abgeschlossen
+technik: [Java, Webanwendung, abas ERP]
+link: { href: '/downloads/STAPELPLANUNG_Arthur_Schimpf_Projektdokumentation-Sommer-2022_2022-04.pdf', text: 'Dokumentation als PDF' }
 aside: false
-sidebar: true
 ---
 
-# Abschlussarbeit Ausbildung 2022
+Das IHK-Abschlussprojekt meiner Ausbildung zum Fachinformatiker für Anwendungsentwicklung, umgesetzt im Frühjahr 2022 bei der abas Software GmbH. Die Webanwendung hilft dabei, Ware zu planen und zu verwalten, die kommissioniert werden soll, und holt ihre Daten direkt aus dem abas ERP.
 
-**Fachinformatiker Anwendungsentwicklung · abas Software GmbH · Karlsruhe · 2022**
-
-Abschlussprojekt der dualen Ausbildung zum Fachinformatiker Anwendungsentwicklung an der Heinrich-Hertz-Schule Karlsruhe. Die Arbeit wurde bei der abas Software GmbH durchgeführt und dokumentiert Konzeption, Umsetzung und Ergebnis des Abschlussprojekts.
-
-<div class="pdf-actions">
-  <a href="/downloads/STAPELPLANUNG_Arthur_Schimpf_Projektdokumentation-Sommer-2022_2022-04.pdf" download class="cv-download-link">
-    PDF herunterladen
-  </a>
-</div>
+Die Dokumentation beschreibt den ganzen Weg von der Ausgangslage über Anforderungsanalyse und Planung bis zur Umsetzung und zum Abschluss. Alle Daten darin sind erfunden.
 
 <div class="pdf-viewer">
   <iframe
     src="/downloads/STAPELPLANUNG_Arthur_Schimpf_Projektdokumentation-Sommer-2022_2022-04.pdf"
-    width="100%"
-    height="100%"
-    frameborder="0"
-  >
-    <p>Dein Browser unterstützt keine eingebetteten PDFs.
-    <a href="/downloads/STAPELPLANUNG_Arthur_Schimpf_Projektdokumentation-Sommer-2022_2022-04.pdf">PDF herunterladen</a></p>
-  </iframe>
+    title="Projektdokumentation Stapelplanung"
+    loading="lazy"
+  ></iframe>
 </div>

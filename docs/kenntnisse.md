@@ -1,93 +1,80 @@
 ---
+title: Kenntnisse
+description: Womit Arthur Schimpf arbeitet, wo er es eingesetzt hat und wie tief das Wissen geht.
 aside: true
 ---
 
-# Technische Kenntnisse
+# Kenntnisse
 
-Was hier steht, ist kein Kompetenzraster mit Balken oder Sternchen. Es ist ein ehrlicher Bericht darüber, womit ich gearbeitet habe, wo ich es eingesetzt habe und wie tief das Wissen tatsächlich geht. Manches davon ist tägliches Handwerk, anderes wurde in einem spezifischen Projekt gebraucht und seitdem nicht mehr angefasst. Den Unterschied versuche ich deutlich zu machen.
+<p class="lead">Keine Balken und keine Sterne. Hier steht, womit ich gearbeitet habe, in welchem Projekt und wie sicher ich mich darin fühle.</p>
 
----
+<dl class="stack-summary">
+  <div>
+    <dt>Täglich</dt>
+    <dd>Java, Spring Boot, PostgreSQL, Docker, GitHub Actions, GitLab CI</dd>
+  </div>
+  <div>
+    <dt>Regelmäßig</dt>
+    <dd>Quarkus, Kafka, Angular, Vue.js, TypeScript, Testcontainers, Flyway</dd>
+  </div>
+  <div>
+    <dt>In eigenen Projekten</dt>
+    <dd>Kotlin, Next.js, Python, Swift, Elixir, Kubernetes im Betrieb</dd>
+  </div>
+</dl>
 
-## Java und das Spring-Ökosystem
+## Java und Spring
 
-Java ist die Sprache, in der ich professionell denke. Ich habe mit allen LTS-Versionen von Java 8 bis Java 21 gearbeitet, nicht in dem Sinne, dass ich jeden API-Unterschied zwischen den Versionen auswendig kennen würde, sondern in dem Sinne, dass ich in Codebases gearbeitet habe, die auf diesen Versionen liefen, und produktiv war. Der bewussteste Einsatz moderner Java-Features passierte bei Hellmann: Dort haben wir Records in der Domänenmodellierung verwendet, was direkt mit dem Clean-Architecture-Ansatz zusammenhing, den das Team verfolgte. Records erzwingen Unveränderlichkeit und machen den Domänencode expliziter. Das war keine Stilentscheidung, sondern eine architektonische.
+Java ist die Sprache, in der ich am sichersten bin. Ich habe in Codebases von Java 8 bis Java 21 gearbeitet. Bei Hellmann haben wir das Domänenmodell konsequent mit Records gebaut, weil sie unveränderlich sind und im Code sofort zeigen, was ein Wert ist und was eine Entität.
 
-Spring Boot kenne ich durch und durch im Alltag. Die letzte Version, mit der ich aktiv gearbeitet habe, war Spring Boot 3. Ich könnte nicht spontan auflisten was sich zwischen den Haupt-Releases verändert hat, aber ich arbeite nicht aus dem Gedächtnis, sondern mit dem Ökosystem. Was mich von jemandem unterscheidet, der Spring Boot aus Tutorials kennt: Ich habe damit produktive Systeme gebaut, die echte Nutzer verwenden, und ich weiß was passiert wenn etwas schiefläuft. Ich kenne den Unterschied zwischen dem was ein Framework verspricht und dem was es in der Praxis liefert.
+Spring Boot setze ich seit der Ausbildung ein, zuletzt in Version 3. Spring MVC für REST-APIs mit Validierung und einheitlicher Fehlerbehandlung, Spring Data JPA mit Hibernate für die Persistenz, Spring Security für OAuth2, JWT und zustandslose APIs. Spring AI habe ich bei der Infokom für eine interne Chat-Anwendung verwendet, als das Modul noch sehr jung war und man vieles im Quellcode nachlesen musste.
 
-Innerhalb des Spring-Ökosystems habe ich regelmäßig mit Spring MVC und Spring Web gearbeitet: REST-APIs, Controller-Schichten, Exception-Handling, Validierung. Spring Data JPA ist fester Bestandteil jedes meiner Backend-Projekte: Repository-Pattern, Query-Methoden, Transaktionsmanagement. Spring Security setze ich ein wenn Authentifizierung und Autorisierung gebraucht werden: OAuth2, JWT, rollenbasierte Zugriffskontrolle. Einen Sonderfall stellt Spring AI dar: beim InfoGPT-Projekt bei der Infokom, einer internen Chat-Anwendung vergleichbar mit ChatGPT, haben wir Spring AI zur Anbindung der KI-Modelle eingesetzt. Das war zum Zeitpunkt unserer Arbeit ein noch junges Modul, und der Umgang damit erforderte mehr Eigenrecherche als die etablierten Spring-Module, aber es hat funktioniert.
-
----
+Für eigene Dienste nehme ich inzwischen oft Quarkus. Die beiden KI-Pipelines hinter [Stoistic Forge](/projekte/stoistic-forge) und [9thbit](/projekte/9thbit) laufen als Quarkus-Uber-Jar unter systemd auf einem kleinen Server. Kurze Startzeit und wenig Speicher spielen da eine größere Rolle als im Konzernumfeld.
 
 ## Datenbanken
 
-PostgreSQL ist meine primäre Datenbank. Ich habe sie in nahezu jeder Stelle eingesetzt: bei der Infokom für das komplette Rechnungsverwaltungssystem, bei Hellmann im Zielschema der Migration, in eigenen Projekten wie TinyBill. Ich schreibe SQL direkt wenn das ORM nicht ausreicht, entwerfe Schemas von Grund auf und denke bei der Modellierung mit, welche Abfragen zu erwarten sind. MySQL kenne ich ebenfalls aus der Praxis und bewege mich darin sicher. Die konzeptionellen Unterschiede zur PostgreSQL-Welt sind mir bekannt, auch wenn ich PostgreSQL bevorzuge, wenn die Wahl frei ist.
+PostgreSQL ist meine Standarddatenbank, beruflich wie privat. Ich entwerfe Schemas selbst, schreibe SQL direkt, wenn das ORM an seine Grenzen kommt. Beim Notfallpass speichere ich die Passdaten bewusst als JSONB-Dokument, weil sich ihr Aufbau noch ändert und die API sie nur als Ganzes liest und schreibt.
 
-Für Datenbankmigrationen habe ich mit Flyway gearbeitet. Versionierte SQL-Skripte, saubere Migrationspfade, keine manuellen Änderungen an produktiven Schemata ohne Migrationsdatei, das ist für mich Standard. Das Gegenteil, nämlich Schemaänderungen direkt auf der Datenbank ohne nachvollziehbaren Versionspfad, habe ich einmal in einem Projekt vorgefunden und verstanden warum das ein Problem ist.
+Schemaänderungen laufen bei mir immer über versionierte Migrationen, meistens mit Flyway, in TypeScript-Projekten mit Drizzle. Geschäftslogik gehört für mich in den Anwendungscode und nicht in Stored Procedures oder Trigger, weil sie dort schwer zu testen und zu versionieren ist.
 
-Was ich bewusst nicht einsetze: Stored Procedures, Trigger und Views als Ersatz für Anwendungslogik. Das ist eine architektonische Überzeugung, keine technische Unfähigkeit. Logik, die in der Datenbank steckt, ist schwerer zu testen, schwerer zu versionieren und schwerer nachzuvollziehen. Ich halte Geschäftslogik im Anwendungscode und die Datenbank so nah wie sinnvoll an ihrer Kernaufgabe: Daten halten und abfragen.
+MySQL kenne ich aus der Praxis. Für kleine Werkzeuge nehme ich SQLite, in Node inzwischen über das eingebaute `node:sqlite`. CockroachDB habe ich bei der Infokom in der Konzeption einer Migration kennengelernt, zusammen mit Leuten von Cockroach Labs. Das ist Wissen über das Konzept und die Konsistenzmodelle, nicht über den Betrieb.
 
-CockroachDB habe ich im Rahmen des AS400-Migrationsprojekts bei der Infokom konzeptionell kennengelernt. Das Projekt arbeitete eng mit einem Spezialistenteam von CockroachDB selbst zusammen. Mein Wissen darüber ist struktureller Natur: Grundprinzipien der verteilten Datenhaltung, Konsistenzmodelle, warum CockroachDB für diesen Anwendungsfall gewählt wurde. Keine produktive Erfahrung mit dem Betrieb.
+## Kafka
 
----
+Kafka habe ich in zwei Produktivsystemen eingesetzt. Bei der Infokom kamen eingehende E-Rechnungen über Kafka-Topics ins System und wurden dort validiert und verarbeitet. Bei Hellmann hat Kafka die Extraktion aus dem AS400 von der Validierung und dem Import ins neue Modell entkoppelt.
 
-## Messaging mit Kafka
-
-Kafka habe ich in zwei realen Produktionskontexten eingesetzt. Das ist ein Unterschied zu jemandem, der Kafka aus Tutorials kennt.
-
-Bei der Infokom wurde Kafka für den Empfang eingehender E-Rechnungen verwendet. Externe Rechnungen liefen über Kafka-Topics in das System und wurden dort verarbeitet, validiert und weiterverarbeitet. Das war ein durchgehend asynchroner Prozess, bei dem Fehlerbehandlung, Retry-Logik und Idempotenz echte Überlegungen waren.
-
-Bei Hellmann war Kafka Teil der ETL-Pipeline: Daten wurden aus dem AS400-System extrahiert, über Kafka als Nachrichtenkanal weitergeleitet und dann von unserem Validierungsservice konsumiert, bevor sie ins neue Domänenmodell überführt wurden. Kafka hat dort die Entkopplung zwischen Extraktionsschicht und Verarbeitungsschicht übernommen.
-
-Ich habe Producer- und Consumer-Konfigurationen geschrieben, mit Consumer Groups gearbeitet und verstehe die wesentlichen Konzepte wie Partitionierung, Offsets und At-least-once-Delivery aus der Praxis. Was ich nicht habe, ist tiefes Wissen über Kafka-Administration oder Cluster-Betrieb. Damit hatte ich keinen direkten Kontakt.
-
----
+Ich habe Producer und Consumer konfiguriert, mit Consumer Groups gearbeitet und mich mit Offsets, Partitionierung, Retries und idempotenter Verarbeitung beschäftigt, weil At-least-once-Delivery sonst doppelte Datensätze erzeugt. Einen Kafka-Cluster administriert habe ich nicht.
 
 ## Frontend
 
-Vue.js ist das Frontend-Framework, das mich am längsten begleitet hat. Ich habe kurz mit Vue 2 gearbeitet, bin aber schnell auf Vue 3 gewechselt und seitdem dabei. Die Composition API ist für mich der natürlichere Ansatz: Logik nach Zugehörigkeit gruppieren statt nach Lebenszyklusphase. Dieses Portfolio und DailyDev sind beide mit VitePress auf Vue-Basis gebaut, was zeigt, dass das kein aufgewärmtes Wissen aus alten Projekten ist. Für Webanwendungen, die ich nach eigenem Ermessen gestalten kann, wähle ich Vue.
+Ich bin Backend-Entwickler, baue aber regelmäßig Oberflächen. Angular habe ich bei Hellmann im Team eingesetzt und für den [Notfallpass](/projekte/dein-notruf) mit Angular 19, Standalone Components und Signals ein komplettes Frontend gebaut. Vue.js nutze ich seit Jahren, unter anderem für diese Seite und andere VitePress-Projekte.
 
-React und Next.js habe ich die letzten zwei Jahre für ausgewählte Projekte genutzt, zuletzt im Kontext von Shopitech-Kundenprojekten und eigenen Experimenten. Die aktuelle Richtung des React-Ökosystems (Server Components, App Router, die Verlagerung von Logik in Richtung Server) habe ich aktiv mitverfolgt und angewendet. Es ist nicht mein tägliches Werkzeug im Beruf, aber ich finde mich sofort zurecht.
-
-Angular habe ich bei Hellmann kennengelernt. Wir haben eine aktuelle Version eingesetzt und ich habe eigenständig Features entwickelt. Angular ist nach Jahren mit Vue und React eine andere Welt: stärker strukturiert, mehr Konventionen, mehr Framework-Meinung über alles. Für Teams mit variierendem Erfahrungsniveau kann das ein echter Vorteil sein. Ich habe dort Wissen aufgebaut und betrachte mich als jemanden mit solider Arbeitspraxis, nicht als jemanden mit ausgewachsener Expertise.
-
-Vaadin ist das Framework, in dem ich die meiste zusammenhängende Erfahrung habe. Von Version 21 bis 25 habe ich damit das komplette ZFWEB-Projekt bei der Infokom aufgebaut: Flow-Komponenten, Data Grids mit tausenden Datensätzen, komplexe Formulare, Dialoge, Layouts, Bindings an Service-Schichten. Vaadin verbindet Java-Backend direkt mit der UI, es gibt keine Trennung zwischen Frontend und Backend im klassischen Sinne. Das macht es für interne Business-Anwendungen auf Java-Basis außergewöhnlich produktiv. Ich kenne die Stärken und die Grenzen dieses Ansatzes aus intensiver Praxis.
-
----
+Vaadin ist das Framework, mit dem ich am längsten zusammenhängend gearbeitet habe: die komplette Rechnungsanwendung bei der Infokom, von Version 21 bis 25, mit großen Data Grids, Formularen und Dialogen. Für interne Fachanwendungen auf Java-Basis ist das sehr produktiv. React und Next.js verwende ich für Kundenwebsites und eigene Werkzeuge, mit App Router und Server Components.
 
 ## Testing
 
-Ich habe mit JUnit 4 und JUnit 5 gearbeitet. Den genauen API-Unterschied zwischen beiden Versionen könnte ich nicht aus dem Gedächtnis reproduzieren, in der Praxis spielt das selten eine Rolle, weil man üblicherweise in einer Codebase ist, die schon eine der Versionen etabliert hat. Wichtiger ist die Herangehensweise: Ich schreibe Tests während der Entwicklung, nicht danach. Ich teste die Teile, die fehleranfällig sind, nicht den Code, der trivial korrekt ist.
+Ich teste die Stellen, an denen Fehler teuer werden: Berechnungen, Zustandsübergänge, Schnittstellen. Unit-Tests mit JUnit 5 und Mockito, Integrationstests mit Testcontainers gegen eine echte PostgreSQL statt gegen H2, weil sich beide an genug Stellen unterschiedlich verhalten. In TypeScript-Projekten nehme ich Vitest und für End-to-End-Tests Playwright. In quitt, meiner Rechnungs-App, prüfe ich Geldbeträge und Rechnungssummen zusätzlich mit Property-based Tests über fast-check, weil Rundungsfehler bei Rechnungen sonst erst beim Steuerberater auffallen.
 
-Für Integrationstests habe ich intensiv mit Testcontainers gearbeitet. Testcontainers startet echte Datenbankinstanzen, Kafka-Broker oder andere Abhängigkeiten in Docker-Containern für die Laufzeit des Tests und fährt sie danach wieder herunter. Das bedeutet: Integrationstests gegen eine echte PostgreSQL-Instanz, nicht gegen eine eingebettete H2-Datenbank die sich an einigen Stellen anders verhält. Dieser Unterschied ist real und relevant. Bei der Infokom und in eigenen Projekten war Testcontainers fester Bestandteil der Testinfrastruktur.
+## CI/CD und Betrieb
 
-Browser-basierte End-to-End-Tests mit Playwright habe ich in eigenen Projekten aufgesetzt. Das ist ein Bereich, in dem ich mir Schritt für Schritt mehr aufgebaut habe: Tooling-Entscheidungen, Selektoren, Stabilität von Tests gegen dynamische Inhalte. Ich würde mich hier als kompetent, nicht als erfahren bezeichnen.
+Das ist der Bereich, in dem ich seit Mai 2026 hauptberuflich arbeite, und der mich auch privat am meisten beschäftigt.
 
----
+Mit GitLab CI habe ich bei der Infokom Pipelines von Grund auf geschrieben: Stages für Test, Build und Deployment, Abhängigkeiten zwischen Jobs, Variablen pro Umgebung. Azure DevOps und Jenkins kenne ich aus bestehenden Projekten. Für meine eigenen Projekte nutze ich GitHub Actions mit einem wiederverwendbaren Workflow, den die einzelnen App-Repositories aufrufen.
 
-## Infrastructure und DevOps
+Meine Dienste laufen auf drei Hetzner-Servern, die ich selbst einrichte und pflege. Images werden ausschließlich in der CI gebaut und in die GitHub Container Registry geschoben, auf den Servern wird nur gezogen und gestartet. Ein Deploy prüft danach einen Healthcheck und setzt bei einem Fehler automatisch auf die vorherige Version zurück. Davor sitzt Caddy als Reverse Proxy mit automatischen Zertifikaten. Einzelne Java-Dienste laufen bewusst ohne Container direkt unter systemd. Wie das im Detail aussieht, steht auf der Seite zur [Infrastruktur](/projekte/infrastruktur).
 
-GitLab CI ist das CI/CD-System, mit dem ich am meisten gearbeitet habe. Ich habe Pipelines selbst geschrieben und konfiguriert: Stages für Tests, Build, Deployment, Abhängigkeiten zwischen Jobs, Umgebungsvariablen, Deployment in verschiedene Umgebungen. Das ist nicht nur "Pipeline existiert", sondern aktives Gestalten und Pflegen von Lieferprozessen. Azure DevOps kenne ich ebenfalls aus der Praxis, Jenkins habe ich in bestehenden Projekten gesehen und angepasst.
+Docker nutze ich jeden Tag: eigene Dockerfiles mit Multi-Stage-Builds, Compose-Umgebungen mit Datenbank und Broker für die lokale Entwicklung, schlanke Laufzeit-Images. Kubernetes habe ich im Betrieb bestehender Anwendungen erlebt und dort Deployments und Konfigurationen angepasst. Einen Cluster von Grund auf entworfen habe ich noch nicht.
 
-Docker nutze ich täglich in der lokalen Entwicklung. Ich schreibe eigene Dockerfiles für Anwendungen, setze docker-compose Umgebungen auf die Datenbanken, Kafka-Broker und Anwendungen gemeinsam hochfahren, und verstehe was in einem Container passiert wenn etwas schiefläuft. Multi-Stage-Builds habe ich nicht eingesetzt, bisher gab es dafür in meinen Projekten keinen Anlass, aber das Konzept ist mir bekannt.
+## Arbeiten mit KI
 
-Kubernetes habe ich im Deployment-Kontext erlebt. Anwendungen wurden auf K8s-Clustern betrieben, ich habe Konfigurationen angepasst und den Betrieb begleitet. Was ich nicht habe: tiefes Wissen über Cluster-Architektur, Netzwerkpolicies oder die Administration eines Clusters selbst. Ich weiß genug um mit K8s-Deployments zu arbeiten, nicht genug um sie von Grund auf zu designen.
+Ich nutze Sprachmodelle auf zwei Arten. Als Baustein in Anwendungen: Die Blog-Pipelines rufen die Claude-API in mehreren Stufen auf, mit einem eigenen Review-Schritt, der schwache Ergebnisse verwirft. [Fundus](/projekte/fundus) ordnet Dokumente mit Claude ein und stellt sein Archiv über einen MCP-Server mit OAuth und Zwei-Faktor-Anmeldung bereit.
 
----
+Und als Werkzeug beim Entwickeln: Viele meiner Projekte entstehen mit Claude Code. Ich schreibe vorher einen Plan mit Arbeitspaketen und Abnahmekriterien, lasse umsetzen und lese das Ergebnis wie einen Pull Request. Damit das funktioniert, müssen Tests, Linter und Pipeline streng sein. Je weniger ich selbst tippe, desto wichtiger werden sie.
 
-## Werkzeuge und Umgebung
+## Weitere Sprachen
 
-IntelliJ IDEA ist meine primäre Entwicklungsumgebung, seit dem Beginn meiner Karriere. Ich kenne die Tastaturkürzel, die Refactoring-Werkzeuge, die Datenbankintegration und das Debugging. Eine IDE gut zu kennen ist keine Kleinigkeit: Sie bestimmt, wie schnell man im Code navigiert, wie sicher man refactored und wie effektiv man Fehler findet.
+Kotlin habe ich mir mit der zweiten Version von TinyBill beigebracht, einer Spring-Boot-API in Kotlin. TypeScript schreibe ich für Frontends und kleine Node-Dienste. Python nutze ich für Fundus. Swift und SwiftUI für die iOS-Apps zum Notfallpass und zu Arcane Spire, Jetpack Compose für dessen Android-Port. Elixir mit Phoenix LiveView habe ich in einem kleinen Erinnerungsdienst ausprobiert, vor allem wegen des Prozessmodells mit einem GenServer pro Aufgabe. In diesen Sprachen bin ich produktiv, aber nicht so sicher wie in Java.
 
-Für API-Design und Dokumentation setze ich OpenAPI ein. Schnittstellen beschreiben, bevor man sie implementiert, hat einen klaren Vorteil: man durchdenkt den Vertrag explizit und nicht erst wenn der Code schon steht. Das habe ich bei Hellmann für die neuen Services praktiziert.
+## Werkzeuge
 
-Git-Plattformen: GitLab war mein hauptsächliches Werkzeug im beruflichen Kontext. GitHub nutze ich für eigene Projekte intensiv. Bitbucket kenne ich ebenfalls aus der Praxis. Für Projektorganisation habe ich mit Jira und Miro gearbeitet: Jira für Ticket-Verwaltung und Sprint-Planung, Miro für Architekturdiagramme und technische Workshops.
-
----
-
-## Betriebssystem
-
-macOS ist mein Betriebssystem, und das seit dem ersten Tag, an dem ich mir selbst etwas leisten konnte. Mit meinem ersten eigenen Geld habe ich mir einen iMac gekauft. Seitdem habe ich nichts anderes mehr benutzt.
-
-Das ist keine ideologische Entscheidung. Es ist eine praktische. macOS und Unix-basierte Systeme sind für Softwareentwicklung gebaut: die Terminal-Umgebung, die Paketverwaltung, das Verhalten des Dateisystems entsprechen dem was auf Servern läuft. Der Übergang zwischen lokalem Rechner und Linux-Server ist fließend, nicht ein ständiges Übersetzen von Systemkonzepten.
-
-Gleichzeitig habe ich Linux nicht nur als entfernte Serverumgebung kennengelernt. Der Raspberry Pi im Heimnetzwerk auf dem DailyDev und daily-pi-poetry laufen, ist ein vollwertiger Linux-Rechner den ich administriere: Prozesse, Cron-Jobs, Logs, Netzwerkkonfiguration. Das ist kein Spielzeug-Setup sondern eine laufende Produktivumgebung unter der Schreibtischplatte.
+IntelliJ IDEA seit dem ersten Tag der Ausbildung, macOS als Arbeitsrechner, Linux auf den Servern. GitLab und GitHub, Jira für Tickets und Sprints, Miro für Architekturskizzen in Workshops. Für API-Verträge OpenAPI, das ich bei Hellmann vor der Implementierung geschrieben habe, damit beide Seiten früh über dieselbe Schnittstelle reden.

@@ -1,39 +1,33 @@
 ---
-aside: true
+title: Kundenwebsites
+description: Websites für kleine Betriebe aus der Region, gebaut und betrieben unter dem Namen Shopitech.
+gruppe: shopitech
+order: 3
+zeitraum: seit 2024
+status: Laufend
+technik: [Next.js, React, Astro, WordPress, Shopify, Tailwind CSS]
+link: { href: 'https://www.shopitech.de', text: 'shopitech.de' }
+aside: false
 ---
 
-# Shopitech
+## Worum es geht
 
-**Kundenprojekte · Verschiedene Technologien · [www.shopitech.de](https://www.shopitech.de)**
+Seit 2024 baue ich nebenberuflich Websites für kleine Betriebe, vor allem Restaurants, Salons und Handwerker aus der Gegend um Karlsruhe. Der Name dafür ist Shopitech. Die Kunden sind keine Entwickler, und meistens geht es um ganz konkrete Fragen: Findet man uns bei Google Maps, sieht man die Speisekarte auf dem Handy, kann man direkt anrufen.
 
-Shopitech ist der Name, unter dem ich einige Web-Projekte für Kunden gebaut habe, ausgewählte Einzelprojekte für Unternehmen und Personen aus meinem Umfeld. Kein großes Agenturgeschäft, sondern gezielte Zusammenarbeit mit wenigen Kunden, bei denen ich den direkten Kontakt und die vollständige Kontrolle über Technologieentscheidungen schätze.
+## Ausgewählte Projekte
 
-## Die Projekte
+**[Mango Thai](https://www.mango-thai.de)** ist die Website eines Thai-Restaurants, gebaut mit Next.js. Im Mittelpunkt stehen Speisekarte, Atmosphäre und der kürzeste Weg zur Reservierung.
 
-**[cw-baden.de](https://www.cw-baden.de)** ist die Website eines Handwerker-Service-Unternehmens in Baden-Baden. Der Auftrag war ein vollständiges Rebranding des bestehenden Auftritts kombiniert mit einem WordPress-Update: veraltetes Theme, veraltete Plugins, unstrukturierter Inhalt. Das Ergebnis ist ein sauberer, schneller Auftritt, der für lokale Suche optimiert ist. Ein handwerklicher Betrieb gewinnt seine Kunden über Google Maps und lokale Suchanfragen, nicht über Social Media. Das bestimmt die Prioritäten beim Aufbau der Seite.
+**Khao Hom** in Rastatt ist ebenfalls ein Thai-Restaurant. Die Seite hat Speisekarte, Mittagstisch, Getränke und Anfahrt. Aus denselben Daten erzeugen Skripte über Druckansichten und Headless Chrome die PDFs für Speisekarten und Flyer, sodass eine Preisänderung nur an einer Stelle gepflegt wird. Vor dem Bau habe ich vier gestalterische Richtungen als Moodboards entworfen.
 
-**[mango-thai.de](https://www.mango-thai.de)** ist die Website eines Thai-Restaurants. Hier stand die visuelle Darstellung im Vordergrund: Speisekarte, Atmosphäre, Reservierungsmöglichkeit. Technisch umgesetzt mit Next.js und React, deployed über Vercel. Restaurants leben von der Erwartung, die sie vor dem ersten Besuch erzeugen. Eine Webseite muss das leisten, was ein Schaufenster in der Fußgängerzone früher geleistet hat.
+**artisti. Hairstudio** ist ein Friseursalon. Die bisherige Onepage baue ich gerade als eigenständige Website mit Astro neu auf.
 
-**dein-notruf.de** ist ein Hausnotruf-Service, den ich zusammen mit einer Freundin aufbaue. Aktuell noch in der frühen Phase; die Website steht, die Grundstruktur ist gelegt, aber das Geschäftsmodell wird noch ausgearbeitet.
+**[cw-baden.de](https://cw-baden.de)** gehört einem Handwerker-Service in Baden-Baden. Hier ging es um ein neues Erscheinungsbild und darum, eine veraltete WordPress-Installation mit verwaisten Plugins aufzuräumen. Ein Handwerksbetrieb gewinnt seine Kunden über die lokale Suche, und danach richtet sich die ganze Seite.
 
-**tinybill.de** ist als Teil des Shopitech-Portfolios gelistet, aber ausführlicher auf der [eigenen Seite](/projekte/tinybill) beschrieben.
+**Catching Theo** war 2021 ein eigenes Shopify-Theme für einen Onlineshop.
 
-## Technische Entscheidungen
+## Wie ich arbeite
 
-Die Technologieauswahl war bei jedem Projekt verschieden, und das bewusst. Ein Handwerker-Service und ein Restaurant haben andere Anforderungen als eine Webanwendung. Wer überall denselben Stack einsetzt, optimiert für das Werkzeug, nicht für das Problem.
+Die Technik wähle ich pro Projekt. Eine Speisekarten-Website braucht kein CMS mit Login, ein Betrieb, der seine Texte selbst pflegen will, schon. Neuere Seiten laufen auf meiner [eigenen Infrastruktur](/projekte/infrastruktur), und für Restaurants gibt es mit [Tavola](/projekte/tavola) eine Plattform, auf der eine neue Website nur noch eine Konfigurationsdatei ist.
 
-Für die statischen Seiten habe ich anfangs mit Next.js gearbeitet. Next.js ist ein hervorragendes Framework für Anwendungen, die tatsächlich Anwendungscharakter haben: dynamische Daten, Authentifizierung, komplexe Interaktionen. Für eine einfache Präsenzseite ist es schnell mehr Aufwand als nötig, Build-Pipeline aufsetzen, Deployment konfigurieren, Dependency-Management. Das alles funktioniert, aber es ist Overhead für ein Problem, das keinen Overhead braucht.
-
-Deshalb habe ich die Shopitech-Website selbst vor kurzem von Next.js auf Framer migriert. Framer ist ein Design- und Publishing-Tool, das Seiten direkt aus einem visuellen Editor heraus erstellt und deployt. Für eine Unternehmensseite, die primär auf visuellen Eindruck und schnelle Aktualisierbarkeit ausgelegt ist, ist das die ehrlichere Wahl. Ich kann Änderungen in Minuten einspielen, ohne eine Codezeile anzufassen. Kein Build, kein Deployment, kein Warten.
-
-Das klingt wie ein Schritt zurück für jemanden der hauptberuflich Softwareentwickler ist. Es ist das Gegenteil. Die Fähigkeit zu erkennen, wann ein Werkzeug das richtige ist (auch wenn es kein Code-Werkzeug ist) ist ein Zeichen von Reife. Der beste Code ist der, den man nicht schreiben musste.
-
-## Was Kundenprojekte lehren
-
-Wer Software für Kunden baut, die selbst keine Entwickler sind, lernt andere Dinge als wer im Team für interne Systeme entwickelt. Anforderungen heraushören, die nicht explizit genannt werden. Erwartungen managen, ohne zu versprechen was nicht machbar ist. Erklären warum etwas so gelöst wird wie es gelöst wird, ohne dabei technisch zu werden.
-
-Was ich durch diese Projekte gelernt habe, ist was "fertig" wirklich bedeutet. Im Unternehmenskontext gibt es immer die nächste Iteration, den nächsten Sprint. Bei einem Kundenprojekt gibt es irgendwann eine Website, die live ist und läuft. Dieses Gefühl und die Verantwortung die damit verbunden ist schärfen die Perspektive auf das was wirklich wichtig ist.
-
----
-
-[www.shopitech.de](https://www.shopitech.de){.cv-download-link}
+Was ich aus diesen Projekten mitnehme, hat mit Code wenig zu tun. Kunden sagen selten genau, was sie brauchen, also frage ich nach, wie sie heute arbeiten. Ich verspreche keine Termine, die ich nicht halten kann. Und ich erkläre Entscheidungen so, dass man dafür nicht wissen muss, was ein Framework ist.

@@ -1,28 +1,22 @@
 ---
-aside: true
+title: Foxfolio
+description: Ein Generator, der aus einmal eingegebenen Daten eine gehostete Portfolio-Seite für Bewerbungen macht.
+gruppe: frueher
+order: 1
+zeitraum: 2023 bis 2024
+status: Pausiert, Idee lebt in der Bewerber-Schmiede weiter
+technik: [Java, Spring Boot, Vaadin]
+aside: false
 ---
 
-# Foxfolio
+## Die Idee
 
-**Portfolio-Generator · Vaadin · Spring Boot · In Entwicklung**
+Ein Lebenslauf sagt, wann jemand wo war, aber wenig darüber, wie jemand arbeitet. Eine eigene Portfolio-Seite kann das, nur muss man dafür bisher selbst Webentwickler sein. Foxfolio sollte diesen Aufwand abnehmen: Daten einmal in ein Formular eintragen, und das System erzeugt daraus eine fertige Website, gehostet unter einer Foxfolio-Subdomain oder einer eigenen Domain. Gedacht war das als Alternative zu Profilen auf Jobportalen und PDF-Anhängen.
 
-Foxfolio ist die Idee, dass eine Bewerbung keine PDF-Anlage sein muss. Statt Blocktexte in ein StepStone-Profil zu tippen oder einen Lebenslauf in Word-Formatierung zusammenzuhalten, gibt man seine Daten einmal ein und das System generiert daraus eine vollständige, gehostete Portfolio-Webseite. Entweder unter einer `.foxfolio`-Subdomain oder unter einer eigenen Domain.
+## Technik
 
-Die Domain ist gesichert. Die Idee ist es auch.
+Geplant waren zwei Teile: ein Spring-Boot-Backend für Daten, Generierung und Domainverwaltung und eine Oberfläche in Vaadin, das ich von der Infokom gut kannte und das für eine formulargetriebene Anwendung sehr schnell zum Ziel führt. Aus den strukturierten Daten sollten statische Seiten entstehen, jede einzeln auslieferbar unter ihrer eigenen Adresse. Rund um die Idee sind mehrere Prototypen entstanden, für Datenbankschema, Vorschau und Hosting.
 
-## Warum diese Idee
+## Stand
 
-Recruitern fehlt der Kontext. Ein Lebenslauf ist ein komprimiertes Dokument. Er sagt wann jemand wo war, aber nicht wie jemand arbeitet, denkt, oder an Probleme herangeht. Eine Portfolio-Webseite kann das leisten: Projekte mit Erklärung, Texte in eigenen Worten, ein Bild davon, wie jemand wirklich ist. Das ist keine neue Erkenntnis. Es fehlt nur ein Tool, das diesen Aufwand auf ein Minimum reduziert.
-
-Die Idee war: Wer sich bewirbt, sollte nicht erst Webentwickler sein müssen. Foxfolio übernimmt Generierung und Hosting vollständig. Der Nutzer füllt ein Formular aus. Das war's.
-
-## Technischer Aufbau
-
-Die Anwendung war in zwei Teile gegliedert. Ein Spring Boot Backend für Datenhaltung, Generierungslogik und Domain-Management. Vaadin als Frontend, dasselbe Framework, mit dem ich bei der Infokom GmbH jahrelang gearbeitet habe und das ich gut kenne. Kein separates JavaScript-Frontend, kein API-Overhead für jede Kleinigkeit. Für eine formulargetriebene Anwendung wie Foxfolio ist Vaadin eine produktive Wahl.
-
-Die Generierungslogik sollte aus strukturierten Nutzer-Daten statische Seiten erzeugen, ähnlich wie ein Static Site Generator, aber vollständig automatisiert ohne manuelle Konfiguration. Jedes generierte Portfolio sollte unabhängig deploybar und über eine eigene URL erreichbar sein.
-
-## Aktueller Stand
-
-Die Entwicklung ist pausiert. TinyBill v2 und der Übergang zur neuen Stelle hatten Vorrang. Das bedeutet nicht, dass die Idee tot ist. Der Markt für Bewerbungstools ist groß, die meisten sind schlecht, und das Problem das Foxfolio lösen würde ist real. Wenn die Zeit es erlaubt, wird das Projekt wieder aufgenommen.
-
+Die Entwicklung ruht seit 2024. Die Idee ist aber nicht weg: In der [Bewerber-Schmiede](/projekte/bewerber-schmiede) ist Foxfolio als drittes Werkzeug neben Lebenslauf-Analyse und Anschreiben angekündigt.

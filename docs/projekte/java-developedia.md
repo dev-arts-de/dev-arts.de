@@ -1,21 +1,14 @@
 ---
-aside: true
+title: java-developedia
+description: Eine Wissenssammlung zu Java im Stil einer Dokumentation, angelehnt an awesome-java.
+gruppe: frueher
+order: 5
+zeitraum: '2020'
+status: Offline
+technik: [Docusaurus, React, Markdown]
+aside: false
 ---
 
-# java-developedia
+In der Ausbildung wollte ich alles, was ich über Java lerne, an einem Ort sammeln. Vorbild war awesome-java, eine kuratierte Liste von Bibliotheken auf GitHub. Daraus wurde eine Website im Stil einer Dokumentation mit Sprachfeatures, Bibliotheken und Designprinzipien, jeweils kurz erklärt und mit Verweisen auf bessere Quellen.
 
-**Wissensdatenbank · Java · ~2020 · Nicht mehr online**
-
-java-developedia war ein persönliches Wissensprojekt aus der Ausbildungszeit. Inspiriert von awesome-java, einer kuratierten Liste von Java-Bibliotheken und Ressourcen auf GitHub, habe ich versucht, dasselbe Prinzip in eine dokumentationsartige Webseite zu überführen. Strukturiertes Wissen rund um Java als Programmiersprache, aufbereitet zum Nachlesen und Vertiefen.
-
-## Was dahintersteckt
-
-Die Idee war, alle relevanten Themen der Java-Entwicklung an einem Ort zu sammeln, nicht als Tutorial, sondern als Referenz. Sprachfeatures, Bibliotheken, Designprinzipien, Best Practices. Aufgeteilt nach Themenbereichen, mit kurzen Erklärungen und Verweisen auf weiterführende Quellen.
-
-Das Projekt ist nie wirklich fertig geworden. Wissenssammlungen haben das Problem, dass sie immer unvollständig sind. Es gibt immer ein weiteres Thema, das noch fehlt. Irgendwann habe ich das Projekt eingestellt.
-
-## Was davon geblieben ist
-
-Die Grundidee, strukturiertes Lernen durch aufbereitetes Wissen, hat sich in [DailyDev](/projekte/dailydev) weiterentwickelt. Statt einer statischen Wissensdatenbank entstand dort ein System, das Wissen aktiv ausliefert: täglich ein Thema, automatisiert, mit Selbsttests. Das ist die konsequentere Antwort auf dasselbe Problem.
-
----
+Fertig wird so etwas nie, irgendein Thema fehlt immer. Irgendwann habe ich aufgehört. Die Idee hat aber überlebt: [DailyDev](/projekte/dailydev) ist dieselbe Art Sammlung, nur dass sie mir das Wissen jeden Tag selbst zuschickt.
